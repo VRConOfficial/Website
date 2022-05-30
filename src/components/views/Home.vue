@@ -9,7 +9,7 @@
 <script>
 /* eslint-disable */
 
-import Hero from './elements/Hero';
+import Hero from '../elements/Hero';
 
 export default {
   name: 'Home',
