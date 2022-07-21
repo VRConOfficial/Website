@@ -17,7 +17,7 @@ export default new Vuetify({
         warning: '#FF9800',
         info: '#113C77',
         success: '#113C77',
-        anchor: '#FF6699'
+        anchor: '#fff'
       },
       dark: {
         primary: '#113C77',
@@ -27,7 +27,7 @@ export default new Vuetify({
         warning: '#FF9800',
         info: '#113C77',
         success: '#113C77',
-        anchor: '#C465A7'
+        anchor: '#fff'
       }
     }
   }
