@@ -37,15 +37,6 @@
           <v-card style="
               background: transparent;
             " elevation="0">
-            <v-img width="25vw" style="
-                margin:0 auto;
-              " src="../../assets/Logo.png" transition="scale-transition" />
-          </v-card>
-        </v-col>
-        <v-col>
-          <v-card style="
-              background: transparent;
-            " elevation="0">
           </v-card>
         </v-col>
       </v-row>
