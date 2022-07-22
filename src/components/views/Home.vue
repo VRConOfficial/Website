@@ -8,12 +8,12 @@
             <v-img height="300px" cover fill-width :src="require('@/assets/' + info.image)"></v-img>
           </v-col>
           <v-col sm="6" :order-sm="index % 2 ? 2 : 1">
-            <v-card :class="index % 2 ? 'text-sm-right' : 'text-sm-left'" height="100%">
-              <v-card-title primary-title>
+            <v-card height="100%" class="d-flex flex-column justify-center">
+              <v-card-title primary-title :class="index % 2 ? 'align-self-sm-start' : 'align-self-sm-end'">
                 {{info.title}}
               </v-card-title>
-              <v-card-text>
-                <div>{{info.content}}</div>
+              <v-card-text >
+                {{info.content}}
               </v-card-text>
             </v-card>
           </v-col>
