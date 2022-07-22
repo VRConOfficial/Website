@@ -2,6 +2,23 @@
   <div id="home-app">
     <div id="Home">
       <Hero/>
+      <v-container grid-list-xs>
+        <v-row v-for="(info, index) in landingInfo" :key="index">
+          <v-col sm="5" :order-sm="index % 2 ? 1 : 2">
+            <v-img height="300px" cover fill-width :src="require('@/assets/' + info.image)"></v-img>
+          </v-col>
+          <v-col sm="6" :order-sm="index % 2 ? 2 : 1">
+            <v-card :class="index % 2 ? 'text-sm-right' : 'text-sm-left'" height="100%">
+              <v-card-title primary-title>
+                {{info.title}}
+              </v-card-title>
+              <v-card-text>
+                <div>{{info.content}}</div>
+              </v-card-text>
+            </v-card>
+          </v-col>
+        </v-row>
+      </v-container>
     </div>
   </div>
 </template>
@@ -15,60 +32,21 @@ export default {
   name: 'Home',
 
   components: {
-    Hero,
     Hero
   },
 
   data: () => ({
-    ecosystem: [
+    landingInfo: [
       {
-        text: 'vuetify-loader',
-        href: 'https://github.com/vuetifyjs/vuetify-loader',
+        image: "landing/placeholder-1.jpg",
+        title: "What is VRCON?",
+        content: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam reprehenderit mollitia error voluptatum, eveniet temporibus distinctio quidem ab, quasi eaque, atque repudiandae voluptatibus ducimus delectus sapiente maiores excepturi! Odit, voluptatem!"
       },
       {
-        text: 'github',
-        href: 'https://github.com/vuetifyjs/vuetify',
-      },
-      {
-        text: 'awesome-vuetify',
-        href: 'https://github.com/vuetifyjs/awesome-vuetify',
-      },
-    ],
-    importantLinks: [
-      {
-        text: 'Documentation',
-        href: 'https://vuetifyjs.com',
-      },
-      {
-        text: 'Chat',
-        href: 'https://community.vuetifyjs.com',
-      },
-      {
-        text: 'Made with Vuetify',
-        href: 'https://madewithvuejs.com/vuetify',
-      },
-      {
-        text: 'Twitter',
-        href: 'https://twitter.com/vuetifyjs',
-      },
-      {
-        text: 'Articles',
-        href: 'https://medium.com/vuetify',
-      },
-    ],
-    whatsNext: [
-      {
-        text: 'Explore components',
-        href: 'https://vuetifyjs.com/components/api-explorer',
-      },
-      {
-        text: 'Select a layout',
-        href: 'https://vuetifyjs.com/getting-started/pre-made-layouts',
-      },
-      {
-        text: 'Frequently Asked Questions',
-        href: 'https://vuetifyjs.com/getting-started/frequently-asked-questions',
-      },
+        image: "landing/placeholder-2.png",
+        title: "Why VRCon?",
+        content: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam reprehenderit mollitia error voluptatum, eveniet temporibus distinctio quidem ab, quasi eaque, atque repudiandae voluptatibus ducimus delectus sapiente maiores excepturi! Odit, voluptatem!"
+      }
     ],
   }),
 }
