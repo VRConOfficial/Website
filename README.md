@@ -1,4 +1,21 @@
-# my-app
+# VRCon Website
+
+In preparation for VRCon 2022!
+
+<div align="center">
+	<img
+		src="src/assets/images/connieposter_remastered.png"
+		alt="The logo of VRCon, a stylized circle with VRCon's mascott, Connie, underneath it."
+		width=65%
+	/>
+</div>
+
+## Powered By
+- Vue 2.x +Vue Router
+- Vuetify
+- Love ❤️
+
+---
 
 ## Project setup
 ```
