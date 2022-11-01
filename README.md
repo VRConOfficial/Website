@@ -39,3 +39,12 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
+# Build to Live Site
+
+#### Step 1: run `npm run build`
+#### Step 2: run `git add dist` and `git commit -m'Your Message Here'`
+#### Step 3: run `git subtree push --prefix dist origin live`
+
+Details can be found [here](https://learnvue.co/tutorials/deploy-vue-to-github-pages)
