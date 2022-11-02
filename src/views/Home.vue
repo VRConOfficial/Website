@@ -1,7 +1,6 @@
 <template>
 	<div>
 		<BackPanel />
-		<!-- <FullBack style="background-color: rgba(224, 30, 130, 0.33)"> -->
 		<FullBack>
 			<ColumnLayout>
 				<SectionBanner text="Welcome to YOUR Community" />
@@ -63,18 +62,15 @@
 						</v-row>
 					</v-container>
 				</div>
-				<!-- <ContentList :content="itemList" /> -->
 			</div>
 		</ColumnLayout>
 	</div>
 </template>
 
 <script>
-// import PageBanner from "../PageBanner";
 import BackPanel from "@/components/BackPanel.vue";
 import AlternatingTiles from "@/components/AlternatingTiles.vue";
 import SectionBanner from "@/components/SectionBanner.vue";
-// import ContentList from "@/components/ContentList.vue";
 import ColumnLayout from "@/components/ColumnLayout.vue";
 import FullBack from "@/components/FullBack.vue";
 
@@ -85,8 +81,6 @@ export default {
 	name: "HomeView",
 
 	components: {
-		// PageBanner,
-		// ContentList,
 		BackPanel,
 		SectionBanner,
 		AlternatingTiles,
@@ -119,12 +113,6 @@ export default {
 				destination: "events",
 			},
 		],
-		itemList: [
-			{ avatar: "placeholder.webp", text: "Dave" },
-			{ avatar: "placeholder.webp", text: "Dave" },
-			{ avatar: "placeholder.webp", text: "Dave" },
-			{ avatar: "placeholder.webp", text: "Dave" },
-		],
 		linkList2: [
 			{
 				text: "More Info",
@@ -143,10 +131,5 @@ export default {
 .medieval {
 	font-family: Medieval, serif !important;
 	font-size: 4.5rem !important;
-}
-.dave {
-	background-color: rgba(51, 102, 255, 0.1);
-	backdrop-filter: brightness(40%) blur(4px);
-	box-shadow: 0px 0px 16px rgba(51, 102, 255, 0.4);
 }
 </style>

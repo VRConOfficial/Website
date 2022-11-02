@@ -16,7 +16,6 @@
 						<v-list-item-title v-text="item.title"></v-list-item-title>
 					</v-list-item-content>
 				</template>
-
 				<v-list-item class="accordion">
 					<v-list-item-content class="ma-md-6 ma-sm-0">
 						<v-container>
@@ -25,8 +24,6 @@
 									<v-img
 										:src="require('@/assets/images/tiles/' + item.item.image)"
 									/>
-									<!-- <v-img :src="require('@/assets/images/tiles/' + item.item.image)"/> -->
-									<!-- <v-img src="@/assets/images/tiles/placeholder.webp" /> -->
 								</v-col>
 								<v-col cols="12" sm="8" md="7" lg="6" v-if="item.item.title">
 									<p class="text-h4">{{ item.item.title }}</p>
@@ -51,9 +48,6 @@
 
 <script>
 export default {
-	mounted() {
-		document.title = "VRCon 2022 | FAQ";
-	},
 	name: "AccordionList",
 	components: {},
 	props: ["items", "title"],

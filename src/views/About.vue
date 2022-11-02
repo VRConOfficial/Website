@@ -32,7 +32,6 @@
 import FullBack from "@/components/FullBack.vue";
 import ColumnLayout from "@/components/ColumnLayout.vue";
 import SectionBanner from "@/components/SectionBanner.vue";
-// import PageBanner from '@/components/PageBanner.vue'
 
 export default {
 	mounted() {

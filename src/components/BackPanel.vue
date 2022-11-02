@@ -2,7 +2,7 @@
 	<div>
 		<div class="backpanel-lazy"></div>
 		<v-lazy class="backpanel"></v-lazy>
-		<v-lazy class="backpanel2"></v-lazy>
+		<v-lazy class="backpanel-2"></v-lazy>
 		<v-container class="pb-0">
 			<v-row justify="center" align="center" class="logo-container">
 				<v-img
@@ -25,7 +25,7 @@
 }
 .backpanel,
 .backpanel-lazy,
-.backpanel2 {
+.backpanel-2 {
 	width: 100vw;
 	left: 0;
 	overflow: hidden;
@@ -40,7 +40,7 @@
 .backpanel {
 	background-image: url("@/assets/images/backdrop-2.png");
 }
-.backpanel2 {
+.backpanel-2 {
 	background-image: url("@/assets/images/backdrop.png");
 	mask: url("@/assets/slide-mask.svg");
 	mask-size: cover;

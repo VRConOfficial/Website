@@ -20,7 +20,7 @@ export default new Vuetify({
 				anchor: '#fff',
 				main: '#AB47BC',
 				// background: '#484853'
-				background: 'rgba(71, 71, 82, 0.1)'
+				background: 'rgba(70, 70, 82, 0.1)'
 			},
 			dark: {
 				primary: '#FFCC33',
