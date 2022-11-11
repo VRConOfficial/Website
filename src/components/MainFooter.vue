@@ -96,12 +96,6 @@ export default {
 				title: "Contacts",
 				subItems: [
 					{
-						title: "LilBagel",
-						subTitle: "ethan@vrcon.online",
-						avatar: "bagle-128.gif",
-						destination: "",
-					},
-					{
 						title: "Fizzi",
 						subTitle: "fizzi@vrcon.online",
 						avatar: "fizzi-128.png",
@@ -114,11 +108,29 @@ export default {
 						destination: "",
 					},
 					{
-						title: "VirtuaLilly",
-						subTitle: "lilly@vrcon.online",
-						avatar: "lilly-128.png",
+						title: "Karet",
+						subTitle: "karet@vrcon.online",
+						avatar: "Karet.png",
 						destination: "",
 					},
+					{
+						title: "Rickity",
+						subTitle: "rickity@vrcon.online",
+						avatar: "Rickity.png",
+						destination: "",
+					},
+					{
+						title: "SenpaiVR",
+						subTitle: "senpaivr@vrcon.online",
+						avatar: "SenpaiVR.png",
+						destination: "",
+					},
+					{
+						title: "Don Italiano",
+						subTitle: "don@vrcon.online",
+						avatar: "Don.png",
+						destination: "",
+					}
 				],
 			},
 			{
