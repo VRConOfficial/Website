@@ -2,19 +2,28 @@
 	<FullBack>
 		<ColumnLayout class="py-16">
 			<div class="white--text">
-				<SectionBanner text="About"/>
+				<SectionBanner text="History"/>
+				<h1>
+					2020
+				</h1>
 				<p>
 					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti
 					minus vero animi possimus, enim excepturi beatae? Voluptatum
 					voluptates, eos quod placeat maiores, cum vel repellendus odit
 					reiciendis dolor optio ut?
 				</p>
+				<h1>
+					2021
+				</h1>
 				<p>
 					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti
 					minus vero animi possimus, enim excepturi beatae? Voluptatum
 					voluptates, eos quod placeat maiores, cum vel repellendus odit
 					reiciendis dolor optio ut?
 				</p>
+				<h1>
+					2022
+				</h1>
 				<p>
 					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti
 					minus vero animi possimus, enim excepturi beatae? Voluptatum
@@ -35,7 +44,7 @@ import SectionBanner from "@/components/SectionBanner.vue";
 
 export default {
 	mounted() {
-		document.title = "VRCon 2022 | About";
+		document.title = "VRCon 2022 | Our History";
 	},
 	name: "AboutView",
 	components: {
