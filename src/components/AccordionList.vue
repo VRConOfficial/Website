@@ -10,10 +10,19 @@
 				v-model="item.active"
 				:prepend-icon="item.action"
 				no-action
+				:class="datePassedStyle(item)"
 			>
 				<template v-slot:activator>
 					<v-list-item-content>
-						<v-list-item-title v-text="item.title"></v-list-item-title>
+						<v-list-item-title
+							v-if="datePassedStyle(item) == 'date-passed'"
+							v-text="'(Event Time Passed) ' + item.title"
+						></v-list-item-title>
+						<v-list-item-title
+							v-else-if="item.date"
+							v-text="formatDate(item.date) + ' | ' + item.title"
+						></v-list-item-title>
+						<v-list-item-title v-else v-text="item.title"></v-list-item-title>
 					</v-list-item-content>
 				</template>
 				<v-list-item class="accordion">
@@ -44,6 +53,9 @@
 .accordion {
 	backdrop-filter: brightness(80%) saturate(120%);
 }
+.date-passed {
+	filter: grayscale(100%);
+}
 </style>
 
 <script>
@@ -52,6 +64,18 @@ export default {
 	components: {},
 	props: ["items", "title"],
 	data: () => ({}),
-	methods: {},
+	methods: {
+		datePassedStyle(item) {
+			if (item.date) {
+				if (new Date(item.date) < Date.now() / 1000) {
+					return "date-passed";
+				}
+			}
+			return "";
+		},
+		formatDate(unixDate) {
+			return new Date(unixDate * 1000).toLocaleTimeString();
+		},
+	},
 };
 </script>
