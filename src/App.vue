@@ -15,7 +15,7 @@ export default {
 		MainFooter,
 	},
 	data: () => ({
-		drawerOpen: false,
+		drawerOpen: null,
 		items: [
 			{ title: "Dashboard", icon: "mdi-view-dashboard" },
 			{ title: "Account", icon: "mdi-account-box" },
