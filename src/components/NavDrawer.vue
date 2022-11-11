@@ -4,7 +4,6 @@
 		:value="drawer"
 		dark
 		class="drawer"
-		temporary
 	>
 		<v-toolbar>
 			<v-btn
