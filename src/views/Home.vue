@@ -94,7 +94,7 @@ export default {
 				image: "placeholder-1.jpg",
 				title: "What is VRCON?",
 				content:
-					"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam reprehenderit mollitia error voluptatum, eveniet temporibus distinctio quidem ab, quasi eaque, atque repudiandae voluptatibus ducimus delectus sapiente maiores excepturi! Odit, voluptatem!",
+					"VRCon is an annual community-driven social Virtual Reality (VR) convention held entirely within VR. This convention was created to celebrate the individuals and groups that call VR home! VRCon was also built and designed as a way to give back to the community of Social VR, regardless of whatever social platform and game they use. We aim to overcome the physical boundaries and limits of real life by holding truly virtual conventions and events dedicated to and for the communities in VR. Come to VRCon and find your community today!",
 			},
 			{
 				image: "placeholder-2.png",
