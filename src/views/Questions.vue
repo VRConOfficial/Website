@@ -37,46 +37,145 @@ export default {
 			{
 				action: "mdi-help-circle-outline",
 				item: {
-					title: "Question 1",
+					title: "Is VRCon Free to Attend?",
 					image: "placeholder.webp",
 					content:
-						"Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, dolore voluptatibus, vero nam libero dignissimos modi amet ullam magni repellendus vitae natus quod consequatur inventore consectetur nesciunt assumenda expedita quia!",
+						"Yes! VRCon is free to attend. You just need to have VRChat installed on your PC or your Quest",
 				},
-				title: "Question 1",
+				title: "Is VRCon Free to Attend?",
 			},
 			{
 				action: "mdi-help-circle-outline",
 				item: {
-					title: "Question 2",
+					title: "Is VRCon run by VRChat?",
 					image: "placeholder.webp",
 					content:
-						"Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, dolore voluptatibus, vero nam libero dignissimos modi amet ullam magni repellendus vitae natus quod consequatur inventore consectetur nesciunt assumenda expedita quia!",
+						"No, VRCon is a community driven project and not affiliated with VRChat.",
 				},
-				title: "Question 2",
+				title: "Is VRCon run by VRChat?",
 				
 			},
 			{
 				action: "mdi-help-circle-outline",
 				item: {
-					title: "Question 3",
+					title: " Is VRCon Quest Compatible?",
 					image: "placeholder.webp",
 					content:
-						"Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, dolore voluptatibus, vero nam libero dignissimos modi amet ullam magni repellendus vitae natus quod consequatur inventore consectetur nesciunt assumenda expedita quia!",
+						"Yes! But some events are not quest compatible. Please check the website to find out what events are quest compatible on our Events Page",
 				},
-				title: "Question 3",
+				title: " Is VRCon Quest Compatible?",
 				
 			},
 			{
 				action: "mdi-help-circle-outline",
 				item: {
-					title: "Question 4",
+					title: "Do we need VR to attend?",
 					image: "placeholder.webp",
 					content:
-						"Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, dolore voluptatibus, vero nam libero dignissimos modi amet ullam magni repellendus vitae natus quod consequatur inventore consectetur nesciunt assumenda expedita quia!",
+						"You do not need a VR headset to attend VRCon. You just need to be able to run VRChat on your PC. Or an Oculus quest.",
 				},
-				title: "Question 4",
+				title: "Do we need VR to attend?",
 				
-			}
+			},
+			{
+				action: "mdi-help-circle-outline",
+				item: {
+					title: "When does VRCon start?",
+					image: "placeholder.webp",
+					content:
+						"VRCon 2022 will run December 16th - 30th!",
+				},
+				title: "When does VRCon start?",
+				
+			},
+			{
+				action: "mdi-help-circle-outline",
+				item: {
+					title: "When will be the next VRCon?",
+					image: "placeholder.webp",
+					content:
+						"To be announced. Stay tuned to our socials",
+				},
+				title: "When will be the next VRCon?",
+				
+			},
+			{
+				action: "mdi-help-circle-outline",
+				item: {
+					title: "How do we attend VRCon?",
+					image: "placeholder.webp",
+					content:
+						"The VRCon world will be public for anyone to access within VRChat. To attend events please visit the Events page for instructions.",
+				},
+				title: "How do we attend VRCon?",
+				
+			},
+			{
+				action: "mdi-help-circle-outline",
+				item: {
+					title: "How do we attend the VRCon events/panels?",
+					image: "placeholder.webp",
+					content:
+						"Each event and panel will have different ways to join those events such as pre-sign ups. More information will be posted at a later date!",
+				},
+				title: "How do we attend the VRCon events/panels?",
+				
+			},
+			{
+				action: "mdi-help-circle-outline",
+				item: {
+					title: "Where can I find the schedule?",
+					image: "placeholder.webp",
+					content:
+						"Check our Events Page",
+				},
+				title: "Where can I find the schedule?",
+				
+			},
+			{
+				action: "mdi-help-circle-outline",
+				item: {
+					title: "I'm interested in hosting a panel, How can I apply?",
+					image: "placeholder.webp",
+					content:
+						"Right now, our applications are held through Google Forms. to get more details, join our Discord!",
+				},
+				title: "I'm interested in hosting a panel, How can I apply?",
+				
+			},
+			{
+				action: "mdi-help-circle-outline",
+				item: {
+					title: "I would like to exhibit my community, How can I apply?",
+					image: "placeholder.webp",
+					content:
+						"Right now, our applications are held through Google Forms. to get more details, join our Discord!",
+				},
+				title: "I would like to exhibit my community, How can I apply?",
+				
+			},
+			{
+				action: "mdi-help-circle-outline",
+				item: {
+					title: "Can we stream during VRCon?",
+					image: "placeholder.webp",
+					content:
+						"Yes! Streaming is allowed and encouraged!",
+				},
+				title: "Can we stream during VRCon?",
+				
+			},
+			{
+				action: "mdi-help-circle-outline",
+				item: {
+					title: "What if I have more questions?",
+					image: "placeholder.webp",
+					content:
+						"Feel free to send your questions to us by emailing VRConQuestions@gmail.com",
+				},
+				title: "What if I have more questions?",
+				
+			},
 		],
 		items3: [
 			{
