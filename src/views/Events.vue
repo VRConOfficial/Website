@@ -1,8 +1,17 @@
 <template>
-	<FullBack>
-		<ColumnLayout class="py-16">
+	<div>
+		<FullBack>
+			<ColumnLayout class="py-16">
+				<div class="white--text">
+					<SectionBanner text="Events" />
+				</div>
+			</ColumnLayout>
+		</FullBack>
+		<ColumnLayout class="py-8">
 			<div class="white--text">
-				<SectionBanner text="Events" />
+				<div class="py-8">
+					<AccordionList :items="items" :title="title" />
+				</div>
 				<p>
 					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti
 					minus vero animi possimus, enim excepturi beatae? Voluptatum
@@ -15,16 +24,9 @@
 					voluptates, eos quod placeat maiores, cum vel repellendus odit
 					reiciendis dolor optio ut?
 				</p>
-				<p>
-					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti
-					minus vero animi possimus, enim excepturi beatae? Voluptatum
-					voluptates, eos quod placeat maiores, cum vel repellendus odit
-					reiciendis dolor optio ut?
-				</p>
-			<AccordionList :items="items" :title="title" />
 			</div>
 		</ColumnLayout>
-	</FullBack>
+	</div>
 </template>
 
 <style scoped></style>
@@ -53,22 +55,24 @@ export default {
 			{
 				action: "mdi-calendar-check",
 				item: {
-					title: "Event 1",
+					title: "Future Event",
 					image: "placeholder.webp",
 					content:
 						"Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, dolore voluptatibus, vero nam libero dignissimos modi amet ullam magni repellendus vitae natus quod consequatur inventore consectetur nesciunt assumenda expedita quia!",
 				},
 				title: "Event 1",
+				date: 1920595970,
 			},
 			{
 				action: "mdi-calendar-check",
 				item: {
-					title: "Event 2",
+					title: "Past Event Example",
 					image: "placeholder.webp",
 					content:
 						"Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, dolore voluptatibus, vero nam libero dignissimos modi amet ullam magni repellendus vitae natus quod consequatur inventore consectetur nesciunt assumenda expedita quia!",
 				},
 				title: "Event 2",
+				date: 1478832770,
 			},
 			{
 				action: "mdi-calendar-check",
