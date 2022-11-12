@@ -1,19 +1,7 @@
 <template>
-	<v-navigation-drawer
-		fixed
-		:value="drawer"
-		dark
-		class="drawer"
-	>
-		<v-toolbar>
-			<v-btn
-				class="close-button mx-3 my-2"
-				@click="onButton"
-				small
-				fab
-				dark
-				color=""
-			>
+	<v-navigation-drawer fixed :value="drawer" dark class="drawer">
+		<v-toolbar dark color="primary">
+			<v-btn class="close-button mx-3 my-2" @click="onButton" small fab dark>
 				<v-icon dark>mdi-close-thick</v-icon>
 			</v-btn>
 			<v-toolbar-title>Welcome</v-toolbar-title></v-toolbar
@@ -60,7 +48,11 @@ export default {
 			{ title: "Home", icon: "mdi-home", destination: "home" },
 			{ title: "Guide", icon: "mdi-map", destination: "guide" },
 			{ title: "Events", icon: "mdi-calendar-check", destination: "events" },
-			{ title: "FAQ", icon: "mdi-help-circle-outline", destination: "questions" },
+			{
+				title: "FAQ",
+				icon: "mdi-help-circle-outline",
+				destination: "questions",
+			},
 			{ title: "About", icon: "mdi-information-outline", destination: "about" },
 		],
 	}),
