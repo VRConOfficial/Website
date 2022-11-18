@@ -1,29 +1,27 @@
 <template>
-	<FullBack>
+	<div>
+		<FullBack>
+			<ColumnLayout class="py-16">
+				<SectionBanner text="History" />
+			</ColumnLayout>
+		</FullBack>
 		<ColumnLayout class="py-16">
 			<div class="white--text">
-				<SectionBanner text="History"/>
-				<h1>
-					2020
-				</h1>
+				<h1>2020</h1>
 				<p>
 					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti
 					minus vero animi possimus, enim excepturi beatae? Voluptatum
 					voluptates, eos quod placeat maiores, cum vel repellendus odit
 					reiciendis dolor optio ut?
 				</p>
-				<h1>
-					2021
-				</h1>
+				<h1>2021</h1>
 				<p>
 					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti
 					minus vero animi possimus, enim excepturi beatae? Voluptatum
 					voluptates, eos quod placeat maiores, cum vel repellendus odit
 					reiciendis dolor optio ut?
 				</p>
-				<h1>
-					2022
-				</h1>
+				<h1>2022</h1>
 				<p>
 					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti
 					minus vero animi possimus, enim excepturi beatae? Voluptatum
@@ -32,7 +30,7 @@
 				</p>
 			</div>
 		</ColumnLayout>
-	</FullBack>
+	</div>
 </template>
 
 <style scoped></style>
