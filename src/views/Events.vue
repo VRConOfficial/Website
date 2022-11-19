@@ -10,7 +10,7 @@
 		<ColumnLayout class="py-8">
 			<div class="white--text">
 				<div class="py-8">
-					<AccordionList :items="items" :title="title" />
+					<EventAccordionList :items="items" :title="title" />
 				</div>
 				<p>
 					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti
@@ -35,7 +35,7 @@
 import FullBack from "@/components/FullBack.vue";
 import ColumnLayout from "@/components/ColumnLayout.vue";
 import SectionBanner from "@/components/SectionBanner.vue";
-import AccordionList from "@/components/AccordionList.vue";
+import EventAccordionList from "@/components/EventAccordionList.vue";
 
 export default {
 	mounted() {
@@ -46,7 +46,7 @@ export default {
 		FullBack,
 		ColumnLayout,
 		SectionBanner,
-		AccordionList,
+		EventAccordionList,
 	},
 	props: [],
 	data: () => ({

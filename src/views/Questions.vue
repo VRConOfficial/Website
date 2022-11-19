@@ -39,7 +39,7 @@ export default {
 				title: "Is VRCon Free to Attend?",
 				item: {
 					title: "",
-					image: "placeholder.webp",
+					image: "",
 					content:
 						"Yes! VRCon is free to attend. You just need to have VRChat installed on your PC or your Quest",
 				},

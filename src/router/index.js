@@ -3,10 +3,10 @@ import VueRouter from 'vue-router'
 
 import HomeView from '@/views/Home.vue'
 import AboutView from '@/views/About.vue'
-import PassthroughView from '@/views/Passthrough.vue'
+//import PassthroughView from '@/views/Passthrough.vue'
 import StaffView from '@/views/staff/Staff.vue'
-import DirectorsStaffView from '@/views/staff/Directors.vue'
-import TeamsStaffView from '@/views/staff/TeamsMain'
+//import DirectorsStaffView from '@/views/staff/Directors.vue'
+//import TeamsStaffView from '@/views/staff/TeamsMain'
 import QuestionsView from '@/views/Questions.vue'
 import EventsView from '@/views/Events.vue'
 import GuideView from '@/views/Guide.vue'
@@ -47,23 +47,6 @@ const routes = [
 		path: '/staff',
 		name: 'staff',
 		component: StaffView
-	},
-	{
-		path: '/staff',
-		name: 'staff',
-		component: PassthroughView,
-		children: [
-			{
-				path: 'directors',
-				name: 'Directors',
-				component: DirectorsStaffView
-			},
-			{
-				path: 'teams',
-				name: 'Teams',
-				component: TeamsStaffView
-			}
-		]
 	}
 	
 ]

@@ -1,66 +1,56 @@
 <template>
-	<FullBack>
+	<div>
+		<FullBack>
+			<ColumnLayout class="py-16">
+				<div class="white--text">
+					<SectionBanner text="Staff Directory" class="py-16" />
+				</div>
+			</ColumnLayout>
+		</FullBack>
 		<ColumnLayout class="py-16">
 			<div>
-				<SectionBanner text="Staff Directory" class="py-16" />
-				<v-card
-					style = "background-color: rgba(0,0,0,0)"
-					flat
-					tile
-				>
-					<v-card-actions class="justify-space-between" >
-							<v-btn
-								text
-								@click="prev"
-								color = white
-							>
-								<v-icon>mdi-chevron-left</v-icon>
-							</v-btn>
-							<v-item-group
-								v-model="onboarding"
-								class="text-center"
-								mandatory
-							>
-								<v-item
-									v-for="n in length"
-									:key="`btn-${n}`"
-									v-slot="{ active, toggle }"
-								>
-									<v-btn
-										:input-value="active"
-										@click="toggle"
-										color = "secondary"
+				<v-card flat tile color="transparent">
+					<v-card-actions class="justify-space-between">
+						<v-btn text @click="prev" color="white">
+							<v-icon>mdi-chevron-left</v-icon>
+						</v-btn>
+						<v-item-group v-model="onboarding" class="text-center" mandatory style="width: 100%;">
+							<v-container>
+								<v-row justify="center" align="center">
+									<v-item
+										v-for="n in length"
+										:key="`btn-${n}`"
+										v-slot="{ active, toggle }"
 									>
-										<v-icon v-if = "n == 1" >Directors</v-icon>
-										<v-icon v-if = "n == 2" >Teams</v-icon>
-									</v-btn>
-								</v-item>
-							</v-item-group>
-							<v-btn
-								text
-								@click="next"
-								color = white
-							>
-								<v-icon>mdi-chevron-right</v-icon>
-							</v-btn>
+										<v-col cols="4">
+											<v-btn
+												:input-value="active"
+												@click="toggle"
+												color="primary"
+												class="ma-4"
+												width="100%"
+											>
+												<v-icon v-if="n == 1">Directors</v-icon>
+												<v-icon v-if="n == 2">Teams</v-icon>
+											</v-btn>
+										</v-col>
+									</v-item>
+								</v-row>
+							</v-container>
+						</v-item-group>
+						<v-btn text @click="next" color="white">
+							<v-icon>mdi-chevron-right</v-icon>
+						</v-btn>
 					</v-card-actions>
-					<v-window
-						v-model="onboarding"
-					>
-						<v-window-item
-							v-for="n in length"
-							:key="`card-${n}`"
-						>
+					<v-window v-model="onboarding">
+						<v-window-item v-for="n in length" :key="`card-${n}`">
 							<!-- Director Card -->
-							<v-card v-if = "n == 1"  
-							>
-								<DirectorsStaffView/>
+							<v-card v-if="n == 1" color="transparent">
+								<DirectorsStaffView />
 							</v-card>
-							
+
 							<!-- Team Card  -->
-							<v-card v-if = "n == 2" 
-							style = "background-color: rgba(0,0,0,0)"
-							>
+							<v-card v-if="n == 2" color="transparent">
 								<TeamsStaffView />
 							</v-card>
 						</v-window-item>
@@ -68,7 +58,7 @@
 				</v-card>
 			</div>
 		</ColumnLayout>
-	</FullBack>
+	</div>
 </template>
 
 <style scoped></style>
@@ -78,8 +68,8 @@
 import FullBack from "@/components/FullBack.vue";
 import ColumnLayout from "@/components/ColumnLayout.vue";
 import SectionBanner from "@/components/SectionBanner.vue";
-import DirectorsStaffView from '@/views/staff/Directors.vue';
-import TeamsStaffView from '@/views/staff/TeamsMain'
+import DirectorsStaffView from "@/views/staff/Directors.vue";
+import TeamsStaffView from "@/views/staff/TeamsMain";
 
 export default {
 	mounted() {
@@ -87,30 +77,27 @@ export default {
 	},
 	name: "StaffView",
 	components: {
-    FullBack,
-    ColumnLayout,
-    SectionBanner,
+		FullBack,
+		ColumnLayout,
+		SectionBanner,
 		DirectorsStaffView,
-		TeamsStaffView
-},
+		TeamsStaffView,
+	},
 	props: [],
 	data: () => ({
 		length: 2,
 		onboarding: 0,
-
 	}),
 	methods: {
-		next () {
-			this.onboarding = this.onboarding + 1 === this.length
-				? 0
-          : this.onboarding + 1
+		next() {
+			this.onboarding =
+				this.onboarding + 1 === this.length ? 0 : this.onboarding + 1;
 		},
-		prev () {
-			this.onboarding = this.onboarding - 1 < 0
-				? this.length - 1
-				: this.onboarding - 1
+		prev() {
+			this.onboarding =
+				this.onboarding - 1 < 0 ? this.length - 1 : this.onboarding - 1;
 		},
 	},
-	computed: {}
+	computed: {},
 };
 </script>
