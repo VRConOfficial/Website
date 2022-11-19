@@ -1,13 +1,11 @@
 <template>
-		<ColumnLayout width="100%">
-			<AccordionList :items="items" :title="title"/>
-		</ColumnLayout>
+	<AccordionList :items="items" :title="title"/>
 </template>
 
 <style scoped></style>
 
 <script>
-import ColumnLayout from '@/components/ColumnLayout.vue';
+//import ColumnLayout from '@/components/ColumnLayout.vue';
 //import FullBack from "@/components/FullBack.vue";
 //import SectionBanner from "@/components/SectionBanner.vue";
 import AccordionList from "@/components/AccordionList.vue";
@@ -19,7 +17,7 @@ export default {
 	name: "DirectorsStaffView",
 	components: {
 		//FullBack,
-		ColumnLayout,
+		//ColumnLayout,
 		//SectionBanner,
 		AccordionList
 	},

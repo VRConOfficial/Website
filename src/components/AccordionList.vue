@@ -28,9 +28,29 @@
                       require('@/assets/images/tiles/' + item.item.image2) +
                       ')',
                   }"
-                  width="100%"
-                >
-                  <p class="text-h4">{{ item.item.title }}</p>
+									style=
+										" width: 100%;
+											height: 10em;
+											object-fit: cover;
+											background-position: center;
+											background-repeat: no-repeat
+										"
+								>
+									<div 
+									style=
+									"
+										display:flex
+										width: 100%;
+										height: 100%;
+										align-content: center;
+										justify-content: center;
+									"
+									>
+										<p 
+										style="
+										text-align: center; margin: 0; align-self: center" 
+										class="text-h4">{{ item.item.title }}</p>
+									</div>
                 </div>
 
                 <v-col cols="12" sm="4" md="4" lg="4" v-if="item.item.image">

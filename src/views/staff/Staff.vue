@@ -53,14 +53,12 @@
 						>
 							<!-- Director Card -->
 							<v-card v-if = "n == 1"  
-							style = "background-color: rgba(0,0,0,0)"
 							>
 								<DirectorsStaffView/>
 							</v-card>
 							
 							<!-- Team Card  -->
 							<v-card v-if = "n == 2" 
-							style = "background-color: rgba(0,0,0,0)"
 							>
 								<TeamsStaffView />
 							</v-card>
