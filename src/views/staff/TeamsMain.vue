@@ -64,7 +64,7 @@ export default {
 				action: "mdi-account",
 				item: {
 					title: "Marketing",
-					image: "Rickity.png",
+					image: "",
 					content:
 						"After all is said and done, Marketing is responsible for getting the word out, and hyping up everyone for the fantastic experience VRCon has to offer. " + "\n\n" + 
 						"Current Team:" + "\n\n" +
