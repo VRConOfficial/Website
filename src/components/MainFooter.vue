@@ -114,9 +114,9 @@ export default {
 						destination: "",
 					},
 					{
-						title: "Rickity",
-						subTitle: "rickity@vrcon.online",
-						avatar: "Rickity.png",
+						title: "Shadozw",
+						subTitle: "Shadozw@vrcon.online",
+						avatar: "Shadozw.png",
 						destination: "",
 					},
 					{
@@ -137,9 +137,9 @@ export default {
 				title: "Directories",
 				subItems: [
 					{ title: "Staff", icon: "", destination: "/staff" },
-					{ title: "Join Our Team", icon: "", destination: "/about" },
-					{ title: "Event Registration", icon: "", destination: "" },
-					{ title: "Booth Registration", icon: "", destination: "" }
+					//{ title: "Join Our Team", icon: "", destination: "/staff/directors" },
+					//{ title: "Event Registration", icon: "", destination: "" },
+					//{ title: "Booth Registration", icon: "", destination: "" }
 				],
 			},
 		],
