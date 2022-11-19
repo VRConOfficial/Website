@@ -72,6 +72,45 @@
                     {{ item.item.content }}
                   </p>
                 </v-col>
+                
+                <v-col cols="12" v-if="item.item.teamInfo" style = "display: flex; justify-Content: space-around">
+                  <p class="text-h3">The Teams</p>
+                </v-col>
+                <v-col cols="12" v-if="item.item.teamInfo" style = "display: flex; justify-Content: space-around">
+                  <p class="text-h5">Director: {{item.item.director}}</p>
+                </v-col>
+                <v-col cols="12" v-if="item.item.teamInfo" 
+                style = "display: flex; justify-Content: space-around"
+                >
+                  <div 
+                    v-for="team in parseTeamInfo(item.item.teamInfo)"
+                    :key="team.message"
+                    style="display:block;"
+                  >
+                    <p class="text-h4" style="font-weight: bolder; text-align: center"> {{team.Team}} </p>
+                    <div
+                      v-for="(name, index) in getNames(team)"
+                      :key="name.message"
+                    >
+                      <p
+                        v-if="index == 0"
+                        class="text-h6"
+                        style="font-weight: bold; text-align: center"
+                      >
+                        {{name}}
+                      </p>
+                      <p
+                        v-if="index != 0"
+                        class="text-p"
+                        style="font-weight: normal; text-align: center"
+                      >
+                        {{name}}
+                      </p>
+                    </div>
+
+                  </div>
+                  
+                </v-col>
               </v-row>
             </v-container>
           </v-list-item-content>
@@ -93,6 +132,29 @@ export default {
   components: {},
   props: ["items", "title"],
   data: () => ({}),
-  methods: {},
+  methods: {
+
+    parseTeamInfo(file) {
+      var json = require('@/assets/Data/' + file + '.json');
+      const result = JSON.stringify(json);
+      var obj = JSON.parse(result);
+
+      return obj;
+    },
+
+    getNames (arr) {
+      var array = []
+      var j = 0;
+      for (var i = 1; i < Object.keys(arr).length; i++)
+      {
+        if (Object.values(arr)[i] != "") {
+          array[j] = Object.values(arr)[i]
+          j++
+        }
+      }
+      return array;
+    }
+
+  },
 };
 </script>
