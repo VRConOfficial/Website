@@ -53,7 +53,7 @@ export default {
 				icon: "mdi-help-circle-outline",
 				destination: "questions",
 			},
-			{ title: "About", icon: "mdi-information-outline", destination: "about" },
+			{ title: "History", icon: "mdi-information-outline", destination: "history" },
 		],
 	}),
 	methods: {
