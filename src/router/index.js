@@ -6,6 +6,7 @@ import AboutView from '@/views/About.vue'
 import PassthroughView from '@/views/Passthrough.vue'
 import StaffView from '@/views/staff/Staff.vue'
 import DirectorsStaffView from '@/views/staff/Directors.vue'
+import TeamsStaffView from '@/views/staff/TeamsMain'
 import QuestionsView from '@/views/Questions.vue'
 import EventsView from '@/views/Events.vue'
 import GuideView from '@/views/Guide.vue'
@@ -56,6 +57,11 @@ const routes = [
 				path: 'directors',
 				name: 'Directors',
 				component: DirectorsStaffView
+			},
+			{
+				path: 'teams',
+				name: 'Teams',
+				component: TeamsStaffView
 			}
 		]
 	}
