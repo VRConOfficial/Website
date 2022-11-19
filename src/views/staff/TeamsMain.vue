@@ -34,7 +34,7 @@ export default {
 				action: "mdi-account",
 				item: {
 					title: "Events",
-					image: "fizzi-128.png",
+					image2: "placeholder.webp",
 					content:
 						"The Events Team handles all things related to Events. From Events scheduling, outreach, planning, and even our lovely volunteer team, these guys do everything they can to ensure our visitors have a memorable experience",
 				},
@@ -44,7 +44,7 @@ export default {
 				action: "mdi-account",
 				item: {
 					title: "Production",
-					image: "yaas-128.png",
+					image2: "yaas-128.png",
 					content:
 						"The Production team handles the World and Avatar production for VRCon. They ensure that VRCon has a memerable world that immerses our visitors into the story we tell throughout the convension.",
 				},
@@ -54,7 +54,7 @@ export default {
 				action: "mdi-account",
 				item: {
 					title: "Human Resources | Public Relations",
-					image: "Karet.png",
+					image2: "Karet.png",
 					content:
 						"HR and PR is responsible for the wellbeing of our staff, handling any complaints or issues that come up internally as well as reaching out to other communities for future collaberations",
 				},
@@ -64,7 +64,7 @@ export default {
 				action: "mdi-account",
 				item: {
 					title: "Marketing",
-					image: "",
+					image2: "",
 					content:
 						"After all is said and done, Marketing is responsible for getting the word out, and hyping up everyone for the fantastic experience VRCon has to offer. " + "\n\n" + 
 						"Current Team:" + "\n\n" +
