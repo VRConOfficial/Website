@@ -45,6 +45,6 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 #### Step 1: run `npm run build`
 #### Step 2: run `git add dist` and `git commit -m'Your Message Here'`
-#### Step 3: run `git subtree push --prefix dist origin live`
+#### Step 3: run `git subtree push --prefix dist origin Live`
 
 Details can be found [here](https://learnvue.co/tutorials/deploy-vue-to-github-pages)
