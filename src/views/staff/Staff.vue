@@ -59,6 +59,7 @@
 							
 							<!-- Team Card  -->
 							<v-card v-if = "n == 2" 
+							style = "background-color: rgba(0,0,0,0)"
 							>
 								<TeamsStaffView />
 							</v-card>
