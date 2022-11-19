@@ -33,8 +33,9 @@ export default {
 				item: {
 					title: "Events",
 					image2: "placeholder.webp",
-					content:
-						"The Events Team handles all things related to Events. From Events scheduling, outreach, planning, and even our lovely volunteer team, these guys do everything they can to ensure our visitors have a memorable experience",
+					content: "The Events team is in charge of creating memerable experiences, etc",
+					director: "Shadozw",
+					teamInfo: "EventsTeam",
 				},
 				title: "Events",
 			},
@@ -45,18 +46,10 @@ export default {
 					image2: "placeholder.webp",
 					content:
 						"The Production team handles the World and Avatar production for VRCon. They ensure that VRCon has a memerable world that immerses our visitors into the story we tell throughout the convension.",
+					director: "Karet",
+					teamInfo: "ProductionTeam",
 				},
 				title: "Production",
-			},
-			{
-				action: "mdi-account",
-				item: {
-					title: "HR | PR",
-					image2: "placeholder.webp",
-					content:
-						"HR and PR is responsible for the wellbeing of our staff, handling any complaints or issues that come up internally as well as reaching out to other communities for future collaberations",
-				},
-				title: "Human Resources | Public Relations",
 			},
 			{
 				action: "mdi-account",
@@ -64,17 +57,9 @@ export default {
 					title: "Marketing",
 					image2: "placeholder.webp",
 					content:
-						"After all is said and done, Marketing is responsible for getting the word out, and hyping up everyone for the fantastic experience VRCon has to offer. " + "\n\n" + 
-						"Current Team:" + "\n\n" +
-						"Media: \nTeam Lead: Wolveeps" + "\n" + "Staff:" + "\n  " + 
-						"Ether the Dreamer" + "\n  " + 
-						"ArcosRazor" + "\n  " + 
-						"BloodRifle" + "\n  " + 
-						"Carmo(SJF95Fighter)" + "\n  " + 
-						"Chris_Conni" + "\n  " + 
-						"drkim" + "\n  " + 
-						"Emma Torch" + "\n  " + 
-						"FreakenPurple",
+						"After all is said and done, Marketing is responsible for getting the word out, and hyping up everyone for the fantastic experience VRCon has to offer. ",
+					director: "SenpaiVR",
+					teamInfo: "MarketingTeam",
 				},
 				title: "Marketing",
 			},
