@@ -38,7 +38,11 @@
 									<p class="text-h4">{{ item.item.title }}</p>
 								</v-col>
 								<v-col cols="12" v-if="item.item.content">
-									<p class="py-sm-4">{{ item.item.content }}</p>
+									<p 
+									class="py-sm-4" 
+									style = "white-space:pre-wrap;">
+										{{ item.item.content }}
+									</p>
 								</v-col>
 							</v-row>
 						</v-container>
