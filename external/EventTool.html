@@ -99,9 +99,19 @@
 						//Iterates through each cell
 						for (let contentIndex = 1; contentIndex < contentList.length; contentIndex++) {//Cells
 							//Combines the header row headings with the cell content
+							let property = ""
+							if (columnHeaders[contentIndex] == "End Time" && contentList[contentIndex] != "") {
+								console.log(contentList[contentIndex]);
+								var endTime = new Date(dateCell + " " + contentList[0] + " EST");
+								property = endTime.getTime() + contentList[contentIndex] * 1000 * 60 * 60;
+							}
+							else {
+								property = contentList[contentIndex];
+							}
+
 							property = {
 								name: columnHeaders[contentIndex],
-								content: contentList[contentIndex]
+								content: property
 							};
 							if (property.content != "")
 								propertyList.push(property);
