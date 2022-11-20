@@ -10,11 +10,42 @@
     <ColumnLayout class="py-8">
       <div class="white--text">
         <div class="py-8">
-          <v-window>
-            <v-window-item v-for="(day, index) in days" :key="index">
-              <EventAccordionList :items="day" />
-            </v-window-item>
-          </v-window>
+          <v-card flat tile color="transparent">
+            <v-card-actions class="justify-space-between">
+              <v-btn text @click="prev" color="white">
+                <v-icon>mdi-chevron-left</v-icon>
+              </v-btn>
+              <v-item-group
+                v-model="onboarding"
+                class="text-center"
+                mandatory
+                style="width: 100%"
+              >
+                <v-window v-model="onboarding">
+                  <v-window-item
+                    v-for="(day, index) in uniqueTimestamps[0]"
+                    :key="index"
+                  >
+                    <v-row justify="center" align="center">
+                      <v-col cols="10">
+                        <v-btn color="primary" class="ma-4" width="100%">
+                          <v-icon>{{ day }}</v-icon>
+                        </v-btn>
+                      </v-col>
+                    </v-row>
+                  </v-window-item>
+                </v-window>
+              </v-item-group>
+              <v-btn text @click="next" color="white">
+                <v-icon>mdi-chevron-right</v-icon>
+              </v-btn>
+            </v-card-actions>
+            <v-window v-model="onboarding">
+              <v-window-item v-for="(day, index) in days" :key="index">
+                <EventAccordionList :items="day" />
+              </v-window-item>
+            </v-window>
+          </v-card>
         </div>
 
         <p>
@@ -48,7 +79,7 @@ export default {
   mounted() {
     document.title = "VRCon 2022 | Events";
     this.setEvents();
-    console.log(this.days);
+    //console.log(this.days);
   },
 
   name: "EventsView",
@@ -61,64 +92,49 @@ export default {
   props: [],
   data: () => ({
     title: "",
-    items: [
-      {
-        action: "mdi-calendar-check",
-        item: {
-          title: "Future Event",
-          image: "placeholder.webp",
-          content:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, dolore voluptatibus, vero nam libero dignissimos modi amet ullam magni repellendus vitae natus quod consequatur inventore consectetur nesciunt assumenda expedita quia!",
-        },
-        title: "Event 1",
-        date: 1920595970,
-      },
-      {
-        action: "mdi-calendar-check",
-        item: {
-          title: "Past Event Example",
-          image: "placeholder.webp",
-          content:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, dolore voluptatibus, vero nam libero dignissimos modi amet ullam magni repellendus vitae natus quod consequatur inventore consectetur nesciunt assumenda expedita quia!",
-        },
-        title: "Event 2",
-        date: 1478832770,
-      },
-      {
-        action: "mdi-calendar-check",
-        item: {
-          title: "Event 3",
-          image: "placeholder.webp",
-          content:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, dolore voluptatibus, vero nam libero dignissimos modi amet ullam magni repellendus vitae natus quod consequatur inventore consectetur nesciunt assumenda expedita quia!",
-        },
-        title: "Event 3",
-      },
-      {
-        action: "mdi-calendar-check",
-        item: {
-          title: "Event 4",
-          image: "placeholder.webp",
-          content:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, dolore voluptatibus, vero nam libero dignissimos modi amet ullam magni repellendus vitae natus quod consequatur inventore consectetur nesciunt assumenda expedita quia!",
-        },
-        title: "Event 4",
-      },
-    ],
+    items: [{}],
     events: Events,
+    uniqueTimestamps: [],
     days: [],
+    onboarding: 0,
   }),
   methods: {
     setEvents() {
       let events = Events;
       let uniqueDays = [];
+      let uniqueTimestamps = [];
+      const monthNames = [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December",
+      ];
       for (let i = 0; i < events.length; i++) {
         let event = events[i];
         let unix_timestamp = event.time;
         let date = new Date(unix_timestamp);
         let dotm = date.getDate();
+        let dateStr =
+          monthNames[date.getMonth()] +
+          " " +
+          date.getDate() +
+          " " +
+          date.getFullYear();
         uniqueDays.push(dotm);
+        uniqueTimestamps.push(dateStr);
       }
+
+      uniqueTimestamps = Array.from(new Set(uniqueTimestamps));
+      //console.log(uniqueTimestamps);
+      this.uniqueTimestamps.push(uniqueTimestamps);
 
       uniqueDays = Array.from(new Set(uniqueDays));
       for (let index = 0; index < uniqueDays.length; index++) {
@@ -126,9 +142,40 @@ export default {
         let newEventsarray = events.filter(
           (el) => new Date(el.time).getDate() == day
         );
-        console.log(newEventsarray.toString());
         this.days.push(newEventsarray);
       }
+
+      //set position in onboarding
+      let currentDate = new Date();
+      let debugDate = new Date("december 17 2022 5:00 PM CST");
+      let today = this.Debugging ? debugDate : currentDate;
+      var todayDateStr =
+        monthNames[today.getMonth()] +
+        " " +
+        today.getDate() +
+        " " +
+        today.getFullYear();
+
+      for (let i = 0; i < this.uniqueTimestamps[0].length; i++) {
+        let dateToCheck = this.uniqueTimestamps[0][i];
+        if (todayDateStr == dateToCheck) {
+          this.onboarding = i;
+          break;
+        }
+      }
+    },
+    next() {
+      this.onboarding =
+        this.onboarding + 1 === this.uniqueTimestamps[0].length
+          ? this.onboarding
+          : this.onboarding + 1;
+      console.log(this.onboarding + 1 === this.uniqueTimestamps[0].length);
+    },
+    prev() {
+      this.onboarding =
+        this.onboarding - 1 < 0
+          ? this.uniqueTimestamps[0].length
+          : this.onboarding - 1;
     },
     ReadyToShowEvents() {
       return false; //Change to true when Events are ready to be shown
