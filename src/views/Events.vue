@@ -11,29 +11,8 @@
       <div class="white--text">
         <div class="py-8">
           <v-window>
-            <v-window-item
-              v-for="(events, index) in getEvents()"
-              :key="events.message"
-            >
-              <div v-if="Debugging() || ReadyToShowEvents()">
-                <!-- {{getDate(index)}}
-								{{events}} -->
-                <EventAccordionList :date="getDate(index)" :events="events" />
-              </div>
-              <div
-                v-else
-                style="
-                  display: flex;
-                  align-items: center;
-                  align-content: center;
-                  justify-content: center;
-                "
-              >
-                <p>
-                  This days events are still being scheduled. Please check back
-                  later!
-                </p>
-              </div>
+            <v-window-item v-for="(day, index) in days" :key="index">
+              <EventAccordionList :items="day" />
             </v-window-item>
           </v-window>
         </div>
@@ -58,15 +37,18 @@
 <style scoped></style>
 
 <script>
+/* eslint-disable */
 import FullBack from "@/components/FullBack.vue";
 import ColumnLayout from "@/components/ColumnLayout.vue";
 import SectionBanner from "@/components/SectionBanner.vue";
 import EventAccordionList from "@/components/EventAccordionList.vue";
-import EventsList from "@/assets/Data/EventsPages.json";
+import Events from "@/assets/Data/EventData/events.json";
 
 export default {
   mounted() {
     document.title = "VRCon 2022 | Events";
+    this.setEvents();
+    console.log(this.days);
   },
 
   name: "EventsView",
@@ -123,66 +105,30 @@ export default {
         title: "Event 4",
       },
     ],
-    data() {
-      return {
-        eventDays: [],
-      };
-    },
+    events: Events,
+    days: [],
   }),
   methods: {
-    getEvents() {
-      const eventFiles = Object.assign({}, EventsList);
-      const eventLength = Object.keys(eventFiles).length;
-      const eventDays = [];
-      //get event listings in EASTERN
-      for (let i = 0; i < eventLength; i++) {
-        var file = require("@/assets/Data/EventData/" +
-          Object.values(eventFiles)[i] +
-          ".json");
-        console.log(file);
-        eventDays.push(file);
+    setEvents() {
+      let events = Events;
+      let uniqueDays = [];
+      for (let i = 0; i < events.length; i++) {
+        let event = events[i];
+        let unix_timestamp = event.time;
+        let date = new Date(unix_timestamp);
+        let dotm = date.getDate();
+        uniqueDays.push(dotm);
       }
 
-      //Combine all events into a single array and add dates
-      const combinedEvents = [];
-      for (var i = 0; i < eventDays.length; i++) {
-        var date = this.getDate(i);
-        for (var j = 0; j < eventDays[i].length; j++) {
-          if (eventDays[i][j][2] == "") continue;
-          var arr = eventDays[i][j];
-          var time = arr[0];
-          arr[0] = date + " " + time;
-          combinedEvents.push(eventDays[i][j]);
-        }
+      uniqueDays = Array.from(new Set(uniqueDays));
+      for (let index = 0; index < uniqueDays.length; index++) {
+        let day = uniqueDays[index];
+        let newEventsarray = events.filter(
+          (el) => new Date(el.time).getDate() == day
+        );
+        console.log(newEventsarray.toString());
+        this.days.push(newEventsarray);
       }
-
-      //convert times and add endTimes
-
-      return eventDays;
-    },
-    getDate(index) {
-      var eventFiles = Object.assign({}, EventsList);
-      var fileName = Object.values(eventFiles)[index];
-      var date = fileName.replaceAll("VRCon 2022 Schedule (Internal) - ", "");
-      date = date
-        .replace("Monday ", "")
-        .replace("Tuesday ", "")
-        .replace("Wednesday ", "")
-        .replace("Thursday ", "")
-        .replace("Friday ", "")
-        .replace("Saturday ", "")
-        .replace("Sunday ", "")
-        .replace("st", "")
-        .replace("nd", "")
-        .replace("rd", "")
-        .replace("th", "");
-      return date + " 2022";
-    },
-
-    toMonthName(monthNumber) {
-      const date = new Date();
-      date.setMonth(monthNumber - 1);
-      return date.toLocalString("en-US", { month: "long" });
     },
     ReadyToShowEvents() {
       return false; //Change to true when Events are ready to be shown
