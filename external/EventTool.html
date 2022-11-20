@@ -55,10 +55,30 @@
 					//Creates array out of each line of text
 					let textLines = fileText.split(/\r?\n/).filter(element => element);
 					//Gets the column header row
+
+
+					//Finds
+					let dateRow = textLines.filter(element => element.match(
+						/(?:December)/
+					));
+					const dateCells = dateRow.toString().split(/,/).filter(element => element);
+					const dateCell = dateCells.filter(element => element.match(
+						/(?:December)/
+					)).toString() + " 2022"; //CHANGE THIS IF DIFFERENT YEAR
+
+
+
+
+					//const unixDate = new Date(dateCell).getTime();
+
+
+
+
+
 					const columnHeaderRow = textLines.filter(element => element.match(
 						/(?:Event Name)/
 					));
-					const columnHeaders = columnHeaderRow[0].split(/,/).filter(element => element);
+					const columnHeaders = columnHeaderRow[0].split(/,/);
 					//Filters out lines without times
 					textLines = textLines.filter(element => element.match(
 						//Looks for time codes in each row
@@ -66,29 +86,36 @@
 					));
 					//Iterates through each line of text
 					let eventList = [];
-					for (let lineIndex = 0; lineIndex < textLines.length; lineIndex++) {
+					for (let lineIndex = 0; lineIndex < textLines.length; lineIndex++) { //Rows
+
+
+
 						const textLine = textLines[lineIndex];
 						//Separates cells
-						const contentList = textLine.split(/,/).filter(element => element);
+						const contentList = textLine.split(/,/);
 						let propertyList = [];
+						let property;
+
 						//Iterates through each cell
-						for (let contentIndex = 1; contentIndex < contentList.length; contentIndex++) {
+						for (let contentIndex = 1; contentIndex < contentList.length; contentIndex++) {//Cells
 							//Combines the header row headings with the cell content
-							const property = {
+							property = {
 								name: columnHeaders[contentIndex],
 								content: contentList[contentIndex]
 							};
-							propertyList.push(property);
-							const event = {
-								time: contentList[0],
-								properties: propertyList
-							};
-							//Finalized event for each row with heading name, content data, and time
-							eventList.push(event);
+							if (property.content != "")
+								propertyList.push(property);
 						}
-						console.log(eventList);
+						event = {
+							//time: contentList[0],
+							time: new Date(dateCell + " " + contentList[0] + " EST").getTime(),
+							properties: propertyList
+						};
+						//Finalized event for each row with heading name, content data, and time
+
+						if (event.properties != "")
+							eventList.push(event);
 					}
-					console.log(eventList);
 					output.innerText = output.innerText + "\n" + JSON.stringify(eventList, null, 4);
 				});
 			}
