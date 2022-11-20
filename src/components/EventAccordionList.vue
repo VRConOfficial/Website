@@ -1,85 +1,93 @@
 <template>
-	<v-card class="mx-auto accordion" color="transparent" dark>
-		<v-toolbar v-if="title" color="primary">
-			<v-toolbar-title>{{ title }}</v-toolbar-title>
-		</v-toolbar>
-		<v-list color="transparent">
-			<v-list-group
-				v-for="item in items"
-				:key="item.title"
-				v-model="item.active"
-				:prepend-icon="item.action"
-				no-action
-				:class="datePassedStyle(item)"
-			>
-				<template v-slot:activator>
-					<v-list-item-content>
-						<v-list-item-title
-							v-if="datePassedStyle(item) == 'date-passed'"
-							v-text="'(Event Time Passed) ' + item.title"
-						></v-list-item-title>
-						<v-list-item-title
-							v-else-if="item.date"
-							v-text="formatDate(item.date) + ' | ' + item.title"
-						></v-list-item-title>
-						<v-list-item-title v-else v-text="item.title"></v-list-item-title>
-					</v-list-item-content>
-				</template>
-				<v-list-item class="accordion">
-					<v-list-item-content class="ma-md-6 ma-sm-0">
-						<v-container>
-							<v-row justify="center" align="center">
-								<v-col cols="12" sm="4" md="4" lg="4" v-if="item.item.image">
-									<v-img
-										:src="require('@/assets/images/tiles/' + item.item.image)"
-									/>
-								</v-col>
-								<v-col cols="12" sm="8" md="7" lg="6" v-if="item.item.title">
-									<p class="text-h4">{{ item.item.title }}</p>
-								</v-col>
-								<v-col cols="12" v-if="item.item.content">
-									<p 
-									class="py-sm-4" 
-									style = "white-space:pre-wrap;">
-										{{ item.item.content }}
-									</p>
-								</v-col>
-							</v-row>
-						</v-container>
-					</v-list-item-content>
-				</v-list-item>
-			</v-list-group>
-		</v-list>
-	</v-card>
+  <v-card class="mx-auto accordion" color="transparent" dark>
+    <v-list color="transparent">
+      <v-list-group
+        v-for="event in filteredEvents(events)"
+        :key="event.message"
+        v-model="event.active"
+        :prepend-icon="event.action"
+        no-action
+        :class="datePassedStyle(event[0], date, event[3])"
+      >
+        <template v-slote:activator>
+          <v-list-item-content>
+            <v-list-item-title
+              v-if="datePassedStyle(event[0], date, event[3]) == 'date-passed'"
+              v-text="'(Event Time Passed) ' + event[2]"
+            ></v-list-item-title>
+            <v-list-item-title
+              v-else-if="date"
+              v-text="getTime(event[0], date) + ' | ' + event[2]"
+            ></v-list-item-title>
+						
+          </v-list-item-content>
+        </template>
+      </v-list-group>
+    </v-list>
+  </v-card>
 </template>
 
 <style scoped>
 .accordion {
-	backdrop-filter: brightness(80%) saturate(120%);
+  backdrop-filter: brightness(80%) saturate(120%);
 }
 .date-passed {
-	filter: grayscale(100%);
+  filter: grayscale(100%);
 }
 </style>
 
 <script>
 export default {
-	name: "AccordionList",
-	components: {},
-	props: ["items", "title"],
-	data: () => ({}),
-	methods: {
-		datePassedStyle(item) {
-			if (item.date) {
-				if (new Date(item.date) < Date.now() / 1000) {
-					return "date-passed";
-				}
-			}
-			return "";
-		},
-		formatDate(unixDate) {
-			return new Date(unixDate * 1000).toLocaleTimeString();
-		},
-	},
+  name: "AccordionListEvents",
+  components: {},
+  props: ["date", "events"],
+  data: () => ({}),
+  methods: {
+    datePassedStyle(time, date, eventLength) {
+      var localDateTime = new Date();
+      var debugDateTime = new Date("Dec 16 2022 5:00 PM CST");
+      var eventDateTime = new Date(date + " " + time + "EST");
+      const eventEndTime = new Date();
+      eventEndTime.setTime(
+        eventDateTime.getTime() + eventLength * 60 * 60 * 1000
+      );
+      var debug = true; // Change to false when not debugging
+      var currentTime = debug ? debugDateTime : localDateTime;
+      const diffTime = eventEndTime - currentTime;
+
+      if (diffTime < 0) {
+        return "date-passed";
+      }
+
+      return "";
+    },
+    formatDate(unixDate) {
+      return new Date(unixDate * 1000).toLocaleTimeString();
+    },
+
+    getTime(time, date) {
+      var eventDate = new Date(date + " 2022 " + time + " EST");
+      var hours = eventDate.getHours(); // returns 24 hour format
+      var AMPM = hours >= 12 ? "PM" : "AM";
+      hours = hours % 12 || 12;
+      var minutes = eventDate.getMinutes();
+      minutes = minutes.toLocaleString("en", {
+        minimumIntegerDigits: 2,
+        useGrouping: false,
+      });
+      var finalTime = hours + ":" + minutes + " " + AMPM;
+      return finalTime;
+    },
+
+    filteredEvents(events) {
+      var newArray = [];
+      for (let i = 0; i < events.length; i++) {
+        if (events[i][2] != "") {
+          newArray.push(events[i]);
+        }
+      }
+      return newArray;
+    },
+  },
 };
 </script>
