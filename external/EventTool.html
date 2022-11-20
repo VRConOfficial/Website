@@ -105,6 +105,9 @@
 							if (property.content != "")
 								propertyList.push(property);
 						}
+						console.log(dateCell);
+						console.log(contentList[0]);
+						console.log(new Date(dateCell + " " + contentList[0] + " EST").getTime());
 						event = {
 							time: new Date(dateCell + " " + contentList[0] + " EST").getTime(),
 							properties: propertyList
