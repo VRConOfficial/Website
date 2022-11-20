@@ -42,24 +42,11 @@
             </v-card-actions>
             <v-window v-model="onboarding">
               <v-window-item v-for="(day, index) in days" :key="index">
-                <EventAccordionList :items="day" />
+                <EventAccordionList :events="day" />
               </v-window-item>
             </v-window>
           </v-card>
         </div>
-
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti
-          minus vero animi possimus, enim excepturi beatae? Voluptatum
-          voluptates, eos quod placeat maiores, cum vel repellendus odit
-          reiciendis dolor optio ut?
-        </p>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti
-          minus vero animi possimus, enim excepturi beatae? Voluptatum
-          voluptates, eos quod placeat maiores, cum vel repellendus odit
-          reiciendis dolor optio ut?
-        </p>
       </div>
     </ColumnLayout>
   </div>
@@ -79,7 +66,6 @@ export default {
   mounted() {
     document.title = "VRCon 2022 | Events";
     this.setEvents();
-    //console.log(this.days);
   },
 
   name: "EventsView",
@@ -133,7 +119,6 @@ export default {
       }
 
       uniqueTimestamps = Array.from(new Set(uniqueTimestamps));
-      //console.log(uniqueTimestamps);
       this.uniqueTimestamps.push(uniqueTimestamps);
 
       uniqueDays = Array.from(new Set(uniqueDays));
@@ -169,7 +154,6 @@ export default {
         this.onboarding + 1 === this.uniqueTimestamps[0].length
           ? this.onboarding
           : this.onboarding + 1;
-      console.log(this.onboarding + 1 === this.uniqueTimestamps[0].length);
     },
     prev() {
       this.onboarding =
