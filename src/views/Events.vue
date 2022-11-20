@@ -130,6 +130,36 @@ export default {
     },
   }),
   methods: {
+    getEvents() {
+      const eventFiles = Object.assign({}, EventsList);
+      const eventLength = Object.keys(eventFiles).length;
+      const eventDays = [];
+      //get event listings in EASTERN
+      for (let i = 0; i < eventLength; i++) {
+        var file = require("@/assets/Data/EventData/" +
+          Object.values(eventFiles)[i] +
+          ".json");
+        console.log(file);
+        eventDays.push(file);
+      }
+
+      //Combine all events into a single array and add dates
+      const combinedEvents = [];
+      for (var i = 0; i < eventDays.length; i++) {
+        var date = this.getDate(i);
+        for (var j = 0; j < eventDays[i].length; j++) {
+          if (eventDays[i][j][2] == "") continue;
+          var arr = eventDays[i][j];
+          var time = arr[0];
+          arr[0] = date + " " + time;
+          combinedEvents.push(eventDays[i][j]);
+        }
+      }
+
+      //convert times and add endTimes
+
+      return eventDays;
+    },
     getDate(index) {
       var eventFiles = Object.assign({}, EventsList);
       var fileName = Object.values(eventFiles)[index];
@@ -162,37 +192,6 @@ export default {
       return true; // Change to false when this is complete
     },
   },
-  computed: {
-    getEvents() {
-      const eventFiles = Object.assign({}, EventsList);
-      const eventLength = Object.keys(eventFiles).length;
-      const eventDays = [];
-      //get event listings in EASTERN
-      for (let i = 0; i < eventLength; i++) {
-        var file = require("@/assets/Data/EventData/" +
-          Object.values(eventFiles)[i] +
-          ".json");
-        console.log(file);
-        eventDays.push(file);
-      }
-
-      //Combine all events into a single array and add dates
-      const combinedEvents = [];
-      for (var i = 0; i < eventDays.length; i++) {
-        var date = this.getDate(i);
-        for (var j = 0; j < eventDays[i].length; j++) {
-          if (eventDays[i][j][2] == "") continue;
-          var arr = eventDays[i][j];
-          var time = arr[0];
-          arr[0] = date + " " + time;
-          combinedEvents.push(eventDays[i][j]);
-        }
-      }
-
-      //convert times and add endTimes
-
-      return eventDays;
-    },
-  },
+  computed: {},
 };
 </script>
