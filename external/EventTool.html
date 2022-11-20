@@ -17,7 +17,7 @@
 	<div id="wrapper">
 		<h1>VRCon Events Importer (Internal Tool)</h1>
 		<span>Drop Files -></span>
-		<input type="file" id="file-selector" accept=".csv" multiple>
+		<input type="file" id="file-selector" accept=".tsv" multiple>
 		<button id="import-button">Process Files</button>
 		<p>Takes CSV files from the Official VRCon Event spreadsheet and processes them into JSON</p>
 		<p id="status">Status</p>
@@ -63,7 +63,7 @@
 					let dateRow = textLines.filter(element => element.match(
 						/(?:December)/
 					));
-					const dateCells = dateRow.toString().split(/,/).filter(element => element);
+					const dateCells = dateRow.toString().split(/\t/).filter(element => element);
 					const dateCell = dateCells.filter(element => element.match(
 						/(?:December)/
 					)).toString() + " 2022"; //CHANGE THIS IF DIFFERENT YEAR
@@ -71,7 +71,7 @@
 					const columnHeaderRow = textLines.filter(element => element.match(
 						/(?:Event Name)/
 					));
-					const columnHeaders = columnHeaderRow[0].split(/,/);
+					const columnHeaders = columnHeaderRow[0].split(/\t/);
 					//Filters out lines without times
 					textLines = textLines.filter(element => element.match(
 						//Looks for time codes in each row
@@ -82,7 +82,7 @@
 					for (let lineIndex = 0; lineIndex < textLines.length; lineIndex++) {
 						const textLine = textLines[lineIndex];
 						//Separates cells
-						const contentList = textLine.split(/,/);
+						const contentList = textLine.split(/\t/);
 						let propertyList = [];
 						let property;
 

@@ -1,0 +1,299 @@
+[
+  {
+      "time": 1671228000000,
+      "properties": [
+          {
+              "name": "VRC Staff",
+              "content": "Rickity"
+          },
+          {
+              "name": "Event Name",
+              "content": "Opening Ceremony/Tour"
+          },
+          {
+              "name": "End Time",
+              "content": 1671231600000
+          }
+      ]
+  },
+  {
+      "time": 1671231600000,
+      "properties": [
+          {
+              "name": "VRC Staff",
+              "content": "Rickity"
+          },
+          {
+              "name": "Event Name",
+              "content": "Artifex Live!"
+          },
+          {
+              "name": "End Time",
+              "content": 1671242400000
+          },
+          {
+              "name": "VRCon Staff Member Overseeing this event",
+              "content": "Rickity"
+          }
+      ]
+  },
+  {
+      "time": 1671242400000,
+      "properties": [
+          {
+              "name": "Event Name",
+              "content": "Opening Night Party"
+          },
+          {
+              "name": "End Time",
+              "content": 1671253200000
+          }
+      ]
+  },
+  {
+      "time": 1671285600000,
+      "properties": [
+          {
+              "name": "Event Name",
+              "content": "Citrus - Avatar PVP Showcase"
+          },
+          {
+              "name": "End Time",
+              "content": 1671289200000
+          }
+      ]
+  },
+  {
+      "time": 1671292800000,
+      "properties": [
+          {
+              "name": "Event Name",
+              "content": "DustBunny - Dance Class"
+          },
+          {
+              "name": "End Time",
+              "content": 1671296400000
+          }
+      ]
+  },
+  {
+      "time": 1671300000000,
+      "properties": [
+          {
+              "name": "Event Name",
+              "content": "Satchi - Intro to VRChat Roleplay"
+          },
+          {
+              "name": "End Time",
+              "content": 1671303600000
+          }
+      ]
+  },
+  {
+      "time": 1671307200000,
+      "properties": [
+          {
+              "name": "Event Name",
+              "content": "Battle Discs Tournament?"
+          },
+          {
+              "name": "End Time",
+              "content": 1671314400000
+          }
+      ]
+  },
+  {
+      "time": 1671318000000,
+      "properties": [
+          {
+              "name": "Event Name",
+              "content": "VRCon Film Festival"
+          },
+          {
+              "name": "End Time",
+              "content": 1671328800000
+          }
+      ]
+  },
+  {
+      "time": 1671328800000,
+      "properties": [
+          {
+              "name": "Event Name",
+              "content": "Party"
+          },
+          {
+              "name": "End Time",
+              "content": 1671339600000
+          }
+      ]
+  },
+  {
+      "time": 1671382800000,
+      "properties": [
+          {
+              "name": "Event Name",
+              "content": "Laserdome?"
+          },
+          {
+              "name": "End Time",
+              "content": 1671393600000
+          }
+      ]
+  },
+  {
+      "time": 1671397200000,
+      "properties": [
+          {
+              "name": "Event Name",
+              "content": "Cirrex Panel"
+          },
+          {
+              "name": "End Time",
+              "content": 1671400800000
+          }
+      ]
+  },
+  {
+      "time": 1671411600000,
+      "properties": [
+          {
+              "name": "Event Name",
+              "content": "We Met In VR"
+          },
+          {
+              "name": "End Time",
+              "content": 1671415200000
+          },
+          {
+              "name": "Event Host Prefered Contact",
+              "content": "LittlePoe"
+          }
+      ]
+  },
+  {
+      "time": 1671476400000,
+      "properties": [
+          {
+              "name": "Event Name",
+              "content": "Cyberchimp - Meme Showcase"
+          },
+          {
+              "name": "End Time",
+              "content": 1671483600000
+          }
+      ]
+  },
+  {
+      "time": 1671735600000,
+      "properties": [
+          {
+              "name": "Event Name",
+              "content": "Holly - Daily Lives of a Soldier"
+          },
+          {
+              "name": "End Time",
+              "content": 1671742800000
+          }
+      ]
+  },
+  {
+      "time": 1671760800000,
+      "properties": [
+          {
+              "name": "Event Name",
+              "content": "Kuro - NFFC Panel"
+          },
+          {
+              "name": "End Time",
+              "content": 1671764400000
+          }
+      ]
+  },
+  {
+      "time": 1671840000000,
+      "properties": [
+          {
+              "name": "Event Name",
+              "content": "Into the Metaverse Release"
+          },
+          {
+              "name": "End Time",
+              "content": 1671847200000
+          }
+      ]
+  },
+  {
+      "time": 1671850800000,
+      "properties": [
+          {
+              "name": "Event Name",
+              "content": "party"
+          },
+          {
+              "name": "End Time",
+              "content": 1671858000000
+          }
+      ]
+  },
+  {
+      "time": 1671926400000,
+      "properties": [
+          {
+              "name": "Event Name",
+              "content": "Naku! "
+          },
+          {
+              "name": "End Time",
+              "content": 1671930000000
+          }
+      ]
+  },
+  {
+      "time": 1671933600000,
+      "properties": [
+          {
+              "name": "Event Name",
+              "content": "Party"
+          },
+          {
+              "name": "End Time",
+              "content": 1671944400000
+          }
+      ]
+  },
+  {
+      "time": 1672272000000,
+      "properties": [
+          {
+              "name": "Event Name",
+              "content": "Panel on VR Video Production"
+          },
+          {
+              "name": "End Time",
+              "content": 1672279200000
+          },
+          {
+              "name": "Event Host Prefered Contact",
+              "content": "Wolveeps"
+          }
+      ]
+  },
+  {
+      "time": 1672282800000,
+      "properties": [
+          {
+              "name": "Event Name",
+              "content": "NFFC (No friends friends Club)"
+          },
+          {
+              "name": "End Time",
+              "content": 1672286400000
+          },
+          {
+              "name": "Event Host Prefered Contact",
+              "content": "Soldnerx"
+          }
+      ]
+  }
+]
