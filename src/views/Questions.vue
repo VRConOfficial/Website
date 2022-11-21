@@ -22,6 +22,7 @@ import FullBack from "@/components/FullBack.vue";
 export default {
 	mounted() {
 		document.title = "VRCon 2022 | Questions";
+		window.scrollTo({top: 0, behavior: 'smooth'});
 	},
 	name: "QuestionsView",
 	components: {

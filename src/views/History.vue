@@ -53,6 +53,7 @@ import SectionBanner from "@/components/SectionBanner.vue";
 export default {
 	mounted() {
 		document.title = "VRCon 2022 | Our History";
+		window.scrollTo({top: 0, behavior: 'smooth'});
 	},
 	name: "AboutView",
 	components: {
