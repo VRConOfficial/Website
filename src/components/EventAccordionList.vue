@@ -68,18 +68,23 @@
 </style>
 
 <script>
+import { store } from "@/assets/Data/GlobalVars/store.js";
+
 export default {
 	name: "AccordionListEvents",
 	components: {},
 	props: ["events"],
-	data: () => ({}),
+	data: () => ({
+		store,
+	}),
 	methods: {
 		getProperty(event, givenProperty) {
 			return event.properties.find((property) => property.name == givenProperty)
 				.content;
 		},
 		datePassedStyle(event) {
-			if (new Date() > this.getProperty(event, "End Time"))
+			let date = store.debugValue ? store.theDate : new Date();
+			if (date > this.getProperty(event, "End Time"))
 				return "date-passed";
 			return "";
 		},
