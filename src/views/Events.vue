@@ -1,4 +1,4 @@
-<template>
+<template :key="componentKey">
   <div>
     <FullBack>
       <ColumnLayout class="py-16">
@@ -11,38 +11,154 @@
       <div class="white--text">
         <div class="py-8">
           <v-card flat tile color="transparent">
-            <v-card-actions class="justify-space-between">
-              <v-btn text @click="prev" color="white">
-                <v-icon>mdi-chevron-left</v-icon>
-              </v-btn>
-              <v-item-group
-                v-model="onboarding"
-                class="text-center"
-                mandatory
-                style="width: 100%"
-              >
-                <v-window v-model="onboarding">
-                  <v-window-item
-                    v-for="(day, index) in uniqueTimestamps[0]"
-                    :key="index"
+            <v-card-actions style="width: 100%" class="justify-space-around">
+              <div v-if="screenWidth > 600" style="width: 100%">
+                <v-row class="mb-1">
+                  <v-col
+                    cols="1"
+                    style="
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                    "
                   >
-                    <v-row justify="center" align="center">
-                      <v-col cols="10">
-                        <v-btn color="primary" class="ma-4" width="100%">
-                          <v-icon>{{ day }}</v-icon>
-                        </v-btn>
-                      </v-col>
-                    </v-row>
-                  </v-window-item>
-                </v-window>
-              </v-item-group>
-              <v-btn text @click="next" color="white">
-                <v-icon>mdi-chevron-right</v-icon>
-              </v-btn>
+                    <v-btn
+                      text
+                      @click="prev"
+                      color="white"
+                      v-if="onboarding - 1 >= 0"
+                    >
+                      <v-icon>mdi-chevron-left</v-icon
+                      ><v-icon>mdi-chevron-left</v-icon>
+                    </v-btn>
+                  </v-col>
+                  <v-col cols="10">
+                    <v-item-group
+                      v-model="onboarding"
+                      class="text-center"
+                      mandatory
+                      width="100%"
+                    >
+                      <v-window v-model="onboarding">
+                        <v-window-item
+                          v-for="(day, index) in uniqueTimestamps[0]"
+                          :key="index"
+                        >
+                          <v-row justify="center" align="center">
+                            <v-col cols="10">
+                              <v-btn color="primary" width="100%">
+                                <v-icon>{{ day }}</v-icon>
+                              </v-btn>
+                            </v-col>
+                          </v-row>
+                        </v-window-item>
+                      </v-window>
+                    </v-item-group>
+                  </v-col>
+                  <v-col
+                    cols="1"
+                    style="
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                    "
+                  >
+                    <v-btn
+                      text
+                      @click="next"
+                      color="white"
+                      v-if="onboarding + 1 != uniqueTimestamps[0].length"
+                    >
+                      <v-icon>mdi-chevron-right</v-icon
+                      ><v-icon>mdi-chevron-right</v-icon>
+                    </v-btn>
+                  </v-col>
+                </v-row>
+              </div>
+              <div v-else style="max-width: 100%">
+                <v-row class="mb-1">
+                  <v-col
+                    cols="1"
+                    style="
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                    "
+                  >
+                    <v-btn
+                      text
+                      @click="prev"
+                      color="white"
+                      v-if="onboarding - 1 >= 0"
+                    >
+                      <v-icon>mdi-chevron-left</v-icon
+                      ><v-icon>mdi-chevron-left</v-icon>
+                    </v-btn>
+                  </v-col>
+                  <v-col cols="10">
+                    <v-item-group
+                      v-model="onboarding"
+                      class="text-center"
+                      mandatory
+                      width="100%"
+                    >
+                      <v-window v-model="onboarding">
+                        <v-window-item
+                          v-for="(day, index) in uniqueTimestamps[0]"
+                          :key="index"
+                        >
+                          <v-row justify="center" align="center">
+                            <v-col cols="10">
+                              <v-btn color="primary" width="100%">
+                                <v-icon>{{ day }}</v-icon>
+                              </v-btn>
+                            </v-col>
+                          </v-row>
+                        </v-window-item>
+                      </v-window>
+                    </v-item-group>
+                  </v-col>
+                  <v-col
+                    cols="1"
+                    style="
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                    "
+                  >
+                    <div v-if="uniqueTimestamps[0]">
+                      <v-btn
+                        text
+                        @click="next"
+                        color="white"
+                        v-if="onboarding + 1 != uniqueTimestamps[0].length"
+                      >
+                        <v-icon>mdi-chevron-right</v-icon
+                        ><v-icon>mdi-chevron-right</v-icon>
+                      </v-btn>
+                    </div>
+                  </v-col>
+                </v-row>
+              </div>
             </v-card-actions>
             <v-window v-model="onboarding">
               <v-window-item v-for="(day, index) in days" :key="index">
-                <EventAccordionList :events="day" />
+                <div v-if="Debugging() || ReadyToShowEvents()">
+                  <EventAccordionList :events="day" />
+                </div>
+                <div
+                  v-else
+                  style="
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                  "
+                >
+                  <p style="color: White; text-align: center">
+                    The events schedule has not been posted live yet. Please
+                    come check again later!
+                  </p>
+                </div>
               </v-window-item>
             </v-window>
           </v-card>
@@ -61,11 +177,20 @@ import ColumnLayout from "@/components/ColumnLayout.vue";
 import SectionBanner from "@/components/SectionBanner.vue";
 import EventAccordionList from "@/components/EventAccordionList.vue";
 import Events from "@/assets/Data/EventData/events.json";
+import { store } from "@/assets/Data/GlobalVars/store.js";
 
 export default {
   mounted() {
     document.title = "VRCon 2022 | Events";
+
     this.setEvents();
+    this.Debugging();
+
+    this.screenWidth = window.innerWidth;
+    window.onresize = () => {
+      this.screenWidth = window.innerWidth;
+    };
+    window.scrollTo({ top: 0, behavior: "smooth" });
   },
 
   name: "EventsView",
@@ -83,7 +208,15 @@ export default {
     uniqueTimestamps: [],
     days: [],
     onboarding: 0,
+    screenWidth: 0,
+    date: new Date(),
+    store,
   }),
+  watch: {
+    "store.theDate": function (val, oldVal) {
+      this.setEvents();
+    },
+  },
   methods: {
     setEvents() {
       let events = Events;
@@ -132,8 +265,8 @@ export default {
 
       //set position in onboarding
       let currentDate = new Date();
-      let debugDate = new Date("december 17 2022 5:00 PM CST");
-      let today = this.Debugging ? debugDate : currentDate;
+      let debugDate = new Date(store.theDate);
+      let today = this.Debugging() ? debugDate : currentDate;
       var todayDateStr =
         monthNames[today.getMonth()] +
         " " +
@@ -143,7 +276,7 @@ export default {
 
       for (let i = 0; i < this.uniqueTimestamps[0].length; i++) {
         let dateToCheck = this.uniqueTimestamps[0][i];
-        if (todayDateStr == dateToCheck) {
+        if (new Date(todayDateStr) <= new Date(dateToCheck)) {
           this.onboarding = i;
           break;
         }
@@ -166,9 +299,8 @@ export default {
     },
 
     Debugging() {
-      return true; // Change to false when this is complete
+      return store.debugValue;
     },
   },
-  computed: {},
 };
 </script>
