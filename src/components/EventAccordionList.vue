@@ -2,7 +2,7 @@
 	<v-card class="mx-auto accordion" color="transparent" dark>
 		<v-toolbar color="primary">
 			<v-toolbar-title>{{
-				new Date(events[0].time).toDateString()
+				dayjs(events[0].time).format("ddd - MMMM D YYYY")
 			}}</v-toolbar-title>
 		</v-toolbar>
 		<v-list color="transparent">
@@ -22,33 +22,74 @@
 						<v-list-item-title
 							v-else
 							v-text="
-								new Date(event.time).toLocaleTimeString() +
-								' | ' +
+								dayjs(event.time).format('h:mm A') +
+								' : ' +
 								getProperty(event, 'Event Name')
 							"
 						></v-list-item-title>
 					</v-list-item-content>
 				</template>
-				<v-list-item class="accordion">
-					<v-list-item-content class="ma-md-4 ma-sm-0">
+
+				<v-list-item class="accordion ma-0 pa-4">
+					<v-list-item-content>
 						<v-container>
 							<v-row justify="center" align="center">
-								<v-col cols="12" v-if="getProperty(event, 'Event Name')">
-									<div class="py-sm-4" style="white-space: pre-wrap">
-										{{ getProperty(event, "Event Name") }}
+								<v-col
+									cols="12"
+									v-if="getProperty(event, 'Event Name')"
+									class="text-h2 text-center"
+								>
+									{{ getProperty(event, "Event Name") }}
+								</v-col>
+							</v-row>
+							<v-row>
+								<v-col
+									cols="12"
+									class="text-center text-h6 font-weight-light ma-1"
+								>
+									<div v-if="getProperty(event, 'End Time') && event.time">
+										{{ dayjs(event.time).format("h:mm a") }} to
+										{{ dayjs(getProperty(event, "End Time")).format("h:mm a") }}
+										({{ dayjs.tz.guess() }})
+									</div>
+									<div v-if="getProperty(event, 'Event Host VRChat UserName')">
+										Event Host Username:
+										{{ getProperty(event, "Event Host VRChat UserName") }}
+									</div>
+									<div v-if="getProperty(event, 'Links')">
+										Links: {{ getProperty(event, "Links") }}
 									</div>
 								</v-col>
-								<v-col cols="12" v-if="getProperty(event, 'End Time')">
-									<div style="white-space: pre-wrap">
-										Starting Time: {{ new Date(event.time).toTimeString() }}
-									</div>
-									<div style="white-space: pre-wrap">
-										Ending Time:
-										{{
-											new Date(getProperty(event, "End Time")).toTimeString()
-										}}
-									</div>
+							</v-row>
+							<v-row justify="center" align="center">
+								<v-col
+									cols="5" sm="5" md="5" lg="5" xl="5"
+									class="ma-1"
+									v-if="getProperty(event, 'Event Image Link')"
+								></v-col>
+								<v-col cols="5" sm="5" md="5" lg="5" xl="5" class="ma-1" v-else>
+									<v-img
+										:src="require('@/assets/images/placeholder.webp')"
+									></v-img>
 								</v-col>
+								<v-col
+									cols="11" sm="11" md="11" lg="6" xl="6"
+									class="ma-5 text-h6 font-weight-light"
+									v-if="getProperty(event, 'Event Details')"
+								></v-col>
+								<v-col cols="11" sm="11" md="11" lg="6" xl="6" class="ma-5 text-h6 font-weight-light" v-else>
+									Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+									Assumenda obcaecati autem dolorum! Cupiditate quae harum nulla
+									veritatis eligendi voluptate numquam reprehenderit voluptatem
+									similique deserunt minus a, est architecto ducimus sit.
+								</v-col>
+							</v-row>
+							<v-row justify="center" align="center">
+								<v-col
+									cols="1"
+									class="ma-1"
+									v-if="getProperty(event, 'Event Image Link')"
+								></v-col>
 							</v-row>
 						</v-container>
 					</v-list-item-content>
@@ -69,6 +110,11 @@
 
 <script>
 import { store } from "@/assets/Data/GlobalVars/store.js";
+const dayjs = require("dayjs");
+const utc = require("dayjs/plugin/utc");
+const timezone = require("dayjs/plugin/timezone");
+dayjs.extend(timezone);
+dayjs.extend(utc);
 
 export default {
 	name: "AccordionListEvents",
@@ -76,16 +122,21 @@ export default {
 	props: ["events"],
 	data: () => ({
 		store,
+		dayjs: dayjs,
 	}),
 	methods: {
 		getProperty(event, givenProperty) {
-			return event.properties.find((property) => property.name == givenProperty)
-				.content;
+			try {
+				return event.properties.find(
+					(property) => property.name == givenProperty
+				).content;
+			} catch (error) {
+				return false;
+			}
 		},
 		datePassedStyle(event) {
 			let date = store.debugValue ? store.theDate : new Date();
-			if (date > this.getProperty(event, "End Time"))
-				return "date-passed";
+			if (date > this.getProperty(event, "End Time")) return "date-passed";
 			return "";
 		},
 		formatDate(unixDate) {
