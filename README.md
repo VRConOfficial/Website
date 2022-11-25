@@ -43,7 +43,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 # Build to Live Site
 
-#### Step 1: run `npm run build`
+#### Step 1: run `npm run build -- --mode=production` (mode=production will set the .env to reference the .env.production)
 #### Step 2: run `git add dist` and `git commit -m'Your Message Here'`
 #### Step 3: run `git subtree push --prefix dist origin Live`
 
