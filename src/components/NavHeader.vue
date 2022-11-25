@@ -140,11 +140,11 @@ export default {
       else if (tzHour > -10) tz = "-0" + Math.abs(tzHour);
       else tz = tzHour;
       tz += ":00";
-      console.log(this.date + "T" + (this.time > 10 ? "0" + this.time : this.time)  + tz)
-      console.log(this.date);
-      console.log(this.time);
-      console.log(tz);
-      store.theDate = new Date(this.date + "T" + (this.time > 10 ? "0" + this.time : this.time)  + tz);
+
+      var time = this.time.split(":");
+      var hr = parseInt(time[0], 10);
+      var mn =  parseInt(time[1], 10);
+      store.theDate = new Date(this.date + "T" + (hr < 10 ?  "0" + hr : hr) + ":" + (mn < 10 ? "0" + mn : mn ) + tz);
       this.$forceUpdate()
     },
   },

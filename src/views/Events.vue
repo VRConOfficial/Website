@@ -191,6 +191,7 @@ export default {
       this.screenWidth = window.innerWidth;
     };
     window.scrollTo({ top: 0, behavior: "smooth" });
+    console.log(this.uniqueTimestamps)
   },
 
   name: "EventsView",
@@ -219,6 +220,7 @@ export default {
   },
   methods: {
     setEvents() {
+      console.log("Setting Events");
       let events = Events;
       let uniqueDays = [];
       let uniqueTimestamps = [];

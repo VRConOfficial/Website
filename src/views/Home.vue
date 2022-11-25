@@ -116,8 +116,8 @@ export default {
 		],
 		linkList2: [
 			{
-				text: "More Info",
-				destination: "about",
+				text: "Our History",
+				destination: "history",
 			},
 		],
 	}),
