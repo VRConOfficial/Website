@@ -132,14 +132,14 @@ export default {
             destination: "/events",
           },
           {
-            title: "About",
-            icon: "mdi-information-outline",
-            destination: "/about",
-          },
-          {
             title: "FAQ",
             icon: "mdi-help-circle-outline",
             destination: "/questions",
+          },
+          {
+            title: "History",
+            icon: "mdi-book-multiple",
+            destination: "/history",
           },
         ],
       },
@@ -184,15 +184,16 @@ export default {
           },
         ],
       },
-      {
-        title: "Directories",
-        subItems: [
-          { title: "Staff", icon: "", destination: "/staff" },
-          //{ title: "Join Our Team", icon: "", destination: "/staff/directors" },
-          //{ title: "Event Registration", icon: "", destination: "" },
-          //{ title: "Booth Registration", icon: "", destination: "" }
-        ],
-      },
+      //Uncomment when staff page Complete
+      // {
+      //   title: "Directories",
+      //   subItems: [
+      //     { title: "Staff", icon: "", destination: "/staff" },
+      //     //{ title: "Join Our Team", icon: "", destination: "/staff/directors" },
+      //     //{ title: "Event Registration", icon: "", destination: "" },
+      //     //{ title: "Booth Registration", icon: "", destination: "" }
+      //   ],
+      // },
     ],
   }),
   props: [],
