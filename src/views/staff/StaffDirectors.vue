@@ -5,9 +5,6 @@
 <style scoped></style>
 
 <script>
-//import ColumnLayout from '@/components/ColumnLayout.vue';
-//import FullBack from "@/components/FullBack.vue";
-//import SectionBanner from "@/components/SectionBanner.vue";
 import AccordionList from "@/components/AccordionList.vue";
 
 export default {
@@ -16,9 +13,6 @@ export default {
 	},
 	name: "DirectorsStaffView",
 	components: {
-		//FullBack,
-		//ColumnLayout,
-		//SectionBanner,
 		AccordionList
 	},
 	props: [],

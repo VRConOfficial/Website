@@ -45,15 +45,16 @@ export default {
 	data: () => ({
 		group: null,
 		items: [
-			{ title: "Home", icon: "mdi-home", destination: "home" },
-			{ title: "Guide", icon: "mdi-map", destination: "guide" },
-			{ title: "Events", icon: "mdi-calendar-check", destination: "events" },
+			{ title: "Home", icon: "mdi-home", destination: "/home" },
+			{ title: "Guide", icon: "mdi-map", destination: "/guide" },
+			{ title: "Events", icon: "mdi-calendar-check", destination: "/events" },
 			{
 				title: "FAQ",
 				icon: "mdi-help-circle-outline",
 				destination: "questions",
 			},
-			{ title: "History", icon: "mdi-book-multiple", destination: "history" },
+			{ title: "History", icon: "mdi-timeline-clock-outline", destination: "/history" },
+			{ title: "Staff", icon: "mdi-account", destination: "/staff" },
 		],
 	}),
 	methods: {
