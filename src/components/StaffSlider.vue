@@ -26,7 +26,7 @@
 								isValidHTML(data.item.photo)
 									? data.item.photo
 									: data.item.photo == ''
-									? require('@/assets/images/placeholder.webp')
+									? require('@/assets/images/tiles/default-profile.webp')
 									: require('@/assets/images/Staff/' + data.item.photo)
 							"
 							max-width="100px"
@@ -35,7 +35,7 @@
 					</v-col>
 					<v-col cols="auto" v-else>
 						<v-img
-							:src="require('@/assets/images/placeholder.webp')"
+							:src="require('@/assets/images/tiles/default-profile.webp')"
 							max-width="100px"
 							max-height="100px"
 						/>
@@ -107,7 +107,7 @@
 									isValidHTML(team.Leader.photo)
 										? team.Leader.photo
 										: team.Leader.photo == ''
-										? require('@/assets/images/placeholder.webp')
+										? require('@/assets/images/tiles/default-profile.webp')
 										: require('@/assets/images/Staff/' + team.Leader.photo)
 								"
 								max-width="100px"
@@ -153,7 +153,7 @@
 													isValidHTML(staff.photo)
 														? staff.photo
 														: staff.photo == ''
-														? require('@/assets/images/placeholder.webp')
+														? require('@/assets/images/tiles/default-profile.webp')
 														: require('@/assets/images/Staff/' + staff.photo)
 												"
 												width="100px"

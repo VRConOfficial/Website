@@ -216,7 +216,7 @@ export default {
 					color: "primary",
 					icon: "mdi-party-popper",
 					image: {
-						image: "VRCon 2020 Thumbnail.png",
+						image: "VRCon 2020 Thumbnail.webp",
 						sub: "Image Credit: KisameReason",
 					},
 					content:
@@ -282,7 +282,7 @@ export default {
 					color: "accent",
 					icon: "mdi-calendar",
 					image: {
-						image: "VRCon 2021 Mini Golf.png",
+						image: "VRCon 2021 Mini Golf.webp",
 						sub: "Image Credit: SladeDaCat",
 					},
 					content:
@@ -294,7 +294,7 @@ export default {
 					color: "accent",
 					icon: "mdi-calendar",
 					image: {
-						image: "VRCon Battle Disc.png",
+						image: "VRCon Battle Disc.webp",
 						sub: "Image Credit: SladeDaCat",
 					},
 					content:
@@ -306,7 +306,7 @@ export default {
 					color: "primary",
 					icon: "mdi-party-popper",
 					image: {
-						image: "VRCon 2021 Thumbnail.png",
+						image: "VRCon 2021 Thumbnail.webp",
 						sub: "Image Credit: SenpaiVR",
 					},
 					content:
@@ -355,7 +355,7 @@ export default {
 					color: "accent",
 					icon: "mdi-calendar",
 					image: {
-						image: "VRCon 2022 Easter.png",
+						image: "VRCon 2022 Easter.webp",
 						sub: "Image Credit: SladeDaCat",
 					},
 					content:
@@ -367,7 +367,7 @@ export default {
 					color: "accent",
 					icon: "mdi-calendar",
 					image: {
-						image: "VRCon 2022 Pool.png",
+						image: "VRCon 2022 Pool.webp",
 						sub: "Image Credit: SladeDaCat",
 					},
 					content:
