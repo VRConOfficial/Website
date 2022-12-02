@@ -34,6 +34,7 @@ import SectionBanner from "@/components/SectionBanner.vue";
 export default {
 	mounted() {
 		document.title = "VRCon 2022 | Staff Directory";
+		window.scrollTo({top: 0, behavior: 'instant'});
 	},
 	name: "StaffView",
 	components: {

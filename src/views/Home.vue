@@ -8,16 +8,16 @@
 		</FullBack>
 		<ColumnLayout>
 			<div>
-				<v-container class="white--text my-2">
-					<v-row class="d-flex align-center justify-center text-center text-sm-left">
-						<v-col cols="10" sm="5" md="5" lg="4" xl="4">
+				<v-container class="px-0 white--text my-2">
+					<v-row class="px-0 d-flex align-center justify-center text-center text-sm-left">
+						<v-col cols="11" sm="8" md="5" lg="4" xl="4" class="pa--4">
 							<v-img
 								src="@/assets/images/leathered.webp"
-								class="ma-2"
+								class="my-2"
 							></v-img>
 						</v-col>
-						<v-col cols="12" sm="7" md="7" lg="8" xl="8">
-							<div class="ma-6 white--text text-h2 medieval text-center text-sm-left">
+						<v-col cols="12" sm="auto" class="px-0">
+							<div class="medieval my-6 white--text text-h2 text-sm-h2 text-center text-sm-left">
 								Here'ye Here'ye
 							</div>
 							<div class="ma-6 text-h4">
@@ -29,11 +29,11 @@
 					<v-row
 						v-for="(link, index) in linkList"
 						:key="index"
-						class="d-flex align-center justify-center text-h5"
+						class="align-center justify-center text-h5 text-sm-h4"
 					>
-						<v-col cols="10">
+						<v-col cols="10" class="my-sm-4">
 							<v-btn
-								class="pa-8 ma-4 primary rounded"
+								class="pa-8 primary rounded"
 								:to="link.destination"
 								block
 							>
@@ -43,16 +43,16 @@
 					</v-row>
 				</v-container>
 				<div class="rounded">
-					<AlternatingTiles :content="landingInfo" class="my-4 rounded" />
+					<AlternatingTiles :content="landingInfo" class="my-4 px-0 rounded" />
 					<v-container>
 						<v-row
 							v-for="(link, index) in linkList2"
 							:key="index"
-							class="d-flex align-center justify-center text-h5"
+							class="align-center justify-center text-h5 text-sm-h4"
 						>
-							<v-col cols="10">
+							<v-col cols="10" class="my-sm-4">
 								<v-btn
-									class="pa-8 ma-4 primary"
+									class="pa-8 primary"
 									:to="link.destination"
 									block
 								>
@@ -77,7 +77,7 @@ import FullBack from "@/components/FullBack.vue";
 export default {
 	mounted() {
 		document.title = "VRCon 2022 | Welcome";
-		window.scrollTo({top: 0, behavior: 'smooth'});
+		window.scrollTo({top: 0, behavior: 'instant'});
 	},
 	name: "HomeView",
 
@@ -131,6 +131,5 @@ export default {
 }
 .medieval {
 	font-family: Medieval, serif !important;
-	font-size: 4.5rem !important;
 }
 </style>

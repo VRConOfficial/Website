@@ -1,9 +1,9 @@
 <template>
 	<div>
-		<v-container class="py-8 py-sm-16">
+		<v-container class="py-8 py-sm-16 px-0">
 			<v-row class="text-center mb-1" justify="center">
-				<v-col>
-					<div class="text-md-h1 white--text font-weight-light text-h2">
+				<v-col cols="auto" class="px-0">
+					<div class="white--text font-weight-light text-h3 text-sm-h2 text-md-h1">
 						{{ text }}
 					</div>
 				</v-col>

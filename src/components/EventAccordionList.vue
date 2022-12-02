@@ -1,5 +1,5 @@
 <template>
-	<v-card class="mx-auto accordion" color="transparent" dark>
+	<v-card class="mx-auto darkened" color="transparent" dark>
 		<v-toolbar color="primary">
 			<v-toolbar-title>{{
 				dayjs(events[0].time).format("ddd - MMMM D YYYY")
@@ -30,7 +30,7 @@
 					</v-list-item-content>
 				</template>
 
-				<v-list-item class="accordion ma-0 pa-4">
+				<v-list-item class="darkened ma-0 pa-4">
 					<v-list-item-content>
 						<v-container>
 							<v-row justify="center" align="center">
@@ -100,9 +100,6 @@
 </template>
 
 <style scoped>
-.accordion {
-	backdrop-filter: brightness(80%) saturate(120%);
-}
 .date-passed {
 	filter: grayscale(100%);
 }

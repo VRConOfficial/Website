@@ -1,12 +1,12 @@
 <template>
-	<div class="py-8">
+	<div>
 		<FullBack>
-			<ColumnLayout>
+			<ColumnLayout class="py-8 pt-16">
 				<SectionBanner text="Frequently Asked Questions" />
 			</ColumnLayout>
 		</FullBack>
-		<ColumnLayout class="pa-sm-8">
-			<AccordionList :items="items2" :title="title" />
+		<ColumnLayout class="px-0 pa-sm-8 py-8">
+			<AccordionList class="px-0" :items="items2" :title="title" />
 		</ColumnLayout>
 	</div>
 </template>
@@ -22,7 +22,7 @@ import FullBack from "@/components/FullBack.vue";
 export default {
 	mounted() {
 		document.title = "VRCon 2022 | Questions";
-		window.scrollTo({top: 0, behavior: 'smooth'});
+		window.scrollTo({top: 0, behavior: 'instant'});
 	},
 	name: "QuestionsView",
 	components: {

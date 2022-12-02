@@ -22,7 +22,9 @@ export default new Vuetify({
 				anchor: '#fff',
 				main: '#AB47BC',
 				// background: '#484853'
-				background: 'rgba(70, 70, 82, 0.1)'
+				// Background color is transparent because it conflicts with the v-img background
+				// Adjusting z-index hides text for some reason
+				background: 'rgba(70, 70, 82, 0)'
 			},
 			dark: {
 				primary: '#FFCC33',

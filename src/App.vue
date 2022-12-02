@@ -38,20 +38,26 @@ export default {
 		<NavHeader @navDrawerOpen="openNavDrawer" />
 		<NavDrawer :drawer="drawerOpen" @navDrawerClose="closeNavDrawer" />
 		<v-main>
-			<v-img class="background-image" src="@/assets/images/background.png"></v-img>
-			<router-view></router-view>
+			<v-img
+				class="background-image"
+				src="@/assets/images/background.png"
+			></v-img>
+			<router-view />
 		</v-main>
 		<MainFooter />
 	</v-app>
 </template>
 
-<style scoped>
-	.background-image {
-		z-index: -2;
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100vw;
-		height: 100vh;
-	}
+<style>
+.background-image {
+	z-index: -1;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 120vh;
+}
+.darkened {
+	backdrop-filter: brightness(80%) saturate(120%);
+}
 </style>

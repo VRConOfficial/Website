@@ -1,18 +1,18 @@
 <template>
 	<v-footer dark>
-		<ColumnLayout class="my-8">
+		<ColumnLayout class="my-6 px-0">
 			<div>
-				<v-row justify="center">
-					<v-col cols="5" sm="4" md="4" lg="3">
+				<v-row class=" justify-center">
+					<v-col cols="6" sm="4" md="4" lg="2" class="ma-4">
 						<v-img
 							src="../assets/images/logo.svg"
-							width="200px"
+							width="400px"
 							class="my-sm-4"
 						></v-img>
 					</v-col>
 					<v-col
-						cols="10"
-						sm="7"
+						cols="12"
+						sm="5"
 						md="4"
 						lg="3"
 						v-for="item in items"
@@ -48,13 +48,14 @@
 						</v-list>
 					</v-col>
 				</v-row>
-				<v-row class="text-center">
-					<v-col cols="12">
+				<v-row class="text-center py-sm-8" no-gutters>
+					<v-col cols="12" class="py-2">
 						Thank you everyone who helped make VRCon a reality!
 					</v-col>
 					<v-col
 						cols="12"
 						style="display: flex; flex-direction: row; justify-content: center"
+						class="py-2"
 					>
 						<div
 							v-for="icon in icons"
@@ -73,8 +74,8 @@
 							</v-btn>
 						</div>
 					</v-col>
-					<v-col cols="12"
-						>&copy; 2022 VRCon
+					<v-col cols="12" class="py-2">
+						&copy; 2022 VRCon
 						<br />
 						VRCon Connie Illustration by Polaris
 						<br />

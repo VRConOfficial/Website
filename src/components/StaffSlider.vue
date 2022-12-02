@@ -80,7 +80,7 @@
 							outlined
 							@click="next(data.item.teamInfo)"
 							color="primary"
-							class="arrow-button pa-6 darkened"
+							class="pa-6 darkened"
 							v-if="onboarding + 1 != data.item.teamInfo.length"
 						>
 							<v-icon>mdi-chevron-right</v-icon>
@@ -181,9 +181,6 @@
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-}
-.darkened {
-	backdrop-filter: brightness(80%) saturate(120%);
 }
 .banner-card {
 	width: 100%;

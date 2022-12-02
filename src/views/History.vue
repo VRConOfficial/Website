@@ -2,7 +2,7 @@
 <template>
 	<div>
 		<FullBack>
-			<ColumnLayout class="py-16">
+			<ColumnLayout class="py-8 pt-16">
 				<SectionBanner text="History" />
 			</ColumnLayout>
 		</FullBack>
@@ -198,7 +198,7 @@ import SectionBanner from "@/components/SectionBanner.vue";
 export default {
 	mounted() {
 		document.title = "VRCon 2022 | Our History";
-		window.scrollTo({ top: 0, behavior: "smooth" });
+		window.scrollTo({top: 0, behavior: 'instant'});
 	},
 	name: "HistoryView",
 	components: {

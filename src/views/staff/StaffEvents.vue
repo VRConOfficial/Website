@@ -8,6 +8,9 @@
 import StaffSlider from "@/components/StaffSlider.vue";
 
 export default {
+	mounted() {
+		document.title = "VRCon 2022 | Events Team";
+	},
 	name: "EventsStaffView",
 	components: {
 		StaffSlider

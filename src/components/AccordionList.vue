@@ -1,5 +1,5 @@
 <template>
-	<v-card class="mx-auto accordion" color="transparent" dark>
+	<v-card class="mx-auto darkened" color="transparent" dark>
 		<v-toolbar v-if="title" color="primary">
 			<v-toolbar-title>{{ title }}</v-toolbar-title>
 		</v-toolbar>
@@ -16,11 +16,11 @@
 						<v-list-item-title v-text="item.title"></v-list-item-title>
 					</v-list-item-content>
 				</template>
-				<v-list-item class="accordion pa-4">
+				<v-list-item class="pa-4 darkened">
 					<v-list-item-content class="ma-md-6 ma-sm-0">
 						<v-container>
 							<v-row justify="center" align="center">
-								<v-col cols="auto">
+								<v-col cols="auto" v-if="item.item.image || item.item.title">
 									<v-row justify="center" align="center">
 										<v-col
 											cols="12"
@@ -63,9 +63,6 @@
 </template>
 
 <style scoped>
-.accordion {
-	backdrop-filter: brightness(80%) saturate(120%);
-}
 </style>
 
 <script>
