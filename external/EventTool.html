@@ -17,7 +17,7 @@
 	<div id="wrapper">
 		<h1>VRCon Events Importer (Internal Tool)</h1>
 		<span>Drop Files -></span>
-		<input type="file" id="file-selector" accept=".csv" multiple>
+		<input type="file" id="file-selector" accept=".tsv" multiple>
 		<button id="import-button">Process Files</button>
 		<p>Takes CSV files from the Official VRCon Event spreadsheet and processes them into JSON</p>
 		<p id="status">Status</p>
@@ -42,54 +42,94 @@
 			output.innerText = "-- Output --";
 		};
 
-		function process() {
+		async function process() {
 			if (!fileList) {
 				status.innerText = "No files";
 				console.log("No files");
 				return
 			}
+
+			let eventList = [];
+
 			//Iterates through each given file
 			for (let i = 0, fileIndex = fileList.length; i < fileIndex; i++) {
 				const file = fileList[i];
-				file.text().then((fileText) => {
+				await file.text().then((fileText) => {
 					//Creates array out of each line of text
 					let textLines = fileText.split(/\r?\n/).filter(element => element);
 					//Gets the column header row
+
+					//Finds date
+					let dateRow = textLines.filter(element => element.match(
+						/(?:December)/
+					));
+					const dateCells = dateRow.toString().split(/\t/).filter(element => element);
+					const dateCell = dateCells.filter(element => element.match(
+						/(?:December)/
+					)).toString() + " 2022"; //CHANGE THIS IF DIFFERENT YEAR
+
 					const columnHeaderRow = textLines.filter(element => element.match(
 						/(?:Event Name)/
 					));
-					const columnHeaders = columnHeaderRow[0].split(/,/).filter(element => element);
+					const columnHeaders = columnHeaderRow[0].split(/\t/);
 					//Filters out lines without times
 					textLines = textLines.filter(element => element.match(
 						//Looks for time codes in each row
 						/([0-9]|0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]/
 					));
 					//Iterates through each line of text
-					let eventList = [];
+
 					for (let lineIndex = 0; lineIndex < textLines.length; lineIndex++) {
 						const textLine = textLines[lineIndex];
 						//Separates cells
-						const contentList = textLine.split(/,/).filter(element => element);
+						const contentList = textLine.split(/\t/);
 						let propertyList = [];
+						let property;
+
 						//Iterates through each cell
 						for (let contentIndex = 1; contentIndex < contentList.length; contentIndex++) {
 							//Combines the header row headings with the cell content
-							const property = {
+							let property = ""
+							if (columnHeaders[contentIndex] == "End Time" && contentList[contentIndex] != "") {
+								var endTime = new Date(dateCell + " " + contentList[0] + " EST");
+								property = endTime.getTime() + contentList[contentIndex] * 1000 * 60 * 60;
+							}
+							else {
+								property = contentList[contentIndex];
+							}
+
+							property = {
 								name: columnHeaders[contentIndex],
-								content: contentList[contentIndex]
+								content: property
 							};
-							propertyList.push(property);
-							const event = {
-								time: contentList[0],
-								properties: propertyList
-							};
-							//Finalized event for each row with heading name, content data, and time
-							eventList.push(event);
+							if (property.content != "")
+								propertyList.push(property);
 						}
+						console.log(dateCell);
+						console.log(contentList[0]);
+						console.log(new Date(dateCell + " " + contentList[0] + " EST").getTime());
+						event = {
+							time: new Date(dateCell + " " + contentList[0] + " EST").getTime(),
+							properties: propertyList
+						};
+						//Finalized event for each row with heading name, content data, and time
+
+						if (event.properties != "")
+							eventList.push(event);
 					}
-					output.innerText = output.innerText + "\n" + JSON.stringify(eventList, null, 4);
 				});
 			}
+
+			// Sort by event time
+			eventList = eventList.sort((event1, event2) => {
+				if (event1.time > event2.time)
+					return 1;
+				if (event1.time < event2.time)
+					return -1
+				return 0;
+			});
+
+			output.innerText = output.innerText + "\n" + JSON.stringify(eventList, null, 4);
 			status.innerText = "Done";
 		}
 	</script>

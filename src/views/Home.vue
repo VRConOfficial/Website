@@ -77,6 +77,7 @@ import FullBack from "@/components/FullBack.vue";
 export default {
 	mounted() {
 		document.title = "VRCon 2022 | Welcome";
+		window.scrollTo({top: 0, behavior: 'smooth'});
 	},
 	name: "HomeView",
 
@@ -115,8 +116,8 @@ export default {
 		],
 		linkList2: [
 			{
-				text: "More Info",
-				destination: "about",
+				text: "Our History",
+				destination: "history",
 			},
 		],
 	}),

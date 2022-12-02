@@ -11,6 +11,12 @@ import QuestionsView from '@/views/Questions.vue'
 import EventsView from '@/views/Events.vue'
 import GuideView from '@/views/Guide.vue'
 
+import StaffEventsView from '@/views/staff/StaffEvents.vue'
+import DirectorsStaffView from '@/views/staff/StaffDirectors.vue'
+import EventsStaffView from '@/views/staff/StaffEvents.vue'
+import ProductionStaffView from '@/views/staff/StaffProduction.vue'
+import MarketingStaffView from '@/views/staff/StaffMarketing.vue'
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -46,9 +52,27 @@ const routes = [
 	{
 		path: '/staff',
 		name: 'staff',
-		component: StaffView
+		component: StaffView,
+		children: [
+			{
+				path: 'directors',
+				component: DirectorsStaffView,
+			},
+			{
+				path: 'events-team',
+				component: EventsStaffView,
+			},
+			{
+				path: 'production-team',
+				component: ProductionStaffView,
+			},
+			{
+				path: 'marketing-team',
+				component: MarketingStaffView,
+			},
+		],
 	}
-	
+
 ]
 
 const router = new VueRouter({

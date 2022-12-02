@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <title>VRCon Image Crop Tool</title>
+    <link rel="stylesheet" href="../../node_modules/croppie/croppie.css">
+    <link rel="stylesheet" href="crop.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="../../node_modules/croppie/croppie.js"></script>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="modal">
+            <a class="button actionUpload">
+                <span>Upload</span>
+                <input type="file" id="upload" value="Choose Image" accept="image/*" multiple>
+            </a>
+            <button id="btnDone" class="actionDone">Done</button>
+            <button class="actionCancel">Cancel</button>
+
+            <div id='random'></div>
+        </div>
+    </div>
+
+
+
+    <script src="crop.js"></script>
+</body>
+
+</html>

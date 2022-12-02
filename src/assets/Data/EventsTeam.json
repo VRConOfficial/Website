@@ -1,86 +1,184 @@
 [
   {
-    "Team": "Event Team",
-    "Leader": "SoldnerX",
-    "": "Alicia Von Tost",
-    "__1": "CelesitalRose",
-    "__2": "Chris_Conni",
-    "__3": "Euky",
-    "__4": "IBETA7",
-    "__5": "RubyStorm",
-    "__6": "Spades",
-    "__7": "Xter7856",
-    "__8": "",
-    "__9": "",
-    "__10": "",
-    "__11": "",
-    "__12": "",
-    "__13": "",
-    "__14": "",
-    "__15": "",
-    "__16": "",
-    "__17": "",
-    "__18": "",
-    "__19": "",
-    "__20": "",
-    "__21": "",
-    "__22": "",
-    "__23": ""
+    "Photo": "placeholder.webp",
+    "Team": "Event Coordination",
+    "Leader": {
+      "name": "Barry",
+      "photo": "https://cdn.discordapp.com/avatars/350809719012720663/160f338c8bc02b36e8615859034d04f5.png?size=1024"
+    },
+    "Staff": {
+      "0": {
+        "Name": "Alicia Von Tost",
+        "sub": "",
+        "photo": ""
+      },
+      "1": {
+        "Name": "CelesitalRose",
+        "sub": "",
+        "photo": ""
+      },
+      "2": {
+        "Name": "Chris_Conni",
+        "sub": "",
+        "photo": ""
+      },
+      "3": {
+        "Name": "Euky",
+        "sub": "",
+        "photo": ""
+      },
+      "4": {
+        "Name": "IBETA7",
+        "sub": "",
+        "photo": ""
+      },
+      "5": {
+        "Name": "RubyStorm",
+        "sub": "",
+        "photo": ""
+      },
+      "6": {
+        "Name": "DarkNinMagic",
+        "sub": "",
+        "photo": ""
+      },
+      "7": {
+        "Name": "Spades",
+        "sub": "",
+        "photo": ""
+      },
+      "8": {
+        "Name": "Xter7856",
+        "sub": "",
+        "photo": ""
+      }
+    }
   },
   {
-    "Team": "Events Admin",
-    "Leader": "GingerTea",
-    "": "",
-    "__1": "",
-    "__2": "",
-    "__3": "",
-    "__4": "",
-    "__5": "",
-    "__6": "",
-    "__7": "",
-    "__8": "",
-    "__9": "",
-    "__10": "",
-    "__11": "",
-    "__12": "",
-    "__13": "",
-    "__14": "",
-    "__15": "",
-    "__16": "",
-    "__17": "",
-    "__18": "",
-    "__19": "",
-    "__20": "",
-    "__21": "",
-    "__22": "",
-    "__23": ""
-  },
-  {
-    "Team": "Volunteers",
+    "Photo": "placeholder.webp",
+    "Team": "Events Team",
     "Leader": "Shadozw",
-    "": "!!Vela Zhezzaia!!",
-    "__1": "Ace Gamer",
-    "__2": "Barry",
-    "__3": "BlueFox",
-    "__4": "DaEpicZach",
-    "__5": "DarkNinMagic",
-    "__6": "kero!",
-    "__7": "Little Poe",
-    "__8": "Mageyboi",
-    "__9": "MarshalClarke",
-    "__10": "Matty MT",
-    "__11": "MissNerdyCanty",
-    "__12": "MYHT1C",
-    "__13": "MysticalCyan",
-    "__14": "RainRuby",
-    "__15": "ReadyPlayerEmma",
-    "__16": "Salt Breaker",
-    "__17": "Skooj",
-    "__18": "SnowFoxHound",
-    "__19": "StarNovaKitty",
-    "__20": "TBG",
-    "__21": "Wolvegirl",
-    "__22": "Zero8473",
-    "__23": "° Hydro-SamaVR °"
+    "Staff": {
+      "Leader": {
+        "Name": "Shadozw",
+        "sub": "",
+        "photo": ""
+      },
+      "0": {
+        "Name": "!!Vela Zhezzaia!!",
+        "sub": "",
+        "photo": "Vela Zhezzaia.png"
+      },
+      "1": {
+        "Name": "Ace Gamer",
+        "sub": "",
+        "photo": "AceGamer.png"
+      },
+      "2": {
+        "Name": "BlueFox",
+        "sub": "",
+        "photo": ""
+      },
+      "3": {
+        "Name": "DaEpicZach",
+        "sub": "",
+        "photo": ""
+      },
+      "4": {
+        "Name": "DaEpicZach",
+        "sub": "",
+        "photo": ""
+      },
+      "5": {
+        "Name": "DarkNinMagic",
+        "sub": "",
+        "photo": ""
+      },
+      "6": {
+        "Name": "kero!",
+        "sub": "",
+        "photo": ""
+      },
+      "7": {
+        "Name": "Mageyboi",
+        "sub": "",
+        "photo": "https://media.discordapp.net/attachments/886246995763802212/1044647716766089216/VRChat_1920x1080_2022-06-29_01-33-08.512.png?width=1618&height=910"
+      },
+      "8": {
+        "Name": "MarshalClarke",
+        "sub": "",
+        "photo": ""
+      },
+      "9": {
+        "Name": "Matty MT",
+        "sub": "",
+        "photo": ""
+      },
+      "10": {
+        "Name": "MissNerdyCanty",
+        "sub": "",
+        "photo": ""
+      },
+      "11": {
+        "Name": "MissNerdyCanty",
+        "sub": "",
+        "photo": ""
+      },
+      "12": {
+        "Name": "MYHT1C",
+        "sub": "",
+        "photo": "https://media.discordapp.net/attachments/886774165636517918/1044724738041315468/VRChat_2022-11-22_20-05-02.974_2160x3840.png?width=380&height=676"
+      },
+      "13": {
+        "Name": "MysticalCyan",
+        "sub": "",
+        "photo": ""
+      },
+      "14": {
+        "Name": "RainRuby",
+        "sub": "",
+        "photo": ""
+      },
+      "15": {
+        "Name": "ReadyPlayerEmma",
+        "sub": "",
+        "photo": ""
+      },
+      "16": {
+        "Name": "Salt Breaker",
+        "sub": "",
+        "photo": ""
+      },
+      "17": {
+        "Name": "Skooj",
+        "sub": "",
+        "photo": ""
+      },
+      "18": {
+        "Name": "SnowFoxHound",
+        "sub": "",
+        "photo": ""
+      },
+      "19": {
+        "Name": "StarNovaKitty",
+        "sub": "",
+        "photo": ""
+      },
+      "20": {
+        "Name": "TBG",
+        "sub": "",
+        "photo": ""
+      },
+      "21": {
+        "Name": "Wolvegirl",
+        "sub": "",
+        "photo": ""
+      },
+      "22": {
+        "Name": "Zero8473",
+        "sub": "",
+        "photo": ""
+      }
+    }
   }
 ]
