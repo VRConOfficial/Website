@@ -46,11 +46,10 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 #### Step 0: in `store.js`, set `debugValue: false`
 #### Step 1: run `npm run build -- --mode=production` (mode=production will set the .env to reference the .env.production)
 #### Step 2: Copy `index.html` contents to `404.html`
-#### step 3: copy `CNAME` to `dist` folder
 
-#### Step 4: run `git add dist` and `git commit -m'Your Message Here'`
-#### Step 5: run `git subtree push --prefix dist origin Live`
+#### Step 3: run `git add dist` and `git commit -m'Your Message Here'`
+#### Step 4: run `git subtree push --prefix dist origin Live`
 
-#### Step 6: in in `store.js`, set `debugValue: process.env.VUE_APP_DEBUG,`
+#### Step 5: in in `store.js`, set `debugValue: process.env.VUE_APP_DEBUG,`
 
 Details can be found [here](https://learnvue.co/tutorials/deploy-vue-to-github-pages)
