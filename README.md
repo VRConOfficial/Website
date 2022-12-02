@@ -4,7 +4,7 @@ In preparation for VRCon 2022!
 
 <div align="center">
 	<img
-		src="src/assets/images/connieposter_remastered.png"
+		src="src/assets/images/connieposter_remastered.webp"
 		alt="The logo of VRCon, a stylized circle with VRCon's mascott, Connie, underneath it."
 		width=65%
 	/>
