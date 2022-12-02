@@ -1,0 +1,63 @@
+body {
+    background-color: #2c2c2d;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.1rem;
+}
+
+#wrapper {
+    margin: 100px;
+    text-align: center;
+    color: white;
+}
+
+#modal {
+    z-index: 100;
+    height: 500px;
+    width: 400px;
+    text-align: center;
+}
+
+button,
+input {
+    padding: 8px;
+    font-size: 1.1rem;
+    border: 1px solid white;
+    margin: 4px;
+}
+
+button,
+.button {
+    position: relative;
+    background-color: purple;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 3px;
+    border: 1px solid #cccccc;
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    cursor: pointer;
+    margin: 0 auto;
+    width: 200px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+button.actionCancel,
+.button.actionCancel {
+    background-color: #ddd;
+    color: purple;
+}
+
+button.actionDone,
+.button.actionDone {
+    display: none;
+}
+
+button input[type=file],
+.button input[type=file] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
