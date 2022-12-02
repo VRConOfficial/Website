@@ -220,7 +220,7 @@ export default {
 						sub: "Image Credit: KisameReason",
 					},
 					content:
-						"This marks the very begginning of our Journey of VRCon, wher we hosted 3 days of community events in response to the Covid-19 pandemic. ",
+						"This marks the very beginning of our journey of VRCon, where we hosted three days of community events in response to the Covid-19 pandemic. ",
 					worldsInfo: {
 						groupName: "VRCon 2020",
 						worlds: {
@@ -274,7 +274,7 @@ export default {
 						sub: "Image Credit: VRCon Media Team",
 					},
 					content:
-						"What's Easter without an Easter Egg Hunt? For this months event, we got with 5 different world creators to hide eggs around their worlds!",
+						"What's Easter without an Easter Egg Hunt? For this month's event, we went with 5 different world creators to hide eggs around their worlds!",
 				},
 				//VRCon Mini Golf 2021
 				{
@@ -298,7 +298,7 @@ export default {
 						sub: "Image Credit: SladeDaCat",
 					},
 					content:
-						"With the Battle Discs world now out, VRCon put on a spectacular contest with the community",
+						"With the Battle Discs world now out, VRCon put on a spectacular contest with the community.",
 				},
 				//VRCon 2021
 				{
@@ -310,7 +310,7 @@ export default {
 						sub: "Image Credit: SenpaiVR",
 					},
 					content:
-						"The long awaited VRCon 2021 convention finally arrived. This year, the team did their best to make it even better than the last one, with a bigger spotlight for booths, more events, and an extra day for the visitors to experience.",
+						"The long awaited VRCon 2021 convention has finally arrived. This year, the team did their best to make it even better than the last one, with a bigger spotlight for booths, more events, and an extra day for the visitors to experience.",
 					worldsInfo: {
 						groupName: "VRCon 2021",
 						worlds: {
@@ -347,7 +347,7 @@ export default {
 						sub: "Image Credit: Tero",
 					},
 					content:
-						"The the spooky month of October, VRCon held the event 'Scaretacular' which let the community put their worlds and avatars on display to show of their creations.",
+						"In the spooky month of October, VRCon held the event 'Scaretacular', which let the community put their worlds and avatars on display to show off their creations.",
 				},
 				//VRCon Easter 2022
 				{
@@ -359,7 +359,7 @@ export default {
 						sub: "Image Credit: SladeDaCat",
 					},
 					content:
-						"Our second anual VRCon Easter Egg hunt was double then the last year. Keeping with 5 eggs per world and 6 worlds to visit, VRCon gave away cash prizes to 5 random winners who were able to collect them all.",
+						"Our second annual VRCon Easter Egg hunt was double than the last year. Keeping with 5 eggs per world and 6 worlds to visit, VRCon gave away cash prizes to 5 random winners who were able to collect them all.",
 				},
 				//VRCon Pool 2022
 				{
@@ -371,7 +371,7 @@ export default {
 						sub: "Image Credit: SladeDaCat",
 					},
 					content:
-						"Our final Mini event for 2022 goes to our Biliards tournament where teams of two would compete over 2 days for the championship.",
+						"Our final Mini-Event for 2022 goes to our Billiards tournament where teams of two compete over 2 days for the championship.",
 				},
 				//VRCon 2022
 				// {

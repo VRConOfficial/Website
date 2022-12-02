@@ -95,13 +95,13 @@ export default {
 				image: "placeholder-1.jpg",
 				title: "What is VRCON?",
 				content:
-					"VRCon is an annual event created to celebrate grassroots communities and creators of virtual reality. Here, people may show off the community and content they create such as worlds, avatars, experiences, games, and online entertainment. The entire event can be enjoyed from the comfort and safety of home, providing everyone an opportunity to sprout new friendships over similar interests.",
+					"VRCon is an annual event created to celebrate grassroots communities and creators of virtual reality. Here, people may show off the community and content they create, such as worlds, avatars, experiences, games, and online entertainment. The entire event can be enjoyed from the comfort and safety of home, providing everyone an opportunity to sprout new friendships over similar interests.",
 			},
 			{
 				image: "placeholder-2.png",
-				title: "Why VRCon?",
+				title: "Why VR?",
 				content:
-					"VRCon was origionally intended to allow a convention experience in the comfort and saftey of your own home while also allowing a spotlight for communities to share themselves in vr. Anthing ranging from Avatars, experiences, worlds and games, and even for entertainers on the platform.",
+					"VRCon was originally intended to allow a convention experience in the comfort and safety of your own home while also allowing a spotlight for communities to share themselves in vr. Anything ranging from Avatars, experiences, worlds and games, and even for entertainers on the platform.",
 			},
 		],
 		linkList: [
