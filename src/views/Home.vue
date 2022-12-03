@@ -18,7 +18,7 @@
 						</v-col>
 						<v-col cols="12" sm="auto" class="px-0">
 							<div class="medieval my-6 white--text text-h2 text-sm-h2 text-center text-sm-left">
-								Here'ye Here'ye
+								Hear'ye Hear'ye
 							</div>
 							<div class="ma-6 text-h4">
 								VRCon 2022 <br />

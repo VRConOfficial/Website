@@ -3,19 +3,19 @@ import VueRouter from 'vue-router'
 
 import HomeView from '@/views/Home.vue'
 import HistoryView from '@/views/History.vue'
-//import StaffView from '@/views/staff/Staff.vue'
+import StaffView from '@/views/staff/Staff.vue'
 import StaffViewRedirect from '@/views/staff/StaffRedirect.vue'
 import QuestionsView from '@/views/Questions.vue'
 import EventsView from '@/views/Events.vue'
 import GuideView from '@/views/Guide.vue'
+import { store } from '@/assets/Data/GlobalVars/store.js'
 
-// import DirectorsStaffView from '@/views/staff/StaffDirectors.vue'
-// import EventsStaffView from '@/views/staff/StaffEvents.vue'
-// import ProductionStaffView from '@/views/staff/StaffProduction.vue'
-// import MarketingStaffView from '@/views/staff/StaffMarketing.vue'
+import DirectorsStaffView from '@/views/staff/StaffDirectors.vue'
+import EventsStaffView from '@/views/staff/StaffEvents.vue'
+import ProductionStaffView from '@/views/staff/StaffProduction.vue'
+import MarketingStaffView from '@/views/staff/StaffMarketing.vue'
 
 Vue.use(VueRouter)
-
 const routes = [
 	{
 		path: '*',
@@ -46,50 +46,29 @@ const routes = [
 		name: 'questions',
 		component: QuestionsView
 	},
-	// {
-	// 	path: '/staff',
-	// 	name: 'staff',
-	// 	component: StaffView,
-	// 	children: [
-	// 		{
-	// 			path: 'directors',
-	// 			component: DirectorsStaffView,
-	// 		},
-	// 		{
-	// 			path: 'events-team',
-	// 			component: EventsStaffView,
-	// 		},
-	// 		{
-	// 			path: 'production-team',
-	// 			component: ProductionStaffView,
-	// 		},
-	// 		{
-	// 			path: 'marketing-team',
-	// 			component: MarketingStaffView,
-	// 		},
-	// 	],
-	// }
 	{
 		path: '/staff',
 		name: 'staff',
-		component: StaffViewRedirect,
+		component: store.debugValue === false ? StaffViewRedirect : StaffView,
+		children: [
+			{
+				path: 'directors',
+				component: store.debugValue === false ? StaffViewRedirect : DirectorsStaffView,
+			},
+			{
+				path: 'events-team',
+				component: store.debugValue === false ? StaffViewRedirect : EventsStaffView,
+			},
+			{
+				path: 'production-team',
+				component: store.debugValue === false ? StaffViewRedirect : ProductionStaffView,
+			},
+			{
+				path: 'marketing-team',
+				component: store.debugValue === false ? StaffViewRedirect : MarketingStaffView,
+			},
+		],
 	},
-	{
-		path: '/staff/directors',
-		component: StaffViewRedirect,
-	},
-	{
-		path: '/staff/events-team',
-		component: StaffViewRedirect,
-	},
-	{
-		path: '/staff/production-team',
-		component: StaffViewRedirect,
-	},
-	{
-		path: '/staff/marketing-team',
-		component: StaffViewRedirect,
-	}
 ]
 
 const router = new VueRouter({
