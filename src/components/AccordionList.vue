@@ -49,7 +49,7 @@
 								<v-col
 									cols="12"
 									v-if="item.item.content"
-									class="py-sm-4 text-center"
+									class="py-sm-4 text-center pre-wrap"
 								>
 									{{ item.item.content }}
 								</v-col>
@@ -63,6 +63,9 @@
 </template>
 
 <style scoped>
+.pre-wrap {
+	white-space: pre-wrap;
+}
 </style>
 
 <script>
@@ -71,26 +74,6 @@ export default {
 	components: {},
 	props: ["items", "title"],
 	data: () => ({}),
-	methods: {
-		parseTeamInfo(file) {
-			var json = require("@/assets/Data/" + file + ".json");
-			const result = JSON.stringify(json);
-			var obj = JSON.parse(result);
-
-			return obj;
-		},
-
-		getNames(arr) {
-			var array = [];
-			var j = 0;
-			for (var i = 1; i < Object.keys(arr).length; i++) {
-				if (Object.values(arr)[i] != "") {
-					array[j] = Object.values(arr)[i];
-					j++;
-				}
-			}
-			return array;
-		},
-	},
+	methods: {},
 };
 </script>

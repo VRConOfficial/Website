@@ -1,20 +1,6 @@
 <template>
 	<v-container class="white--text pa-8">
 		<v-row justify="center" align="center">
-			<div
-				v-if="data.item.image2"
-				:style="{
-					'background-image':
-						'url(' + require('@/assets/images/tiles/' + data.item.image2) + ')',
-				}"
-				class="banner-card"
-			>
-				<div>
-					<p class="text-h4">
-						{{ data.item.title }}
-					</p>
-				</div>
-			</div>
 			<v-col class="text-center py-4" cols="12" v-if="data.item.content">
 				{{ data.item.content }}
 			</v-col>
@@ -94,13 +80,7 @@
 					:key="index"
 					class="pa-8 px-16"
 				>
-					<v-img
-						v-if="team.Photo"
-						:src="require('@/assets/images/' + team.Photo)"
-						height="200px"
-					>
-					</v-img>
-					<v-row justify="center" align="center" class="pa-4">
+					<v-row justify="center" align="center" class="pa-4" v-if="team.Leader.name">
 						<v-col cols="auto" v-if="team.Leader.photo">
 							<v-img
 								:src="
@@ -137,13 +117,13 @@
 													(isValidHTML(staff.photo)
 														? staff.photo
 														: staff.photo == ''
-														? require('@/assets/images/placeholder.webp')
+														? require('@/assets/images/tiles/default-profile-large.webp')
 														: require('@/assets/images/Staff/' + staff.photo)) +
 													')',
 											}"
 											class="tile-image"
 										>
-											<v-card-text class="text-h6 text-truncate black--text">
+											<v-card-text class="text-h6 text-truncate white--text">
 												{{ staff.Name }}
 											</v-card-text>
 										</div>
@@ -181,25 +161,6 @@
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-}
-.banner-card {
-	width: 100%;
-	height: 10em;
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-}
-.banner-card div {
-	display: flex;
-	width: 100%;
-	height: 100%;
-	align-content: center;
-	justify-content: center;
-}
-.banner-card div p {
-	text-align: center;
-	margin: 0;
-	align-self: center;
 }
 </style>
 
