@@ -12,13 +12,13 @@
 				<h1 class="white--text text-center text-h3">Meet Our Team!</h1>
 				<v-container class="my-4">
 					<v-row justify="center" align="center">
-						<v-col cols="3" v-for="item in directory" :key="item.title">
+						<v-col cols="10" sm="5" md="3" v-for="item in directory" :key="item.title">
 							<v-btn color="white" outlined block :to="item.path">{{ item.title }}</v-btn>
 						</v-col>
 					</v-row>
 				</v-container>
 			</div>
-			<router-view></router-view>
+			<router-view/>
 		</ColumnLayout>
 	</div>
 </template>

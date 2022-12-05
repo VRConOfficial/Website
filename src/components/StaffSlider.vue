@@ -1,6 +1,6 @@
 <template>
-	<v-container class="white--text pa-8">
-		<v-row justify="center" align="center">
+	<v-container class="white--text px-0 pa-md-0">
+		<v-row justify="center" align="center" class="px-0">
 			<v-col class="text-center py-4" cols="12" v-if="data.item.content">
 				{{ data.item.content }}
 			</v-col>
@@ -8,13 +8,7 @@
 				<v-row justify="center" align="center">
 					<v-col cols="auto" v-if="data.item.photo">
 						<v-img
-							:src="
-								isValidHTML(data.item.photo)
-									? data.item.photo
-									: data.item.photo == ''
-									? require('@/assets/images/tiles/default-profile.webp')
-									: require('@/assets/images/Staff/' + data.item.photo)
-							"
+							:src="getImage(data.item.photo, 'normal')"
 							max-width="100px"
 							max-height="100px"
 						/>
@@ -32,8 +26,8 @@
 					</v-col>
 				</v-row>
 			</v-col>
-			<v-card-actions style="width: 100%" class="darkened my-1">
-				<v-row class="pa-4" justify="center" align="center">
+			<v-card-actions style="width: 100%" class="darkened my-1 px-0">
+				<v-row class="py-4" justify="center" align="center" no-gutters>
 					<v-col cols="2">
 						<v-btn
 							block
@@ -46,13 +40,13 @@
 							<v-icon>mdi-chevron-left</v-icon>
 						</v-btn>
 					</v-col>
-					<v-col cols="8">
+					<v-col cols="6" sm="7">
 						<v-window v-model="onboarding">
 							<v-window-item
 								v-for="(team, index) in data.item.teamInfo"
 								:key="index"
 							>
-								<v-row justify="center" align="center">
+								<v-row justify="center" align="center" no-gutters>
 									<v-col cols="10" class="text-center">
 										<v-icon class="primary--text">{{ team.Team }}</v-icon>
 									</v-col>
@@ -78,18 +72,17 @@
 				<v-window-item
 					v-for="(team, index) in data.item.teamInfo"
 					:key="index"
-					class="pa-8 px-16"
+					class="px-8 px-sm-4 py-8 px-lg-8"
 				>
-					<v-row justify="center" align="center" class="pa-4" v-if="team.Leader.name">
+					<v-row
+						justify="center"
+						align="center"
+						class="pa-4"
+						v-if="team.Leader.name"
+					>
 						<v-col cols="auto" v-if="team.Leader.photo">
 							<v-img
-								:src="
-									isValidHTML(team.Leader.photo)
-										? team.Leader.photo
-										: team.Leader.photo == ''
-										? require('@/assets/images/tiles/default-profile.webp')
-										: require('@/assets/images/Staff/' + team.Leader.photo)
-								"
+								:src="getImage(team.Leader.photo, 'normal')"
 								max-width="100px"
 								max-height="100px"
 							/>
@@ -109,33 +102,9 @@
 							>
 								<v-card color="transparent" class="darkened white--text">
 									<div style="display: flex; flex-direction: row">
-										<div
-											v-if="screenWidth <= 1263"
-											:style="{
-												'background-image':
-													'url(' +
-													(isValidHTML(staff.photo)
-														? staff.photo
-														: staff.photo == ''
-														? require('@/assets/images/tiles/default-profile-large.webp')
-														: require('@/assets/images/Staff/' + staff.photo)) +
-													')',
-											}"
-											class="tile-image"
-										>
-											<v-card-text class="text-h6 text-truncate white--text">
-												{{ staff.Name }}
-											</v-card-text>
-										</div>
-										<div v-else style="display: flex; flex-direction: row">
+										<div style="display: flex; flex-direction: row">
 											<v-img
-												:src="
-													isValidHTML(staff.photo)
-														? staff.photo
-														: staff.photo == ''
-														? require('@/assets/images/tiles/default-profile.webp')
-														: require('@/assets/images/Staff/' + staff.photo)
-												"
+												:src="getImage(staff.photo, 'normal')"
 												width="100px"
 												height="100px"
 											/>
@@ -169,67 +138,58 @@ export default {
 	name: "StaffSlider",
 	components: {},
 	props: ["data", "title"],
-	mounted() {
-		window.addEventListener("resize", () => {
-			this.screenWidth = window.innerWidth;
-		});
-	},
+	mounted() {},
 	data: () => ({
-		screenWidth: window.innerWidth,
 		onboarding: 0,
 	}),
-	// watch: {
-	// 	screenWidth: function (val, oldVal) {
-	// 		console.log("Screen Size changed from " + oldVal + " to " + val);
-	// 	},
-	// },
 	methods: {
-		parseTeamInfo(file) {
-			var json = require("@/assets/Data/" + file + ".json");
-			const result = JSON.stringify(json);
-			var obj = JSON.parse(result);
+		// parseTeamInfo(file) {
+		// 	var json = require("@/assets/Data/" + file + ".json");
+		// 	const result = JSON.stringify(json);
+		// 	var obj = JSON.parse(result);
 
-			return obj;
-		},
-
-		getNames(arr) {
-			var array = [];
-			var j = 0;
-			for (var i = 1; i < Object.keys(arr).length; i++) {
-				var key = Object.keys(arr)[i];
-				if (
-					Object.values(arr)[i] != "" &&
-					key != "Photo" &&
-					key != "Team" &&
-					key != "Leader"
-				) {
-					array[j] = Object.values(arr)[i];
-					j++;
+		// 	return obj;
+		// },
+		// getNames(arr) {
+		// 	var array = [];
+		// 	var j = 0;
+		// 	for (var i = 1; i < Object.keys(arr).length; i++) {
+		// 		var key = Object.keys(arr)[i];
+		// 		if (
+		// 			Object.values(arr)[i] != "" &&
+		// 			key != "Photo" &&
+		// 			key != "Team" &&
+		// 			key != "Leader"
+		// 		) {
+		// 			array[j] = Object.values(arr)[i];
+		// 			j++;
+		// 		}
+		// 	}
+		// 	return array;
+		// },
+		getImage(image) {
+			if (image) {
+				try {
+					return require("@/assets/images/Staff/" + image);
+				} catch (e) {
+					try {
+						let url = new URL(image);
+						if (url.protocol === "http:" || url.protocol === "https:") {
+							return image;
+						}
+					} catch (e2) {
+						return require("@/assets/images/Staff/" + image);
+					}
 				}
 			}
-			return array;
+			return require("@/assets/images/tiles/default-profile.webp");
 		},
-
-		isValidHTML(string) {
-			let url;
-			// console.log("trying: " + string);
-			try {
-				url = new URL(string);
-			} catch (_) {
-				// console.log("url is invalid");
-				return false;
-			}
-			// console.log("url is valid");
-			return url.protocol === "http:" || url.protocol === "https:";
-		},
-
 		next(arr) {
 			this.onboarding =
 				this.onboarding + 1 === arr.length
 					? this.onboarding
 					: this.onboarding + 1;
 		},
-
 		prev(arr) {
 			this.onboarding =
 				this.onboarding - 1 < 0 ? this.arr.length : this.onboarding - 1;
