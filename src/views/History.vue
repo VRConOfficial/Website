@@ -8,12 +8,7 @@
 		</FullBack>
 		<ColumnLayout class="py-16">
 			<div class="white--text">
-				<v-dialog
-					v-model="dialog"
-					fullscreen
-					hide-overlay
-					transition="dialog-bottom-transition"
-				>
+				<v-dialog v-model="dialog" fullscreen hide-overlay transition="dialog-bottom-transition">
 					<v-card dark>
 						<v-toolbar dark color="primary">
 							<v-btn icon dark @click="(dialog = false), (worlds = null)">
@@ -22,39 +17,16 @@
 						</v-toolbar>
 						<transition name="slide-fade">
 							<v-card-text v-if="worlds">
-								<v-card-title
-									primary-title
-									style="justify-content: center; align-items: center"
-								>
+								<v-card-title primary-title style="justify-content: center; align-items: center">
 									{{ worlds.groupName }}
 								</v-card-title>
 								<v-card-text>
 									<v-container grid-list-lg>
 										<v-row no-gutters>
-											<v-col
-												v-for="(world, index) in worlds.worlds"
-												:key="index"
-												cols="12"
-												sm="4"
-											>
+											<v-col v-for="(world, index) in worlds.worlds" :key="index" cols="12" sm="4">
 												<v-card class="ma-4 pa-4" flat>
-													<v-img
-														:src="
-															require('@/assets/images/worlds/' + world.image)
-														"
-														style="
-															display: flex;
-															justify-content: end;
-															align-items: end;
-														"
-													>
-														<v-btn
-															color="primary"
-															:href="world.link"
-															target="_blank"
-															class="ma-2"
-															>{{ world.name }}</v-btn
-														>
+													<v-img :src="require('@/assets/images/worlds/' + world.image)" style=" display: flex; justify-content: end; align-items: end;">
+														<v-btn color="primary" :href="world.link" target="_blank" class="ma-2">{{ world.name }}</v-btn>
 													</v-img>
 												</v-card>
 											</v-col>
@@ -63,62 +35,19 @@
 								</v-card-text>
 							</v-card-text>
 						</transition>
-						<div
-							v-if="worlds == null"
-							style="
-								min-width: 100%;
-								min-height: 100%;
-								display: flex;
-								align-items: center;
-								justify-content: center;
-								padding-top: 11%;
-							"
-						>
-							<v-progress-circular
-								indeterminate
-								color="primary"
-								:size="70"
-								:width="7"
-							></v-progress-circular>
+						<div v-if="worlds == null" style=" min-width: 100%; min-height: 100%; display: flex; align-items: center; justify-content: center; padding-top: 11%; ">
+							<v-progress-circular indeterminate color="primary" :size="70" :width="7"></v-progress-circular>
 						</div>
 					</v-card>
 				</v-dialog>
 				<v-timeline align-top :dense="$vuetify.breakpoint.smAndDown">
-					<v-timeline-item
-						v-for="(item, i) in items.timelineItems"
-						:key="i"
-						fill-dot
-						:icon="item.icon"
-						:color="item.color"
-					>
+					<v-timeline-item v-for="(item, i) in items.timelineItems" :key="i" fill-dot :icon="item.icon" :color="item.color">
 						<template v-slot:opposite>
 							<v-card style="width: 80; border-radius: 25px 0">
-								<v-img
-									:src="
-										item.image != ''
-											? isValidHttpUrl(item.image)
-												? item.image
-												: require('@/assets/images/' + item.image.image)
-											: require('@/assets/images/placeholder.webp')
-									"
-									dark
-									max-height="14em"
-								/>
-
-								<v-card
-									v-if="item.image.sub != '' && item.image != ''"
-									height="2em"
-									style="
-										display: flex;
-										align-items: center;
-										justify-content: center;
-									"
-								>
+								<v-img :src="item.image != '' ? isValidHttpUrl(item.image) ? item.image : require('@/assets/images/' + item.image.image) : require('@/assets/images/placeholder.webp')" dark max-height="14em" />
+								<v-card v-if="item.image.sub != '' && item.image != ''" height="2em" style=" display: flex; align-items: center; justify-content: center; ">
 									<v-card-text class="pa-0" style="width: fit-content">
-										<p
-											class="ma-0"
-											style="width: fit-content text-align: center"
-										>
+										<p class="ma-0" style="width: fit-content text-align: center">
 											{{ item.image.sub }}
 										</p>
 									</v-card-text>
@@ -129,28 +58,13 @@
 							<v-card-title class="text-h6">
 								{{ item.dates }}
 							</v-card-title>
-							<v-card-text
-								class="text--white"
-								style="
-									background-color: rgba(0, 0, 0, 0) !important;
-									backdrop-filter: brightness(70%) saturate(130%);
-								"
-							>
+							<v-card-text class="text--white" style=" background-color: rgba(0, 0, 0, 0) !important; backdrop-filter: brightness(70%) saturate(130%); ">
 								<p class="text-h6 ma-3">
 									{{ item.content }}
 								</p>
 								<v-container>
-									<v-btn
-										color="primary"
-										dark
-										v-if="item.worldsInfo"
-										@click="ShowWorlds(item.worldsInfo)"
-										style="height: fit-content; word-wrap: break-word"
-									>
-										<p
-											class="ma-1 pa-0"
-											style="width: 100%; word-wrap: break-word"
-										>
+									<v-btn color="primary" dark v-if="item.worldsInfo" @click="ShowWorlds(item.worldsInfo)" style="height: fit-content; word-wrap: break-word">
+										<p class="ma-1 pa-0" style="width: 100%; word-wrap: break-word">
 											Check out<br />our Worlds!
 										</p>
 									</v-btn>
@@ -169,9 +83,15 @@
 .fade-leave-active {
 	transition: opacity 0.5s;
 }
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+
+.fade-enter,
+.fade-leave-to
+
+/* .fade-leave-active below version 2.1.8 */
+	{
 	opacity: 0;
 }
+
 .slide-fade-enter-active {
 	transition: all 0.3s ease-out;
 }
@@ -185,6 +105,7 @@
 	transform: translateX(20px);
 	opacity: 0;
 }
+
 .rounded-card {
 	border-radius: 5em;
 }
@@ -198,7 +119,7 @@ import SectionBanner from "@/components/SectionBanner.vue";
 export default {
 	mounted() {
 		document.title = "VRCon 2022 | Our History";
-		window.scrollTo({top: 0, behavior: 'instant'});
+		window.scrollTo({ top: 0, behavior: 'instant' });
 	},
 	name: "HistoryView",
 	components: {

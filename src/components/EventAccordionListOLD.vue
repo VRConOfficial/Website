@@ -4,24 +4,11 @@
 			<v-toolbar-title>{{ title }}</v-toolbar-title>
 		</v-toolbar>
 		<v-list color="transparent">
-			<v-list-group
-				v-for="item in items"
-				:key="item.title"
-				v-model="item.active"
-				:prepend-icon="item.action"
-				no-action
-				:class="datePassedStyle(item)"
-			>
+			<v-list-group v-for="item in items" :key="item.title" v-model="item.active" :prepend-icon="item.action" no-action :class="datePassedStyle(item)">
 				<template v-slot:activator>
 					<v-list-item-content>
-						<v-list-item-title
-							v-if="datePassedStyle(item) == 'date-passed'"
-							v-text="'(Event Time Passed) ' + item.title"
-						></v-list-item-title>
-						<v-list-item-title
-							v-else-if="item.date"
-							v-text="formatDate(item.date) + ' | ' + item.title"
-						></v-list-item-title>
+						<v-list-item-title v-if="datePassedStyle(item) == 'date-passed'" v-text="'(Event Time Passed) ' + item.title"></v-list-item-title>
+						<v-list-item-title v-else-if="item.date" v-text="formatDate(item.date) + ' | ' + item.title"></v-list-item-title>
 						<v-list-item-title v-else v-text="item.title"></v-list-item-title>
 					</v-list-item-content>
 				</template>
@@ -30,17 +17,13 @@
 						<v-container>
 							<v-row justify="center" align="center">
 								<v-col cols="12" sm="4" md="4" lg="4" v-if="item.item.image">
-									<v-img
-										:src="require('@/assets/images/tiles/' + item.item.image)"
-									/>
+									<v-img :src="require('@/assets/images/tiles/' + item.item.image)" />
 								</v-col>
 								<v-col cols="12" sm="8" md="7" lg="6" v-if="item.item.title">
 									<p class="text-h4">{{ item.item.title }}</p>
 								</v-col>
 								<v-col cols="12" v-if="item.item.content">
-									<p 
-									class="py-sm-4" 
-									style = "white-space:pre-wrap;">
+									<p class="py-sm-4" style="white-space:pre-wrap;">
 										{{ item.item.content }}
 									</p>
 								</v-col>
@@ -57,6 +40,7 @@
 .accordion {
 	backdrop-filter: brightness(80%) saturate(120%);
 }
+
 .date-passed {
 	filter: grayscale(100%);
 }

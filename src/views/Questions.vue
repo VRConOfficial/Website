@@ -11,7 +11,9 @@
 	</div>
 </template>
 
-<style scoped></style>
+<style scoped>
+
+</style>
 
 <script>
 import ColumnLayout from "@/components/ColumnLayout.vue";
@@ -22,7 +24,7 @@ import FullBack from "@/components/FullBack.vue";
 export default {
 	mounted() {
 		document.title = "VRCon 2022 | Questions";
-		window.scrollTo({top: 0, behavior: 'instant'});
+		window.scrollTo({ top: 0, behavior: 'instant' });
 	},
 	name: "QuestionsView",
 	components: {

@@ -24,6 +24,7 @@
 </template>
 
 <style scoped>
+
 </style>
 
 <script>
@@ -34,7 +35,7 @@ import SectionBanner from "@/components/SectionBanner.vue";
 export default {
 	mounted() {
 		document.title = "VRCon 2022 | Under Construction";
-		window.scrollTo({top: 0, behavior: 'instant'});
+		window.scrollTo({ top: 0, behavior: 'instant' });
 	},
 	name: "StaffViewRedirect",
 	components: {

@@ -38,10 +38,7 @@ export default {
 		<NavHeader @navDrawerOpen="openNavDrawer" />
 		<NavDrawer :drawer="drawerOpen" @navDrawerClose="closeNavDrawer" />
 		<v-main>
-			<v-img
-				class="background-image"
-				src="@/assets/images/background.png"
-			></v-img>
+			<v-img class="background-image" src="@/assets/images/background.png"></v-img>
 			<router-view />
 		</v-main>
 		<MainFooter />
@@ -57,6 +54,7 @@ export default {
 	width: 100vw;
 	height: 120vh;
 }
+
 .darkened {
 	backdrop-filter: brightness(80%) saturate(120%);
 }

@@ -4,20 +4,9 @@
 			<div>
 				<v-row class=" justify-center">
 					<v-col cols="6" sm="4" md="4" lg="2" class="ma-4">
-						<v-img
-							src="../assets/images/logo.svg"
-							width="400px"
-							class="my-sm-4"
-						></v-img>
+						<v-img src="../assets/images/logo.svg" width="400px" class="my-sm-4"></v-img>
 					</v-col>
-					<v-col
-						cols="12"
-						sm="5"
-						md="4"
-						lg="3"
-						v-for="item in items"
-						:key="item.title"
-					>
+					<v-col cols="12" sm="5" md="4" lg="3" v-for="item in items" :key="item.title">
 						<v-list color="transparent">
 							<v-list-item>
 								<v-list-item-content>
@@ -25,15 +14,9 @@
 								</v-list-item-content>
 							</v-list-item>
 							<v-divider></v-divider>
-							<v-list-item
-								v-for="subItem in item.subItems"
-								:key="subItem.title"
-								:to="subItem.destination"
-							>
+							<v-list-item v-for="subItem in item.subItems" :key="subItem.title" :to="subItem.destination">
 								<v-list-item-avatar v-if="subItem.avatar">
-									<v-img
-										:src="require('@/assets/images/tiles/' + subItem.avatar)"
-									/>
+									<v-img :src="require('@/assets/images/tiles/' + subItem.avatar)" />
 								</v-list-item-avatar>
 								<v-list-item-icon v-if="subItem.icon">
 									<v-icon v-text="subItem.icon"></v-icon>
@@ -52,24 +35,9 @@
 					<v-col cols="12" class="py-2">
 						Thank you everyone who helped make VRCon a reality!
 					</v-col>
-					<v-col
-						cols="12"
-						style="display: flex; flex-direction: row; justify-content: center"
-						class="py-2"
-					>
-						<div
-							v-for="icon in icons"
-							:key="icon.icon"
-							flex
-							style="display: flex; flex-direction: row"
-						>
-							<v-btn
-								v-if="icon.link != ''"
-								text
-								dark
-								:href="icon.link"
-								target="_blank"
-							>
+					<v-col cols="12" style="display: flex; flex-direction: row; justify-content: center" class="py-2">
+						<div v-for="icon in icons" :key="icon.icon" flex style="display: flex; flex-direction: row">
+							<v-btn v-if="icon.link != ''" text dark :href="icon.link" target="_blank">
 								<v-icon>{{ icon.icon }}</v-icon>
 							</v-btn>
 						</div>
@@ -80,15 +48,7 @@
 						VRCon Connie Illustration by Polaris
 						<br />
 						Website by
-						<a href="https://kylechaney.dev"
-							><v-img
-								class="three-thirty-six"
-								max-height="0.8em"
-								max-width="1.1em"
-								contain
-								src="@/assets/images/tiles/gradient336.png"
-							/>Gradient 336</a
-						>
+						<a href="https://kylechaney.dev"><v-img class="three-thirty-six" max-height="0.8em" max-width="1.1em" contain src="@/assets/images/tiles/gradient336.png" />Gradient 336</a>
 					</v-col>
 				</v-row>
 			</div>
@@ -100,6 +60,7 @@
 .three-thirty-six {
 	display: inline-block;
 }
+
 a {
 	text-decoration: none;
 }

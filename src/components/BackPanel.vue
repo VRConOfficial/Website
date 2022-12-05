@@ -1,16 +1,8 @@
 <template>
 	<div>
 		<div class="backpanel-wrapper">
-			<v-img
-				class="backpanel-2"
-				:lazy-src="lazyBackdrop2"
-				src="@/assets/images/backdrop-2.jpg"
-			></v-img>
-			<v-img
-				class="backpanel"
-				:lazy-src="lazyBackdrop"
-				src="@/assets/images/backdrop.jpg"
-			></v-img>
+			<v-img class="backpanel-2" :lazy-src="lazyBackdrop2" src="@/assets/images/backdrop-2.jpg"></v-img>
+			<v-img class="backpanel" :lazy-src="lazyBackdrop" src="@/assets/images/backdrop.jpg"></v-img>
 			<svg class="arrows">
 				<path class="a1" d="M0 0 L30 32 L60 0"></path>
 				<path class="a2" d="M0 20 L30 52 L60 20"></path>
@@ -19,14 +11,7 @@
 		</div>
 		<v-container class="pb-0">
 			<v-row justify="center" align="center" class="logo-container pa-0 ma-0" n>
-				<v-img
-					class="pa-0 ma-0"
-					:lazy-src="lazyLogo"
-					contain
-					max-width="85vw"
-					max-height="85vh"
-					src="@/assets/images/connieposter_remastered.webp"
-				/>
+				<v-img class="pa-0 ma-0" :lazy-src="lazyLogo" contain max-width="85vw" max-height="85vh" src="@/assets/images/connieposter_remastered.webp" />
 			</v-row>
 		</v-container>
 	</div>
@@ -44,10 +29,12 @@
 	mask-mode: alpha;
 	mask-size: cover;
 }
+
 .logo-container {
 	margin-top: 8px;
 	height: calc(100vh - 8px);
 }
+
 .backpanel,
 .backpanel-2 {
 	z-index: -1;
@@ -56,6 +43,7 @@
 	overflow: hidden;
 	position: fixed;
 }
+
 .backpanel {
 	mask: url("@/assets/slide-mask.svg");
 	mask-size: cover;
@@ -88,27 +76,36 @@
 	0% {
 		opacity: 0;
 	}
+
 	40% {
 		opacity: 1;
 	}
+
 	80% {
 		opacity: 0;
 	}
+
 	100% {
 		opacity: 0;
 	}
 }
 
-@-webkit-keyframes arrow /*Safari and Chrome*/ {
+@-webkit-keyframes arrow
+
+/*Safari and Chrome*/
+	{
 	0% {
 		opacity: 0;
 	}
+
 	40% {
 		opacity: 1;
 	}
+
 	80% {
 		opacity: 0;
 	}
+
 	100% {
 		opacity: 0;
 	}
@@ -116,17 +113,20 @@
 
 .arrows path.a1 {
 	animation-delay: -1s;
-	-webkit-animation-delay: -1s; /* Safari 和 Chrome */
+	-webkit-animation-delay: -1s;
+	/* Safari 和 Chrome */
 }
 
 .arrows path.a2 {
 	animation-delay: -0.5s;
-	-webkit-animation-delay: -0.5s; /* Safari 和 Chrome */
+	-webkit-animation-delay: -0.5s;
+	/* Safari 和 Chrome */
 }
 
 .arrows path.a3 {
 	animation-delay: 0s;
-	-webkit-animation-delay: 0s; /* Safari 和 Chrome */
+	-webkit-animation-delay: 0s;
+	/* Safari 和 Chrome */
 }
 </style>
 

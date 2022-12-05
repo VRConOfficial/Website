@@ -4,23 +4,17 @@
 			<v-btn class="close-button mx-3 my-2" @click="onButton" small fab dark>
 				<v-icon dark>mdi-close-thick</v-icon>
 			</v-btn>
-			<v-toolbar-title>Welcome</v-toolbar-title></v-toolbar
-		>
+			<v-toolbar-title>Welcome</v-toolbar-title></v-toolbar>
 		<v-divider></v-divider>
 		<v-list dense nav>
-			<v-list-item
-				v-for="item in items"
-				:key="item.title"
-				link
-				:to="item.destination"
-			>
+			<v-list-item v-for="item in items" :key="item.title" link :to="item.destination">
 				<v-list-item-icon>
 					<v-icon>{{ item.icon }}</v-icon>
 				</v-list-item-icon>
 
 				<v-list-item-content>
 					<v-list-item-title class="text-body-1">{{
-						item.title
+							item.title
 					}}</v-list-item-title>
 				</v-list-item-content>
 			</v-list-item>

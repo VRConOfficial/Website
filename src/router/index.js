@@ -8,6 +8,7 @@ import StaffViewRedirect from '@/views/staff/StaffRedirect.vue'
 import QuestionsView from '@/views/Questions.vue'
 import EventsView from '@/views/Events.vue'
 import GuideView from '@/views/Guide.vue'
+import FilmFestival2022 from '@/views/FilmFestival.vue'
 import { store } from '@/assets/Data/GlobalVars/store.js'
 
 import DirectorsStaffView from '@/views/staff/StaffDirectors.vue'
@@ -45,6 +46,11 @@ const routes = [
 		path: '/questions',
 		name: 'questions',
 		component: QuestionsView
+	},
+	{
+		path: '/FilmFestival2022',
+		name: 'Film-Festival-2022',
+		component: FilmFestival2022
 	},
 	{
 		path: '/staff',

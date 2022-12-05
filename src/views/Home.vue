@@ -11,10 +11,7 @@
 				<v-container class="px-0 white--text my-2">
 					<v-row class="px-0 d-flex align-center justify-center text-center text-sm-left">
 						<v-col cols="11" sm="8" md="5" lg="4" xl="4" class="pa--4">
-							<v-img
-								src="@/assets/images/leathered.webp"
-								class="my-2"
-							></v-img>
+							<v-img src="@/assets/images/leathered.webp" class="my-2"></v-img>
 						</v-col>
 						<v-col cols="12" sm="auto" class="px-0">
 							<div class="medieval my-6 white--text text-h2 text-sm-h2 text-center text-sm-left">
@@ -26,17 +23,9 @@
 							</div>
 						</v-col>
 					</v-row>
-					<v-row
-						v-for="(link, index) in linkList"
-						:key="index"
-						class="align-center justify-center text-h5 text-sm-h4"
-					>
+					<v-row v-for="(link, index) in linkList" :key="index" class="align-center justify-center text-h5 text-sm-h4">
 						<v-col cols="10" class="my-sm-4">
-							<v-btn
-								class="pa-8 primary rounded"
-								:to="link.destination"
-								block
-							>
+							<v-btn class="pa-8 primary rounded" :to="link.destination" block>
 								{{ link.text }}
 							</v-btn>
 						</v-col>
@@ -45,17 +34,9 @@
 				<div class="rounded">
 					<AlternatingTiles :content="landingInfo" class="my-4 px-0 rounded" />
 					<v-container>
-						<v-row
-							v-for="(link, index) in linkList2"
-							:key="index"
-							class="align-center justify-center text-h5 text-sm-h4"
-						>
+						<v-row v-for="(link, index) in linkList2" :key="index" class="align-center justify-center text-h5 text-sm-h4">
 							<v-col cols="10" class="my-sm-4">
-								<v-btn
-									class="pa-8 primary"
-									:to="link.destination"
-									block
-								>
+								<v-btn class="pa-8 primary" :to="link.destination" block>
 									{{ link.text }}
 								</v-btn>
 							</v-col>
@@ -77,7 +58,7 @@ import FullBack from "@/components/FullBack.vue";
 export default {
 	mounted() {
 		document.title = "VRCon 2022 | Welcome";
-		window.scrollTo({top: 0, behavior: 'instant'});
+		window.scrollTo({ top: 0, behavior: 'instant' });
 	},
 	name: "HomeView",
 
@@ -129,6 +110,7 @@ export default {
 	font-family: Medieval;
 	src: url("../assets/MedievalSharp-Regular.ttf");
 }
+
 .medieval {
 	font-family: Medieval, serif !important;
 }

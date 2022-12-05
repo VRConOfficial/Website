@@ -1,8 +1,10 @@
 <template>
-	<AccordionList :items="items" :title="title"/>
+	<AccordionList :items="items" :title="title" />
 </template>
 
-<style scoped></style>
+<style scoped>
+
+</style>
 
 <script>
 import AccordionList from "@/components/AccordionList.vue";
@@ -66,7 +68,7 @@ export default {
 					image: "SenpaiVR.png",
 					content:
 						"Senpai does the grunt work. That's it. Skip over this person (Senpai wrote this btw)",
-						
+
 				},
 				title: "SenpaiVR",
 			},

@@ -2,7 +2,9 @@
 	<StaffSlider :data="data" :title="title" />
 </template>
 
-<style scoped></style>
+<style scoped>
+
+</style>
 
 <script>
 import StaffSlider from "@/components/StaffSlider.vue";

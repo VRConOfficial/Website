@@ -18,12 +18,13 @@
 					</v-row>
 				</v-container>
 			</div>
-			<router-view/>
+			<router-view />
 		</ColumnLayout>
 	</div>
 </template>
 
 <style scoped>
+
 </style>
 
 <script>
@@ -34,7 +35,7 @@ import SectionBanner from "@/components/SectionBanner.vue";
 export default {
 	mounted() {
 		document.title = "VRCon 2022 | Staff Directory";
-		window.scrollTo({top: 0, behavior: 'instant'});
+		window.scrollTo({ top: 0, behavior: 'instant' });
 	},
 	name: "StaffView",
 	components: {
@@ -54,10 +55,10 @@ export default {
 			{
 				title: 'Events Team',
 				path: '/staff/events-team'
-			},{
+			}, {
 				title: 'Production Team',
 				path: '/staff/production-team'
-			},{
+			}, {
 				title: 'Marketing Team',
 				path: '/staff/marketing-team'
 			},

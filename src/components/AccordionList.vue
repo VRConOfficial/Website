@@ -4,13 +4,7 @@
 			<v-toolbar-title>{{ title }}</v-toolbar-title>
 		</v-toolbar>
 		<v-list color="transparent">
-			<v-list-group
-				v-for="item in items"
-				:key="item.title"
-				v-model="item.active"
-				:prepend-icon="item.action"
-				no-action
-			>
+			<v-list-group v-for="item in items" :key="item.title" v-model="item.active" :prepend-icon="item.action" no-action>
 				<template v-slot:activator>
 					<v-list-item-content>
 						<v-list-item-title v-text="item.title"></v-list-item-title>
@@ -22,35 +16,17 @@
 							<v-row justify="center" align="center">
 								<v-col cols="auto" v-if="item.item.image || item.item.title">
 									<v-row justify="center" align="center">
-										<v-col
-											cols="12"
-											sm="4"
-											md="4"
-											lg="4"
-											v-if="item.item.image"
-										>
-											<v-img
-												width="100%"
-												height="100%"
-												:src="
-													require('@/assets/images/tiles/' + item.item.image)
-												"
-											/>
+										<v-col cols="12" sm="4" md="4" lg="4" v-if="item.item.image">
+											<v-img width="100%" height="100%" :src="
+												require('@/assets/images/tiles/' + item.item.image)
+											" />
 										</v-col>
-										<v-col
-											cols="auto"
-											v-if="item.item.title && item.item.image"
-											class="text-h4"
-										>
+										<v-col cols="auto" v-if="item.item.title && item.item.image" class="text-h4">
 											{{ item.item.title }}
 										</v-col>
 									</v-row>
 								</v-col>
-								<v-col
-									cols="12"
-									v-if="item.item.content"
-									class="py-sm-4 text-center pre-wrap"
-								>
+								<v-col cols="12" v-if="item.item.content" class="py-sm-4 text-center pre-wrap">
 									{{ item.item.content }}
 								</v-col>
 							</v-row>

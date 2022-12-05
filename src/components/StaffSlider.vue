@@ -7,18 +7,10 @@
 			<v-col cols="12" v-if="data.item.teamInfo" class="text-center py-8">
 				<v-row justify="center" align="center">
 					<v-col cols="auto" v-if="data.item.photo">
-						<v-img
-							:src="getImage(data.item.photo, 'normal')"
-							max-width="100px"
-							max-height="100px"
-						/>
+						<v-img :src="getImage(data.item.photo, 'normal')" max-width="100px" max-height="100px" />
 					</v-col>
 					<v-col cols="auto" v-else>
-						<v-img
-							:src="require('@/assets/images/tiles/default-profile.webp')"
-							max-width="100px"
-							max-height="100px"
-						/>
+						<v-img :src="require('@/assets/images/tiles/default-profile.webp')" max-width="100px" max-height="100px" />
 					</v-col>
 					<v-col cols="auto">
 						<h3 class="headline mb-0">{{ data.item.director }}</h3>
@@ -29,23 +21,13 @@
 			<v-card-actions style="width: 100%" class="darkened my-1 px-0">
 				<v-row class="py-4" justify="center" align="center" no-gutters>
 					<v-col cols="2">
-						<v-btn
-							block
-							outlined
-							@click="prev(data.item.teamInfo)"
-							color="primary"
-							class="arrow-button pa-6 darkened"
-							v-if="onboarding - 1 >= 0"
-						>
+						<v-btn block outlined @click="prev(data.item.teamInfo)" color="primary" class="arrow-button pa-6 darkened" v-if="onboarding - 1 >= 0">
 							<v-icon>mdi-chevron-left</v-icon>
 						</v-btn>
 					</v-col>
 					<v-col cols="6" sm="7">
 						<v-window v-model="onboarding">
-							<v-window-item
-								v-for="(team, index) in data.item.teamInfo"
-								:key="index"
-							>
+							<v-window-item v-for="(team, index) in data.item.teamInfo" :key="index">
 								<v-row justify="center" align="center" no-gutters>
 									<v-col cols="10" class="text-center">
 										<v-icon class="primary--text">{{ team.Team }}</v-icon>
@@ -55,37 +37,17 @@
 						</v-window>
 					</v-col>
 					<v-col cols="2">
-						<v-btn
-							block
-							outlined
-							@click="next(data.item.teamInfo)"
-							color="primary"
-							class="pa-6 darkened"
-							v-if="onboarding + 1 != data.item.teamInfo.length"
-						>
+						<v-btn block outlined @click="next(data.item.teamInfo)" color="primary" class="pa-6 darkened" v-if="onboarding + 1 != data.item.teamInfo.length">
 							<v-icon>mdi-chevron-right</v-icon>
 						</v-btn>
 					</v-col>
 				</v-row>
 			</v-card-actions>
 			<v-window v-model="onboarding" class="darkened" style="width: 100%">
-				<v-window-item
-					v-for="(team, index) in data.item.teamInfo"
-					:key="index"
-					class="px-8 px-sm-4 py-8 px-lg-8"
-				>
-					<v-row
-						justify="center"
-						align="center"
-						class="pa-4"
-						v-if="team.Leader.name"
-					>
+				<v-window-item v-for="(team, index) in data.item.teamInfo" :key="index" class="px-8 px-sm-4 py-8 px-lg-8">
+					<v-row justify="center" align="center" class="pa-4" v-if="team.Leader.name">
 						<v-col cols="auto" v-if="team.Leader.photo">
-							<v-img
-								:src="getImage(team.Leader.photo, 'normal')"
-								max-width="100px"
-								max-height="100px"
-							/>
+							<v-img :src="getImage(team.Leader.photo, 'normal')" max-width="100px" max-height="100px" />
 						</v-col>
 						<v-col cols="auto">
 							<h3 class="headline mb-0">{{ team.Leader.name }}</h3>
@@ -94,20 +56,11 @@
 					</v-row>
 					<v-container grid-list-xs>
 						<v-row>
-							<v-col
-								cols="12"
-								sm="6"
-								v-for="(staff, key) in team.Staff"
-								:key="key"
-							>
+							<v-col cols="12" sm="6" v-for="(staff, key) in team.Staff" :key="key">
 								<v-card color="transparent" class="darkened white--text">
 									<div style="display: flex; flex-direction: row">
 										<div style="display: flex; flex-direction: row">
-											<v-img
-												:src="getImage(staff.photo, 'normal')"
-												width="100px"
-												height="100px"
-											/>
+											<v-img :src="getImage(staff.photo, 'normal')" width="100px" height="100px" />
 											<v-card-text>
 												{{ staff.Name }}
 											</v-card-text>
@@ -138,7 +91,7 @@ export default {
 	name: "StaffSlider",
 	components: {},
 	props: ["data", "title"],
-	mounted() {},
+	mounted() { },
 	data: () => ({
 		onboarding: 0,
 	}),
