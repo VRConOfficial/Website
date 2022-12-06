@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+	<!--
+	VRCon 2022 Event Importer
+	(Internal Tool)
+	By Gradient 336 (Kyle Chaney)
+-->
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>VRCon Film Festival Tool</title>
+	</head>
+
+	<body>
+		<div id="wrapper">
+			<h1>VRCon FilmFestival Importer (Internal Tool)</h1>
+			<span>Drop Files -></span>
+			<input type="file" id="file-selector" accept=".tsv" multiple>
+			<button id="import-button">Process Files</button>
+			<p>Takes TSV files from the Film Festival acception spreadsheet and processes
+				them into JSON</p>
+			<p id="status">Status</p>
+			<p id="output">-- Output --</p>
+			<button id="clear-button">Clear</button>
+		</div>
+		<script>
+		const fileSelector = document.getElementById('file-selector');
+		const status = document.getElementById('status');
+		const output = document.getElementById('output');
+		let fileList;
+
+		fileSelector.addEventListener('change', (event) => {
+			fileList = event.target.files;
+		});
+
+		document.getElementById("import-button").onclick = () => {
+			process();
+		};
+
+		document.getElementById("clear-button").onclick = () => {
+			output.innerText = "-- Output --";
+		};
+
+		async function process() {
+			if (!fileList) {
+				status.innerText = "No files";
+				console.log("No files");
+				return
+			}
+
+			let filmList = [];
+
+			//Iterates through each given file
+			for (let i = 0, fileIndex = fileList.length; i < fileIndex; i++) {
+				const file = fileList[i];
+				await file.text().then((fileText) => {
+					//Creates array out of each line of text
+					let textLines = fileText.split(/\r?\n/).filter(element => element);
+					//Gets the column header row
+
+					const columnHeaderRow = textLines.filter(element => element.match(
+						/(?:Name)/
+					));
+					const columnHeaders = columnHeaderRow[0].split(/\t/);
+					//Filters out lines without times
+					textLines = textLines.filter(element => !element.match(
+						/(?:Name)/
+					));
+					//Iterates through each line of text
+
+					for (let lineIndex = 0; lineIndex < textLines.length; lineIndex++) {
+						const textLine = textLines[lineIndex];
+						//Separates cells
+						const contentList = textLine.split(/\t/);
+						if (contentList[0] == "") break
+						let propertyList = {};
+						let property;
+						let name;
+						//Iterates through each cell
+						for (let contentIndex = 1; contentIndex < contentList.length; contentIndex++) {
+							//Combines the header row headings with the cell content
+
+							if (columnHeaders[contentIndex] == "Film Name") {
+								name = contentList[contentIndex]
+								continue;
+							}
+							if (columnHeaders[contentIndex] == "Additional Marketing Content"  && contentList[contentIndex] != "") {
+								var gdLinks = contentList[contentIndex]
+								var jsonLinks = gdLinks.split(/, /)
+								for(linkIndex = 0; linkIndex < jsonLinks.length; linkIndex++){
+									var link = jsonLinks[linkIndex]
+									var split = link.split(/=/)
+									link = "https://drive.google.com/uc?export=view&id=" + split[1];
+									jsonLinks[linkIndex] = link
+								}
+								propertyList[columnHeaders[contentIndex]] = jsonLinks
+							
+							} else if (columnHeaders[contentIndex] == "Film Genre") {
+								var genres = contentList[contentIndex]
+								genres = genres.replaceAll(" ", "")
+								var jsonGenres = genres.split(/,/)
+								console.log(jsonGenres)
+								propertyList[columnHeaders[contentIndex]] = jsonGenres
+							
+							} else if (columnHeaders[contentIndex] == "YouTube") {
+								var ytLinks = contentList[contentIndex]
+								var jsonLinks = ytLinks.split(/  /)
+								propertyList[columnHeaders[contentIndex]] = jsonLinks
+							
+							} else if (columnHeaders[contentIndex] == "Twitter") {
+								var tLinks = contentList[contentIndex]
+								var jsonLinks = tLinks.split(/ /)
+								propertyList[columnHeaders[contentIndex]] = jsonLinks
+							
+							} else if (contentList[contentIndex] != "") 
+								propertyList[columnHeaders[contentIndex]] = contentList[contentIndex];
+							
+						}
+
+						film={
+							name: name,
+							properties: propertyList
+						};
+						// event = {
+						// 	time: new Date(dateCell + " " + contentList[0] + " EST").getTime(),
+						// 	properties: propertyList
+						// };
+						//Finalized event for each row with heading name, content data, and time
+						if (film.properties != ""){
+							filmList.push(film);
+						}
+					}
+				});
+			}
+			output.innerText = output.innerText + "\n" + JSON.stringify(filmList, null, 4);
+			status.innerText = "Done";
+		}
+	</script>
+		<style>
+		body {
+			background-color: #2c2c2d;
+			font-family: Verdana, Geneva, Tahoma, sans-serif;
+			font-size: 1.1rem;
+		}
+
+		#wrapper {
+			margin: 100px;
+			text-align: center;
+			color: white;
+		}
+
+		button,
+		input {
+			padding: 8px;
+			font-size: 1.1rem;
+			border: 1px solid white;
+			margin: 4px;
+		}
+
+		#output,
+		#status {
+			border: 1px solid white;
+			padding: 10px;
+			margin: 10px;
+			font-family: monospace;
+			white-space: pre;
+		}
+
+		#output {
+			text-align: left;
+		}
+	
+	</style>
+	</body>
+
+</html>

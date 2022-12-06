@@ -9,6 +9,7 @@ import QuestionsView from '@/views/Questions.vue'
 import EventsView from '@/views/Events.vue'
 import GuideView from '@/views/Guide.vue'
 import FilmFestival2022 from '@/views/FilmFestival.vue'
+import FilmFestivalSignup from '@/views/Forms/FFSignUp.vue'
 import { store } from '@/assets/Data/GlobalVars/store.js'
 
 import DirectorsStaffView from '@/views/staff/StaffDirectors.vue'
@@ -50,7 +51,12 @@ const routes = [
 	{
 		path: '/FilmFestival2022',
 		name: 'Film-Festival-2022',
-		component: FilmFestival2022
+		component: FilmFestival2022,
+	},
+	{
+		path: '/FFSignup',
+		name: 'FFSignup',
+		component: FilmFestivalSignup
 	},
 	{
 		path: '/staff',

@@ -40,70 +40,70 @@
 								</v-row>
 							</div>
 							<!-- <div v-else style="max-width: 100%">
-		<v-row class="mb-1">
-			<v-col
-				cols="1"
-				style="
-					display: flex;
-					justify-content: center;
-					align-items: center;
-				"
-			>
-				<v-btn
-					text
-					@click="prev"
-					color="white"
-					v-if="onboarding - 1 >= 0"
-				>
-					<v-icon>mdi-chevron-left</v-icon
-					><v-icon>mdi-chevron-left</v-icon>
-				</v-btn>
-			</v-col>
-			<v-col cols="10">
-				<v-item-group
-					v-model="onboarding"
-					class="text-center"
-					mandatory
-					width="100%"
-				>
-					<v-window v-model="onboarding">
-						<v-window-item
-							v-for="(day, index) in uniqueTimestamps[0]"
-							:key="index"
-						>
-							<v-row justify="center" align="center">
-								<v-col cols="10">
-									<v-btn color="primary" width="100%">
-										<v-icon>{{ day }}</v-icon>
+							<v-row class="mb-1">
+								<v-col
+									cols="1"
+									style="
+										display: flex;
+										justify-content: center;
+										align-items: center;
+									"
+								>
+									<v-btn
+										text
+										@click="prev"
+										color="white"
+										v-if="onboarding - 1 >= 0"
+									>
+										<v-icon>mdi-chevron-left</v-icon
+										><v-icon>mdi-chevron-left</v-icon>
 									</v-btn>
 								</v-col>
+								<v-col cols="10">
+									<v-item-group
+										v-model="onboarding"
+										class="text-center"
+										mandatory
+										width="100%"
+									>
+										<v-window v-model="onboarding">
+											<v-window-item
+												v-for="(day, index) in uniqueTimestamps[0]"
+												:key="index"
+											>
+												<v-row justify="center" align="center">
+													<v-col cols="10">
+														<v-btn color="primary" width="100%">
+															<v-icon>{{ day }}</v-icon>
+														</v-btn>
+													</v-col>
+												</v-row>
+											</v-window-item>
+										</v-window>
+									</v-item-group>
+								</v-col>
+								<v-col
+									cols="1"
+									style="
+										display: flex;
+										justify-content: center;
+										align-items: center;
+									"
+								>
+									<div v-if="uniqueTimestamps[0]">
+										<v-btn
+											text
+											@click="next"
+											color="white"
+											v-if="onboarding + 1 != uniqueTimestamps[0].length"
+										>
+											<v-icon>mdi-chevron-right</v-icon
+											><v-icon>mdi-chevron-right</v-icon>
+										</v-btn>
+									</div>
+								</v-col>
 							</v-row>
-						</v-window-item>
-					</v-window>
-				</v-item-group>
-			</v-col>
-			<v-col
-				cols="1"
-				style="
-					display: flex;
-					justify-content: center;
-					align-items: center;
-				"
-			>
-				<div v-if="uniqueTimestamps[0]">
-					<v-btn
-						text
-						@click="next"
-						color="white"
-						v-if="onboarding + 1 != uniqueTimestamps[0].length"
-					>
-						<v-icon>mdi-chevron-right</v-icon
-						><v-icon>mdi-chevron-right</v-icon>
-					</v-btn>
-				</div>
-			</v-col>
-		</v-row>
-	</div> -->
+						</div> -->
 						</v-card-actions>
 						<v-window v-model="onboarding">
 							<v-window-item v-for="( day, index ) in days" :key="index">
@@ -181,19 +181,8 @@ export default {
 			let events = Events;
 			let uniqueDays = [];
 			let uniqueTimestamps = [];
-			const monthNames = [
-				"January",
-				"February",
-				"March",
-				"April",
-				"May",
-				"June",
-				"July",
-				"August",
-				"September",
-				"October",
-				"November",
-				"December",
+			const monthNames = [ "January", "February", "March", "April", "May", "June",
+						"July", "August", "September", "October", "November","December",
 			];
 			for (let i = 0; i < events.length; i++) {
 				let event = events[i];

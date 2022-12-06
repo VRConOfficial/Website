@@ -34,6 +34,7 @@
 
 
 <script>
+
 export default {
 	name: "NavDrawer",
 	data: () => ({
@@ -42,11 +43,8 @@ export default {
 			{ title: "Home", icon: "mdi-home", destination: "/home" },
 			{ title: "Guide", icon: "mdi-map", destination: "/guide" },
 			{ title: "Events", icon: "mdi-calendar-check", destination: "/events" },
-			{
-				title: "FAQ",
-				icon: "mdi-help-circle-outline",
-				destination: "questions",
-			},
+			{ title: "Film Festival", icon: "mdi-filmstrip", destination: "/FilmFestival2022"},
+			{ title: "FAQ", icon: "mdi-help-circle-outline", destination: "questions" },
 			{ title: "History", icon: "mdi-timeline-clock-outline", destination: "/history" },
 			{ title: "Staff", icon: "mdi-account", destination: "/staff" },
 		],

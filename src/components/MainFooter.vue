@@ -102,21 +102,10 @@ export default {
 				subItems: [
 					{ title: "Home", icon: "mdi-home", destination: "/home" },
 					{ title: "Guide", icon: "mdi-map", destination: "/guide" },
-					{
-						title: "Events",
-						icon: "mdi-calendar-check",
-						destination: "/events",
-					},
-					{
-						title: "FAQ",
-						icon: "mdi-help-circle-outline",
-						destination: "/questions",
-					},
-					{
-						title: "History",
-						icon: "mdi-timeline-clock-outline",
-						destination: "/history",
-					},
+					{ title: "Events", icon: "mdi-calendar-check", destination: "/events" },
+					{ title: "Film Festival", icon: "mdi-filmstrip", destination: "/FilmFestival2022" },
+					{ title: "FAQ", icon: "mdi-help-circle-outline", destination: "/questions" },
+					{ title: "History", icon: "mdi-timeline-clock-outline", destination: "/history" },
 				],
 			},
 			{

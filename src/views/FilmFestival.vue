@@ -7,12 +7,56 @@
 		</FullBack>
 
 		<ColumnLayout class="py-16 white--text">
-			<LazyYoutube src="https://www.youtube.com/watch?v=g82UH0v574o" :showTitle="false" maxWidth="80%" class="mx-auto" />
-			<v-pagination v-model="page" :length="(Math.floor(Object.keys(films).length / 4) + 1)" :total-visible="7" />
-			<div v-for="(film, index, i) in films" :key="index">
-				<div v-if="(i <= page * 4 - 1) && (i >= page * 4 - 4)" class="py-5">
-					<AccordionList class="px-0" :film="film" />
-				</div>
+			<!-- <LazyYoutube src="https://www.youtube.com/watch?v=g82UH0v574o" :showTitle="false" maxWidth="100%" class="mx-auto" /> -->
+			<v-row>
+				<v-col>
+					<v-select v-model=searchTerm :items="genres" label="Filter By Genre" multiple outlined class="transparent" color="accent" dark />
+				</v-col>
+				<v-col>
+					<div class="mx-auto" style="width: fit-content"><v-btn class="ma-auto" to="/ffsignup">Sign up to Attend!</v-btn></div>
+				</v-col>
+			</v-row>
+
+			<v-pagination v-model="page" :length="Math.ceil(filteredFilms.length / 4)" :total-visible="7" />
+			<div v-for="(film, idx) in filteredFilms" :key="idx">
+				<v-card v-if="(idx >= firstFilm && idx <= lastFilm)" class="my-5 transparent white--text darkened elevation-5" outlined>
+					<v-toolbar color="primary">
+						<v-row no-gutters>
+							<v-col>
+								<v-toolbar-title class="white--text">
+									<p> {{ film.name }} </p>
+								</v-toolbar-title>
+							</v-col>
+							<v-col>
+								<p v-if="film.properties['Film Genre']" class="white--text text-right"> Genre: {{ film.properties["Film Genre"].toString().replaceAll(",", ", ").replaceAll("Music/Dancevideo", "Music/Dance Video") }} </p>
+							</v-col>
+						</v-row>
+					</v-toolbar>
+					<v-row no-gutters>
+						<v-col cols="6" style="display: flex">
+							<!-- <v-img v-if="film.properties['Additional Marketing Content']" :src="film.properties['Additional Marketing Content'][0]" class="my-auto" max-height="30vh" contain /> -->
+							<ImageLoader v-if="film.properties['Additional Marketing Content']" :link="film.properties['Additional Marketing Content'][0]" class="ma-auto" style="max-width: 100%; position: relative" />
+						</v-col>
+						<v-col cols="6" class="pa-5">
+							<v-row>
+								<p>{{ film.properties["Film Description"] }} </p>
+							</v-row>
+							<v-row>
+								<v-col class="text-center" v-if="film.properties.YouTube || film.properties.Twitter">
+									Find the Creators here!
+									<v-container class="mx-auto">
+										<a v-for="(link) in film.properties.YouTube" target="_blank" :href="link"><v-icon color="white">mdi-youtube</v-icon></a>
+									</v-container>
+									<v-container class="mx-auto">
+										<a v-for="(link) in film.properties.Twitter" target="_blank" :href="link"><v-icon color="white">mdi-twitter</v-icon></a>
+									</v-container>
+								</v-col>
+
+							</v-row>
+
+						</v-col>
+					</v-row>
+				</v-card>
 			</div>
 		</ColumnLayout>
 	</div>
@@ -24,15 +68,18 @@ import ColumnLayout from "@/components/ColumnLayout.vue";
 import SectionBanner from "@/components/SectionBanner.vue";
 import AccordionList from "@/components/FilmFestivalAccordian.vue";
 import { store } from "@/assets/Data/GlobalVars/store.js"
+import filmList from '@/assets/Data/FilmFestData/fest.json'
+import ImageLoader from '@/components/Image.vue'
 
 import { LazyYoutube } from 'vue-lazytube'
 export default {
 	mounted() {
 		document.title = "VRCon 2022 | Film Festival";
 		window.scrollTo({ top: 0, behavior: "instant" });
-		if (store.debugValue) {
-			this.randomVideos()
-		}
+		this.films = filmList
+		this.firstFilm = this.page * 4 - 4;
+		this.lastfilm = this.page * 4 - 1;
+		this.getGenres();
 	},
 	name: "Film-Festival-2022",
 	components: {
@@ -40,109 +87,45 @@ export default {
 		ColumnLayout,
 		SectionBanner,
 		AccordionList,
-		LazyYoutube
+		LazyYoutube,
+		filmList,
+		ImageLoader
 	},
 	props: [],
 	data: () => ({
 		title: "Film Submissions",
 		page: 1,
-		films: {
-			film1: {
-				name: "Film 1",
-				director: "Lorem",
-				credits: "test, test, test",
-				about: "test",
-				trailer: "https://www.youtube.com/watch?v=g82UH0v574o",
-			},
-			film2: {
-				name: "Film 2",
-				director: "Ipsum",
-				credits: "test, test, test",
-				about: "test",
-			},
-			film3: {
-				name: "Film 3",
-				director: "dolor",
-				credits: "test, test, test",
-				about: "test",
-			},
-			film4: {
-				name: "Film 4",
-				director: "sit",
-				credits: "test, test, test",
-				about: "test",
-			},
-			film5: {
-				name: "Film 5",
-				director: "amet",
-				credits: "test, test, test",
-				about: "test",
-				trailer: "https://www.youtube.com/watch?v=g82UH0v574o",
-			},
-			film6: {
-				name: "Film 6",
-				director: "consectetur",
-				credits: "test, test, test",
-				about: "test",
-			},
-			film7: {
-				name: "Film 7",
-				director: "adipisicing",
-				credits: "test, test, test",
-				about: "test",
-			},
-			film8: {
-				name: "Film 8",
-				director: "test",
-				credits: "test, test, test",
-				about: "test",
-			},
-		},
+		films: {},
+		firstFilm: 0,
+		lastFilm: 3,
+		genres: [],
+		searchTerm: [],
 	}),
 	watch: {
-		"page": function (val, oldVal) {
-			console.log(this.page)
-		}
+		page: function (el, oldEl) {
+			this.firstFilm = el * 4 - 4;
+			this.lastFilm = el * 4 - 1;
+		},
 	},
 	methods: {
-		randomVideos() {
-			let videos = new Object()
-			var ammount = Math.floor(Math.random() * (150 - 50 + 1) + 50)
-			for (let i = 0; i < ammount; i++) {
-				//create random video 
-				var title = "Lorem Ipsum dolor sit amet"
-				var director = "Lorem"
-				var cast = "lorem, ipsum, dolor"
-				var about = "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus voluptatem libero ab eligendi minima omnis ipsam excepturi unde fugit. Tenetur unde, molestias dicta nam a ipsam perspiciatis temporibus qui necessitatibus?"
-
-				var random = Math.random();
-				var trailer
-				if (random >= 0.5) {
-					trailer = 'https://www.youtube.com/watch?v=' + this.pullRandomYoutubeVideo()
-				}
-
-				var video = new Object()
-				video.name = 'Film ' + i + ' Title';
-				video.director = director;
-				video.credits = cast;
-				video.about = about;
-				if (trailer) video.trailer = trailer;
-				videos[i] = video
-			}
-			console.log(this.films)
-			this.films = videos
-			console.log(this.films)
+		getGenres() {
+			this.films.forEach((film) => {
+				var genres = Object.values(film.properties["Film Genre"])
+				genres.forEach((genre) => {
+					if (!this.genres.includes(genre) && genre) this.genres.push(genre)
+				})
+			})
 		},
+		searchFilter(film) {
+			if (this.searchTerm.length == 0 || this.searchTerm == null) return true;
+			return this.searchTerm.includes(film.properties["Film Genre"][0]) || this.searchTerm.includes(film.properties["Film Genre"][1]) || this.searchTerm.includes(film.properties["Film Genre"][2]);
 
-		pullRandomYoutubeVideo() {
-			var codeLenth = 11;
-			var possibles = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890-_"
-			var code = ""
-			for (let i = 0; i < codeLenth; i++) {
-				code += possibles.charAt(Math.floor(Math.random() * possibles.length))
-			}
-			return code
 		},
 	},
+	computed: {
+		filteredFilms() {
+			return Object.values(this.films).filter(this.searchFilter).sort()
+		}
+	}
 };
 </script>
