@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+	<!--
+	VRCon 2022 Event Importer
+	(Internal Tool)
+	By Gradient 336 (Kyle Chaney)
+-->
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script
+			type="text/javascript"
+			src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js">
+		</script>
+		<title>VRCon Events Tool</title>
+	</head>
+
+	<body>
+		<div id="wrapper">
+			<h1>VRCon Events Importer (Internal Tool)</h1>
+			<span>Drop Files -></span>
+			<input type="file" id="file-selector" accept=".xlsx">
+			<button id="import-button">Process Files</button>
+			<p>Takes xlsx file from the Official VRCon Event spreadsheet and processes
+				sheets into JSON</p>
+			<p id="status">Status</p>
+			<p id="output">-- Output --</p>
+			<button id="clear-button">Clear</button>
+		</div>
+		<script>
+			var selectedFile;
+			document.getElementById("file-selector").addEventListener("change", function(event) {
+				selectedFile = event.target.files[0];
+			});
+			
+			document.getElementById("import-button").addEventListener("click", function() {
+				var json = []
+				console.log("clicked")
+				if (!selectedFile) {
+					document.getElementById("status").innerHTML = "No File Selected";
+				} else {
+					document.getElementById("status").innerHTML = "File Submitted";
+					var fileReader = new FileReader();
+					fileReader.onload = (event) => {
+						var data = event.target.result
+						var workbook = XLSX.read(data, {
+							type: "binary"
+						})
+						workbook.SheetNames.forEach((sheet, index) => {
+							ws = workbook.Sheets[sheet]
+							let rowObject = XLSX.utils.sheet_to_json(ws, {
+								range: 4, 
+								dateNF: false,
+								raw: false
+							})
+							var sheetName = workbook.SheetNames[index];
+							var days = {
+								Monday: "Monday ",
+								Tuesday: "Tuesday ", 
+								Wednesday: "Wednesday ",
+								Thursday: "Thursday ",
+								Friday: "Friday ",
+								Saturday: "Saturday ",
+								Sunday: "Sunday "
+							}
+							var date = sheetName.replace(/Monday |Tuesday |Wednesday |Thursday |Friday |Saturday |Sunday |st|nd|rd|th/gi, "").replace(/Dec/gi, "December") + " 2022"
+							json[date] = rowObject
+						})
+						organizeJson(json)
+						//organizeJson(json)
+					}
+					fileReader.readAsBinaryString(selectedFile)
+				}
+			})
+
+			function organizeJson(days) {
+				eventList = []
+
+				Object.entries(days).forEach((day) => {
+					var date = day[0]
+					var events = day[1]
+
+					Object.entries(events).forEach(slotInfo => {
+						var slotData = slotInfo[1];
+
+						if (Object.entries(slotData).length > 2) {
+							var event = []
+							var propertyList = []
+							//Begin Conversion
+							var time = slotData["Times = EST"];
+							
+							event = {
+								time: new Date(date + " " + time + " EST").getTime(),
+								properties: {}
+							}
+
+							Object.entries(slotData).filter((category) => category[0] != "Times = EST").forEach((category) => {
+								var property = {}
+								if (category[0] == "End Time") {
+									var eventLength = category[1]
+									var endTime = new Date(date + " " + time + " EST")
+									console.log(endTime.getTime() + eventLength * 1000 * 60 * 60)
+									event["properties"][category[0]] = 
+										endTime.getTime() + eventLength * 1000 * 60 * 60
+								}
+								else {
+									event["properties"][category[0]] = category[1]
+								}
+							})
+
+							
+							eventList.push(event)
+						}
+					})
+				})
+
+				eventList = eventList.sort((event1, event2) => {
+					if (event1.time > event2.time) {
+						return 1;
+					}
+					if (event1.time < event2.time){
+						return -1
+					}
+					return 0
+				})
+				
+				document.getElementById("output").innerHTML = JSON.stringify(eventList, null, 4)
+			}
+		</script>
+		<style>
+		body {
+			background-color: #2c2c2d;
+			font-family: Verdana, Geneva, Tahoma, sans-serif;
+			font-size: 1.1rem;
+		}
+
+		#wrapper {
+			margin: 100px;
+			text-align: center;
+			color: white;
+		}
+
+		button,
+		input {
+			padding: 8px;
+			font-size: 1.1rem;
+			border: 1px solid white;
+			margin: 4px;
+		}
+
+		#output,
+		#status {
+			border: 1px solid white;
+			padding: 10px;
+			margin: 10px;
+			font-family: monospace;
+			white-space: pre;
+		}
+
+		#output {
+			text-align: left;
+		}
+	</style>
+	</body>
+
+</html>

@@ -47,7 +47,7 @@ export default {
 					title: "Karet",
 					image: "Karet.png",
 					content:
-						"Karet is the Director of Productions, who takes care of all of the needs of the worlds we use.",
+						"Karet, our production director, joined VRCon in 2021 to assist with the world team with the design and creation of the hub world. With his extencive knowledge in 3D Art and Programming knowledge, and his dedication to VRCon, he was invited to become our Director in 2022 to assist with this years creations.\n\nWhile you may recognize him from VRCon, you may also recognize him as the Chief of the LPD (Loli Police Department) along with some of his other creations over there.",
 				},
 				title: "Karet",
 			},
@@ -57,7 +57,7 @@ export default {
 					title: "Shadozw",
 					image: "Shadozw.png",
 					content:
-						"Rickity is in charge of all Events related work. He organizes our schedules in order to create amazing experiences for our visitors",
+						"Shadow is in charge of all Events related work. He organizes our schedules in order to create amazing experiences for our visitors",
 				},
 				title: "Shadozw",
 			},
@@ -67,7 +67,7 @@ export default {
 					title: "SenpaiVR",
 					image: "SenpaiVR.png",
 					content:
-						"Senpai does the grunt work. That's it. Skip over this person (Senpai wrote this btw)",
+						"SenpaiVR started VRChat in November of 2022, just before the 2020 VRCon Convention. It was there where he realized just how amazing the VRChat community was and fell in love with it.\n\nThroughout 2021, SenpaiVR did his best to understand the ins-and-outs of VRChat, learning the code, and the community. It wasn't too long until he started to explore the VRChat film community that was starting to sprout up in places. After the release of the 'Into the Metaverse' trailer, he got with the creators in order to create the 'Virtual Reality Film Association', a community who's goal was to help directors, filmmakers, sound artists, world creators, and actors link up to make their film dreams a reality.\n\nIn After VRCon 2021, SenpaiVR was recruited onto VRCon by Lilbagel to assist the Art Department (now our graphics design team) due to his experience in creating graphics for his own videos and films. It wasn't too long until Senpai's love for the community and his work was seen by the other directors and he was offered the position of Director of the new Marketing Department where he would assist VRCon in hosting VRCon 2022",
 
 				},
 				title: "SenpaiVR",
