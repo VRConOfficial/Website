@@ -23,27 +23,30 @@
 				</v-col>
 			</v-row>
 
-			<v-pagination v-model="page" :length="Math.ceil(filteredFilms.length / 4)" :total-visible="7" circle="true" total-visible="7"/>
+			<v-pagination v-model="page" :length="Math.ceil(filteredFilms.length / 4)" :total-visible="7" circle="true" total-visible="7" />
 			<div v-for="(film, idx) in filteredFilms" :key="idx">
 				<v-card v-if="(idx >= firstFilm && idx <= lastFilm)" class="my-5 transparent white--text darkened elevation-5" outlined>
 					<v-toolbar color="primary" class="my-5" style="height:fit-content">
-						<v-row no-gutters class="my-auto">
-							<v-col class="ma-0" cols="12" sm="6">
-								<v-toolbar-title class="white--text">
-									<p class="ma-0"> {{ film.name }} </p>
+						<v-row no-gutters class="my-auto" style="max-width: 100%;">
+							<v-col class="ma-0">
+								<v-toolbar-title class="white--text" style="max-width:100%; overflow-wrap: break-word">
+									{{ film.name }}
 								</v-toolbar-title>
 							</v-col>
-							<v-col class="ma-0" cols="12" sm="6">
-								<p v-if="film.properties['Film Genre']" class="white--text text-right ma-0" > Genre: {{ film.properties["Film Genre"].toString().replaceAll(",", ", ").replaceAll("Music/Dancevideo", "Music/Dance Video") }} </p>
+							<v-col class="ma-0">
+								<p v-if="film.properties['Film Genre']" class="white--text text-right ma-0"> Genre: {{ film.properties["Film Genre"].toString().replaceAll(",", ", ").replaceAll("Music/Dancevideo", "Music/Dance Video") }} </p>
 							</v-col>
 						</v-row>
 					</v-toolbar>
 					<v-row no-gutters>
-						<v-col cols="12" lg ="6" md="12" sm="12" style="display: flex">
+						<v-col cols="12" lg="6" md="12" sm="12" style="display: flex">
 							<ImageLoader v-if="film.properties['Thumbnail']" :link="getImageLink(film.properties['Thumbnail'])" class="ma-auto" style="max-width: 100%; min-height: 200px; position: relative" />
 						</v-col>
-						<v-col cols="12" lg= "6" md="12" sm="12" class="pa-5 ma-auto text-center">
-							<v-row class="text-center ma-auto" style="width:fit-content">
+						<v-col cols="12" lg="6" md="12" sm="12" class="pa-5 ma-auto text-center">
+							<v-row class="text-center mx-auto my-5" style="width:fit-content;">
+								<strong>{{ film.name }}</strong>
+							</v-row>
+							<v-row class="text-center ma-auto" style="width:fit-content; ">
 								{{ film.properties["Film Description"] }}
 							</v-row>
 							<v-row>
@@ -63,12 +66,13 @@
 					</v-row>
 				</v-card>
 			</div>
-			<v-pagination v-model="page" :length="Math.ceil(filteredFilms.length / 4)" :total-visible="7" circle="true" total-visible="7"/>
+			<v-pagination v-model="page" :length="Math.ceil(filteredFilms.length / 4)" :total-visible="7" circle="true" total-visible="7" />
 		</ColumnLayout>
 	</div>
 </template>
 
 <style>
+
 </style>
 
 
