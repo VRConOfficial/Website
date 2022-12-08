@@ -20,8 +20,10 @@
     {
         "time": 1671228000000,
         "properties": {
-            "Event Name": "Opening Ceremony/Tour",
+            "Event Name": "VRCon Opening Ceremony",
             "End Time": 1671231600000,
+            "Type of Event": "Opening Ceremony/Tour",
+            "How Long will the event run for?": "1 Hour",
             "Stream Link": "https://twitch.tv/vrconlive",
             "Stream Notes": "1 -2 Cameras"
         }
@@ -31,6 +33,7 @@
         "properties": {
             "Event Name": "Artifex Live!",
             "End Time": 1671242400000,
+            "Type of Event": "Theatre/Live Performance",
             "Stream Link": "https://twitch.tv/vrconlive"
         }
     },
@@ -40,6 +43,7 @@
             "Event Name": "VRCon Opening Night Party",
             "End Time": 1671253200000,
             "Event Details": "Vrcon 3-add for afterparty",
+            "Type of Event": "After Party",
             "Stream Notes": "Recominded Private VCDN stream do to copyright issues"
         }
     },
@@ -146,6 +150,7 @@
             "Event Name": "VRCon After Party",
             "End Time": 1671339600000,
             "Event Details": "Vrcon 3-add for afterparty",
+            "Type of Event": "After Party",
             "Stream Notes": "Recominded Private VCDN stream do to copyright issues"
         }
     },
@@ -485,7 +490,8 @@
         "properties": {
             "Event Name": "VRCon After Party",
             "End Time": 1671858000000,
-            "Event Details": "Vrcon 3-add for afterparty"
+            "Event Details": "Vrcon 3-add for afterparty",
+            "Type of Event": "After Party"
         }
     },
     {
@@ -563,7 +569,8 @@
             "Event Name": "VRCon After Party",
             "End Time": 1671944400000,
             "Event Details": "Vrcon 3-add for afterparty",
-            "Event Host VRChat UserName": "VRCon"
+            "Event Host VRChat UserName": "VRCon",
+            "Type of Event": "After Party"
         }
     },
     {
@@ -707,8 +714,17 @@
         "properties": {
             "Event Name": "Muse Live!",
             "End Time": 1672448400000,
+            "Marketing Description": "A virtual Concert featuring some of VRChats  premeire talent! The event will showcase a variety of music styles and genres from heavy metal to pop to country.",
+            "Event Host VRChat UserName": "MissMuse",
+            "Additional Hosts": "AdzySlayer",
             "Type of Event": "Live Performance",
-            "How Long will the event run for?": "3 Hours"
+            "How Long will the event run for?": "3 Hours",
+            "World they will be using?": "llamas Cave",
+            "What they will need from VRCon": "we will need you to place stream camera in designated area for best visuals. As well as any branding you wish to to be present on promotional materials.",
+            "Are they ok with their event being streamed?": "TRUE",
+            "Stream Link": "https://twitch.tv/vrconlive",
+            "VIP List (Who the host wants in the instance)": "N/A (if changes VRcon staff will be notified promptly)",
+            "Event Image Link": "https://drive.google.com/file/d/1uopx-ZCyvgyJBKBfSprt6Yl-V28DuCU5/view"
         }
     },
     {
@@ -718,6 +734,7 @@
             "End Time": 1672459200000,
             "Type of Event": "Live Performance",
             "How Long will the event run for?": "3 Hours",
+            "Stream Link": "https://twitch.tv/vrconlive",
             "VRCon Staff Member Overseeing this event": "Spades"
         }
     },

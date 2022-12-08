@@ -1,13 +1,19 @@
 <template :key="componentKey">
 	<div>
-		<FullBack>
+		<FullBack img="@/assets/images/Film Festival/vlcsnap-2022-12-05-21h31m57s541.png">
 			<ColumnLayout class="py-8 pt-16">
-				<SectionBanner text="Film Festival" />
+				<v-container class="">
+					<v-row class=" text-center mb-0" justify="center">
+						<v-col cols="auto" style="height:fit-content;" class="pt-10">
+							<v-img :src="require('@/assets/images/Film Festival/No_glow_00135.png')" height="200px" class="mt-10"></v-img>
+						</v-col>
+					</v-row>
+				</v-container>
 			</ColumnLayout>
 		</FullBack>
 
 		<ColumnLayout class="py-16 white--text">
-			<!-- <LazyYoutube src="https://www.youtube.com/watch?v=g82UH0v574o" :showTitle="false" maxWidth="100%" class="mx-auto" /> -->
+			<LazyYoutube src="https://www.youtube.com/watch?v=ofAbfcIKcJM" :showTitle="false" maxWidth="100%" class="mx-auto my-5" />
 			<v-row>
 				<v-col>
 					<v-select v-model=searchTerm :items="genres" label="Filter By Genre" multiple outlined class="transparent" color="accent" dark />
@@ -34,12 +40,11 @@
 					</v-toolbar>
 					<v-row no-gutters>
 						<v-col cols="6" style="display: flex">
-							<!-- <v-img v-if="film.properties['Additional Marketing Content']" :src="film.properties['Additional Marketing Content'][0]" class="my-auto" max-height="30vh" contain /> -->
-							<ImageLoader v-if="film.properties['Additional Marketing Content']" :link="film.properties['Additional Marketing Content'][0]" class="ma-auto" style="max-width: 100%; position: relative" />
+							<ImageLoader v-if="film.properties['Thumbnail']" :link="getImageLink(film.properties['Thumbnail'])" class="ma-auto" style="max-width: 100%; position: relative" />
 						</v-col>
-						<v-col cols="6" class="pa-5">
-							<v-row>
-								<p>{{ film.properties["Film Description"] }} </p>
+						<v-col cols="6" class="pa-5 ma-auto text-center">
+							<v-row class="text-center ma-auto" style="width:fit-content">
+								{{ film.properties["Film Description"] }}
 							</v-row>
 							<v-row>
 								<v-col class="text-center" v-if="film.properties.YouTube || film.properties.Twitter">
@@ -61,6 +66,10 @@
 		</ColumnLayout>
 	</div>
 </template>
+
+<style>
+</style>
+
 
 <script>
 import FullBack from "@/components/FullBack.vue";
@@ -115,6 +124,21 @@ export default {
 					if (!this.genres.includes(genre) && genre) this.genres.push(genre)
 				})
 			})
+		},
+		getImageLink(link) {
+			var linkToParse
+			if (link.includes("drive")) {
+				linkToParse = link;
+			}
+			else {
+				return link
+			}
+
+			if (linkToParse) {
+				linkToParse = linkToParse.replaceAll("https://drive.google.com/file/d/", "").replaceAll("/view?usp=sharing", "").replaceAll("/view", "").replaceAll("_link", "").replaceAll("?usp=share", "")
+				linkToParse = "https://drive.google.com/uc?export=view&id=" + linkToParse
+				return linkToParse
+			}
 		},
 		searchFilter(film) {
 			if (this.searchTerm.length == 0 || this.searchTerm == null) return true;

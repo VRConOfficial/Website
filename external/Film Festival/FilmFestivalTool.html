@@ -85,16 +85,10 @@
 								name = contentList[contentIndex]
 								continue;
 							}
-							if (columnHeaders[contentIndex] == "Additional Marketing Content"  && contentList[contentIndex] != "") {
-								var gdLinks = contentList[contentIndex]
-								var jsonLinks = gdLinks.split(/, /)
-								for(linkIndex = 0; linkIndex < jsonLinks.length; linkIndex++){
-									var link = jsonLinks[linkIndex]
-									var split = link.split(/=/)
-									link = "https://drive.google.com/uc?export=view&id=" + split[1];
-									jsonLinks[linkIndex] = link
-								}
-								propertyList[columnHeaders[contentIndex]] = jsonLinks
+							if (columnHeaders[contentIndex] == "Thumbnail"  && contentList[contentIndex] != "" && contentList[contentIndex].includes("drive")) {
+								var gdLink = contentList[contentIndex]
+								console.log(gdLink)
+								propertyList[columnHeaders[contentIndex]] = gdLink
 							
 							} else if (columnHeaders[contentIndex] == "Film Genre") {
 								var genres = contentList[contentIndex]
@@ -113,7 +107,7 @@
 								var jsonLinks = tLinks.split(/ /)
 								propertyList[columnHeaders[contentIndex]] = jsonLinks
 							
-							} else if (contentList[contentIndex] != "") 
+							} else if (contentList[contentIndex] != "" && columnHeaders[contentIndex] != "Thumbnail") 
 								propertyList[columnHeaders[contentIndex]] = contentList[contentIndex];
 							
 						}

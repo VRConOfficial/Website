@@ -39,7 +39,9 @@
 										{{ dayjs(event.properties['End Time']).format("h:mm a") }}
 										({{ dayjs.tz.guess() }})
 									</div>
-
+									<div v-if="(event.properties['How to join?/Bot'] && (withinTime(event) || happeningSoon(event)))">
+										How to Join: <span v-html="grabJoinData(event)"></span>
+									</div>
 									<div v-if="event.properties['Type of Event']">
 										{{ event.properties['Type of Event'] }}
 									</div>
@@ -49,7 +51,6 @@
 								<v-col cols="5" sm="5" md="5" lg="5" xl="5" class="ma-1" v-if="event.properties['Event Image Link']">
 									<ImageVue v-if="!withinTime(event)" :link="getImageLink(event.properties['Event Image Link'])"></ImageVue>
 									<twitch-stream v-if="(withinTime(event) && event.properties['Stream Link'])" :channel="getChannel(event)" height="240" width="400" theme="dark" />
-
 								</v-col>
 								<v-col cols="5" sm="5" md="5" lg="5" xl="5" class="ma-1" v-else>
 									<v-img v-if="!withinTime(event)" :src="require('@/assets/images/placeholder.webp')"></v-img>
@@ -57,6 +58,9 @@
 								</v-col>
 								<v-col cols="11" sm="11" md="11" lg="6" xl="6" class="ma-5 text-h6 font-weight-light" v-if="event.properties['Marketing Description']">
 									<p>{{ event.properties['Marketing Description'] }}</p>
+								</v-col>
+								<v-col cols="11" sm="11" md="11" lg="6" xl="6" class="ma-5 text-h6 font-weight-light" v-if="event.properties['How to join?/Bot']">
+
 								</v-col>
 								<v-col cols="11" sm="11" md="11" lg="6" xl="6" class="ma-5 text-h6 font-weight-light" v-else></v-col>
 							</v-row>
@@ -79,6 +83,7 @@
 
 <script>
 import { store } from "@/assets/Data/GlobalVars/store.js";
+import bots from "@/assets/Data/VRCon VRCUserIDS/VRConBots.json"
 import ImageVue from "./Image.vue";
 import 'twitch-stream-embed';
 
@@ -108,6 +113,7 @@ export default {
 				return false;
 			}
 		},
+
 		getImageLink(link) {
 			var linkToParse
 			if (link.includes("drive")) {
@@ -120,12 +126,37 @@ export default {
 			}
 
 			if (linkToParse) {
-				linkToParse = linkToParse.replaceAll("https://drive.google.com/file/d/", "").replaceAll("/view?usp=sharing", "")
+				linkToParse = linkToParse.replaceAll("https://drive.google.com/file/d/", "").replaceAll("/view?usp=sharing", "").replaceAll("/view", "")
 				console.log(linkToParse)
 				linkToParse = "https://drive.google.com/uc?export=view&id=" + linkToParse
 				return linkToParse
 			}
 		},
+
+
+		grabJoinData(event) {
+			var property = ""
+			var resp = ""
+			property = event.properties['How to join?/Bot']
+			if (property.toLowerCase().includes("vrcon bot")) {
+				var link = "";
+				if (property.includes('1')) {
+					link = 'https://vrchat.com/home/user/' + bots.VRCon1.UserID
+				}
+				if (property.includes('2')) {
+					link = 'https://vrchat.com/home/user/' + bots.VRCon2.UserID
+				}
+				if (property.includes('3')) {
+					link = 'https://vrchat.com/home/user/' + bots.VRCon3.UserID
+				}
+				resp = `Request Invite from <a href="` + link + `" target="_blank">` + property + `</a>`
+			} else {
+				resp = property
+			}
+			return resp
+			// document.getElementById('HowToJoin').innerHTML = resp
+		},
+
 		withinTime(event) {
 			var now = store.debugValue ? store.theDate.getTime() : new Date().getTime();
 			var startTime = event.time
@@ -134,38 +165,37 @@ export default {
 			if (now >= startTime && now <= endTime) return true;
 			return false
 		},
+
 		getChannel(event) {
 			var link = event.properties['Stream Link'];
 			var channel = event.properties['Stream Link'].replaceAll("www.", "").replaceAll("https://", "").replaceAll('twitch.tv/', '')
 			return channel
 
 		},
+
 		datePassedStyle(event) {
 			let date = store.debugValue ? store.theDate.getTime() : new Date().getTime();
 			if (date > event.properties['End Time']) return "date-passed";
 			return "";
 		},
+
 		eventHapening(event) {
 			let date = store.debugValue ? store.theDate.getTime() : new Date().getTime();
-			if (date >= event.time && date <= event.properties['End Time']-1) return true
+			if (date >= event.time && date <= event.properties['End Time'] - 1) return true
 			return false
 		},
+
 		happeningSoon(event) {
 			let date = store.debugValue ? store.theDate.getTime() : new Date().getTime();
 			let triggerTime = event.time - 15 * 1000 * 60;
-
-			console.log(new Date(date))
-
-			console.log(new Date(triggerTime))
-
-			console.log(new Date(store.theDate.getTime()))
-
 			if (date <= event.time && date >= triggerTime) return true
 			return false
 		},
+
 		formatDate(unixDate) {
 			return new Date(unixDate).toLocaleTimeString();
 		},
+
 	},
 };
 </script>
