@@ -54,22 +54,20 @@
 									Find the Creators here!
 									<v-container class="mx-auto">
 										<v-row>
-											<div>
-												<v-col cols="12" v-for="(link, index) in film.properties.YouTube" :key="index">
-													<a target="_blank" :href="link">
-														<v-icon color="white">mdi-youtube</v-icon>
-														<span> {{ link }}</span>
-													</a>
-												</v-col>
-											</div>
-											<div>
-												<v-col cols="12" v-for="(link, index) in film.properties.Twitter" :key="index">
-													<a target="_blank" :href="link">
-														<v-icon color="white">mdi-twitter</v-icon>
-														<span> {{ link }}</span>
-													</a>
-												</v-col>
-											</div>
+											<v-col cols="12" v-for="(link, index) in film.properties.YouTube" :key="index">
+												<a target="_blank" :href="link">
+													<v-icon color="white">mdi-youtube</v-icon>
+													<span> {{ link }}</span>
+												</a>
+											</v-col>
+										</v-row>
+										<v-row>
+											<v-col cols="12" v-for="(link, index) in film.properties.Twitter" :key="index">
+												<a target="_blank" :href="link">
+													<v-icon color="white">mdi-twitter</v-icon>
+													<span> {{ link }}</span>
+												</a>
+											</v-col>
 										</v-row>
 									</v-container>
 								</v-col>
