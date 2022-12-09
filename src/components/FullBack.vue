@@ -30,7 +30,7 @@ export default {
 	data: () => ({}),
 	methods: {
 		getImg(img) {
-			console.log("url: " + (img))
+			// console.log("url: " + (img))
 			return img;
 		}
 	},

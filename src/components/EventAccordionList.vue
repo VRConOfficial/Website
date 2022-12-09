@@ -117,8 +117,6 @@ export default {
 		getImageLink(link) {
 			var linkToParse
 			if (link.includes("drive")) {
-				console.log("Link is Google Drive")
-				console.log(link)
 				linkToParse = link;
 			}
 			else {
@@ -127,7 +125,6 @@ export default {
 
 			if (linkToParse) {
 				linkToParse = linkToParse.replaceAll("https://drive.google.com/file/d/", "").replaceAll("/view?usp=sharing", "").replaceAll("/view", "")
-				console.log(linkToParse)
 				linkToParse = "https://drive.google.com/uc?export=view&id=" + linkToParse
 				return linkToParse
 			}

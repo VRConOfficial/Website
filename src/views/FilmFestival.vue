@@ -1,4 +1,4 @@
-<template :key="componentKey">
+<template>
 	<div>
 		<FullBack img="@/assets/images/Film Festival/vlcsnap-2022-12-05-21h31m57s541.png">
 			<ColumnLayout class="py-8 pt-16">
@@ -13,20 +13,20 @@
 		</FullBack>
 
 		<ColumnLayout class="py-16 white--text">
-			<LazyYoutube src="https://www.youtube.com/watch?v=ofAbfcIKcJM" :showTitle="false" maxWidth="100%" class="mx-auto my-5" />
-			<v-row>
-				<v-col>
-					<v-select v-model=searchTerm :items="genres" label="Filter By Genre" multiple outlined class="transparent" color="accent" dark />
+			<LazyYoutube src="https://www.youtube.com/watch?v=ofAbfcIKcJM" :showTitle="false" maxWidth="100%" class="mx-auto my-5" style="z-index: 1;" />
+			<v-row class="darkened" justify="center">
+				<v-col cols="12" sm="6">
+					<v-select v-model=searchTerm :items="genres" label="Filter By Genre" multiple outlined class="transparent pa-0" color="primary" dark />
 				</v-col>
-				<v-col>
-					<div class="mx-auto" style="width: fit-content"><v-btn class="ma-auto" to="/ffsignup">Sign up to Attend!</v-btn></div>
+				<v-col cols="12" sm="6">
+					<v-btn outlined color="white" class="ma-auto" block to="/ffsignup">Sign up to Attend!</v-btn>
 				</v-col>
 			</v-row>
 
-			<v-pagination v-model="page" :length="Math.ceil(filteredFilms.length / 4)" :total-visible="7" circle="true" total-visible="7" />
+			<v-pagination v-model="page" :length="Math.ceil(filteredFilms.length / 4)" :total-visible="7" :circle="true" class="my-8" />
 			<div v-for="(film, idx) in filteredFilms" :key="idx">
 				<v-card v-if="(idx >= firstFilm && idx <= lastFilm)" class="my-5 transparent white--text darkened elevation-5" outlined>
-					<v-toolbar color="primary" class="my-5" style="height:fit-content">
+					<v-toolbar color="primary" style="height:fit-content">
 						<v-row no-gutters class="my-auto" style="max-width: 100%;">
 							<v-col class="ma-0">
 								<v-toolbar-title class="white--text" style="max-width:100%; overflow-wrap: break-word">
@@ -53,20 +53,32 @@
 								<v-col class="text-center" v-if="film.properties.YouTube || film.properties.Twitter">
 									Find the Creators here!
 									<v-container class="mx-auto">
-										<a v-for="(link) in film.properties.YouTube" target="_blank" :href="link"><v-icon color="white">mdi-youtube</v-icon></a>
-									</v-container>
-									<v-container class="mx-auto">
-										<a v-for="(link) in film.properties.Twitter" target="_blank" :href="link"><v-icon color="white">mdi-twitter</v-icon></a>
+										<v-row>
+											<div>
+												<v-col cols="12" v-for="(link, index) in film.properties.YouTube" :key="index">
+													<a target="_blank" :href="link">
+														<v-icon color="white">mdi-youtube</v-icon>
+														<span> {{ link }}</span>
+													</a>
+												</v-col>
+											</div>
+											<div>
+												<v-col cols="12" v-for="(link, index) in film.properties.Twitter" :key="index">
+													<a target="_blank" :href="link">
+														<v-icon color="white">mdi-twitter</v-icon>
+														<span> {{ link }}</span>
+													</a>
+												</v-col>
+											</div>
+										</v-row>
 									</v-container>
 								</v-col>
-
 							</v-row>
-
 						</v-col>
 					</v-row>
 				</v-card>
 			</div>
-			<v-pagination v-model="page" :length="Math.ceil(filteredFilms.length / 4)" :total-visible="7" circle="true" total-visible="7" />
+			<v-pagination v-model="page" :length="Math.ceil(filteredFilms.length / 4)" :total-visible="7" :circle="true" />
 		</ColumnLayout>
 	</div>
 </template>
@@ -89,7 +101,7 @@ import { LazyYoutube } from 'vue-lazytube'
 export default {
 	mounted() {
 		document.title = "VRCon 2022 | Film Festival";
-		window.scrollTo({ top: 0, behavior: "instant" });
+		//window.scrollTo({ top: 0, behavior: "instant" });
 		this.films = filmList
 		this.firstFilm = this.page * 4 - 4;
 		this.lastfilm = this.page * 4 - 1;

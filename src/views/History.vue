@@ -341,7 +341,6 @@ export default {
 		ShowWorlds(worlds) {
 			this.dialog = true;
 			setTimeout(() => (this.worlds = worlds), 1500);
-			console.log(worlds);
 		},
 	},
 };

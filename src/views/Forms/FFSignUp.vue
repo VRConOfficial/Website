@@ -342,11 +342,11 @@ export default {
 	data: () => ({
 		formValues: null
 	}),
-	methods: {
-		submitInfo() {
-			console.log(this.formValues)
-		}
-	},
+	// methods: {
+	// 	submitInfo() {
+			
+	// 	}
+	// },
 	watch: {
 
 	}
