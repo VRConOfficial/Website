@@ -99,7 +99,7 @@ import { LazyYoutube } from 'vue-lazytube'
 export default {
 	mounted() {
 		document.title = "VRCon 2022 | Film Festival";
-		//window.scrollTo({ top: 0, behavior: "instant" });
+		window.scrollTo({ top: 0, behavior: "instant" });
 		this.films = filmList
 		this.firstFilm = this.page * 4 - 4;
 		this.lastfilm = this.page * 4 - 1;
