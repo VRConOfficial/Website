@@ -1,104 +1,39 @@
 [
-  {
-    "Photo": "placeholder.webp",
-    "Team": "Programmers",
-    "Leader": {
-      "name": "Vowgan",
-      "photo": "https://pbs.twimg.com/profile_images/1515043514052231168/EnHWxQhD_400x400.jpg"
-    },
-    "Staff": {
-      "": {
-        "Name": "Chanoler",
-        "photo": ""
-      },
-      "__1": {
-        "Name": "Dooly",
-        "photo": ""
-      },
-      "__2": {
-        "Name": "Lhun",
-        "photo": ""
-      },
-      "__3": {
-        "Name": "Lusif",
-        "photo": ""
-      }
-    }
-  },
-  {
-    "Photo": "placeholder.webp",
-    "Team": "Environmental Artists",
-    "Leader": {
-      "name": "Pesky",
-      "photo": "https://cdn.discordapp.com/avatars/235047463017381888/bae4ad37485683c335a972e33c866707.png?size=1024"
-    },
-    "Staff": {
-      "": {
-        "Name": "Tris",
-        "photo": ""
-      },
-      "__1": {
-        "Name": "Chanoler",
-        "photo": ""
-      },
-      "__2": {
-        "Name": "Cody",
-        "photo": ""
-      },
-      "__3": {
-        "Name": "Dooly",
-        "photo": ""
-      },
-      "__4": {
-        "Name": "Kizuragi",
-        "photo": ""
-      },
-      "__5": {
-        "Name": "Lhun",
-        "photo": ""
-      },
-      "__6": {
-        "Name": "Lusif",
-        "photo": ""
-      },
-      "__7": {
-        "Name": "mama peech",
-        "photo": ""
-      },
-      "__8": {
-        "Name": "regenstorm",
-        "photo": ""
-      },
-      "__9": {
-        "Name": "ShaggyMummy",
-        "photo": ""
-      },
-      "__10": {
-        "Name": "Hachi Dog",
-        "photo": ""
-      }
-    }
-  },
-  {
-    "Photo": "placeholder.webp",
-    "Team": "Concept Artists",
-    "Leader": {
-      "name": "CD-Rat",
-      "photo": "https://cdn.discordapp.com/avatars/311021008612229120/349eeb8844a583b7d8970e68b2b1a31b.png?size=1024"
-    },
-    "Staff": {
-      "": {
-        "Name": "Wolveeps",
-        "photo": "https://cdn.discordapp.com/avatars/352206088399224834/bfe1ced1177c14fa3d4e3872b3db076f.png?size=1024"
-      }
-    }
-  },
-  {
-    "Photo": "placeholder.webp",
-    "Team": "Avatar Creators",
-    "Leader": {
-      "name": "Regenstorm",
-      "photo": "https://cdn.discordapp.com/avatars/169674718981390337/a_1637f2b851fb4b1005e865b36221ae43.gif?size=1024"
-    }
-  }
+	{
+		"Team": "Programmers",
+		"Leader": {
+			"name": "Chanoler",
+			"photo": "https://cdn.discordapp.com/avatars/78257941735546880/3d305e4d5219c69c98f8c4e0aeb49b41.png?size=1024"
+		},
+		"Staff": {}
+	},
+	{
+		"Team": "Environmental Artists",
+		"Leader": {
+			"name": "Pesky",
+			"photo": "https://cdn.discordapp.com/avatars/235047463017381888/40f4394cde33802f8100502abf4bca8b.png"
+		},
+		"Staff": {
+			"__1": {
+				"Name": "Chanoler",
+				"photo": "https://cdn.discordapp.com/avatars/78257941735546880/3d305e4d5219c69c98f8c4e0aeb49b41.png?size=1024"
+			},
+			"__2": {
+				"Name": "Cody",
+				"photo": "https://cdn.discordapp.com/avatars/212036654284800001/798458e6e65f107322a6b265997eae87.png?size=1024"
+			},
+			"__3": {
+				"Name": "Lusif",
+				"photo": "https://cdn.discordapp.com/avatars/252568247138910210/a_483c9f77f162f18fe055e1d81177d2a5.gif?size=1024"
+			}
+		}
+	},
+	{
+		"Photo": "placeholder.webp",
+		"Team": "Concept Artists",
+		"Leader": {
+			"name": "CD-Rat",
+			"photo": "https://cdn.discordapp.com/avatars/311021008612229120/349eeb8844a583b7d8970e68b2b1a31b.png?size=1024"
+		}
+	}
 ]

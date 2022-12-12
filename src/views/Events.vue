@@ -229,7 +229,7 @@ export default {
 			this.onboarding = this.onboarding - 1 < 0 ? this.uniqueTimestamps.length : this.onboarding - 1;
 		},
 		ReadyToShowEvents() {
-			return false; //Change to true when Events are ready to be shown
+			return true; //Change to true when Events are ready to be shown
 		},
 
 		Debugging() {

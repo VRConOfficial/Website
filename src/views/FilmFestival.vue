@@ -34,7 +34,7 @@
 								</v-toolbar-title>
 							</v-col>
 							<v-col class="ma-0">
-								<p v-if="film.properties['Film Genre']" class="white--text text-right ma-0"> Genre: {{ film.properties["Film Genre"].toString().replaceAll(",", ", ").replaceAll("Music/Dancevideo", "Music/Dance Video") }} </p>
+								<p v-if="film.properties['Film Genre']" class="white--text text-right ma-0"> Genre: {{ film.properties["Film Genre"].toString().replaceAll(",", " | ").replaceAll("Music/Dancevideo", "Music/Dance Video") }} </p>
 							</v-col>
 						</v-row>
 					</v-toolbar>
@@ -54,19 +54,10 @@
 									Find the Creators here!
 									<v-container class="mx-auto">
 										<v-row>
-											<v-col cols="12" v-for="(link, index) in film.properties.YouTube" :key="index">
-												<a target="_blank" :href="link">
-													<v-icon color="white">mdi-youtube</v-icon>
-													<span> {{ link }}</span>
-												</a>
-											</v-col>
+											<v-col cols="12" v-for="(e, index) in film.properties.YouTube" :key="index" color="white" v-html="insertHTMLfromLink(e)"> </v-col>
 										</v-row>
 										<v-row>
-											<v-col cols="12" v-for="(link, index) in film.properties.Twitter" :key="index">
-												<a target="_blank" :href="link">
-													<v-icon color="white">mdi-twitter</v-icon>
-													<span> {{ link }}</span>
-												</a>
+											<v-col cols="12" v-for="(e, index) in film.properties.Twitter" :key="index" v-html="insertHTMLfromLink(e)">
 											</v-col>
 										</v-row>
 									</v-container>
@@ -124,6 +115,8 @@ export default {
 		lastFilm: 3,
 		genres: [],
 		searchTerm: [],
+		biliSVG: "<svg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' class='v-icon__component theme--light white--text'><path d='m17.813 4.653h.854c1.51.054 2.769.578 3.773 1.574 1.004.995 1.524 2.249 1.56 3.76v7.36c-.036 1.51-.556 2.769-1.56 3.773s-2.262 1.524-3.773 1.56h-13.334c-1.51-.036-2.769-.556-3.773-1.56s-1.524-2.262-1.56-3.773v-7.36c.036-1.511.556-2.765 1.56-3.76 1.004-.996 2.262-1.52 3.773-1.574h.774l-1.174-1.12a1.234 1.234 0 0 1 -.373-.906c0-.356.124-.658.373-.907l.027-.027c.267-.249.573-.373.92-.373s.653.124.92.373l2.853 2.747c.071.071.134.142.187.213h4.267a.836.836 0 0 1 .16-.213l2.853-2.747c.267-.249.573-.373.92-.373s.662.151.929.4.391.551.391.907c0 .355-.124.657-.373.906zm-12.48 2.587c-.746.018-1.373.276-1.88.773-.506.498-.769 1.13-.786 1.894v7.52c.017.764.28 1.395.786 1.893.507.498 1.134.756 1.88.773h13.334c.746-.017 1.373-.275 1.88-.773.506-.498.769-1.129.786-1.893v-7.52c-.017-.765-.28-1.396-.786-1.894-.507-.497-1.134-.755-1.88-.773zm2.667 3.867c.373 0 .684.124.933.373.25.249.383.569.4.96v1.173c-.017.391-.15.711-.4.96-.249.25-.56.374-.933.374s-.684-.125-.933-.374c-.25-.249-.383-.569-.4-.96v-1.173c0-.373.129-.689.386-.947.258-.257.574-.386.947-.386zm8 0c.373 0 .684.124.933.373.25.249.383.569.4.96v1.173c-.017.391-.15.711-.4.96-.249.25-.56.374-.933.374s-.684-.125-.933-.374c-.25-.249-.383-.569-.4-.96v-1.173c.017-.391.15-.711.4-.96.249-.249.56-.373.933-.373z'/></svg>",
+
 	}),
 	watch: {
 		page: function (el, oldEl) {
@@ -160,6 +153,31 @@ export default {
 			return this.searchTerm.includes(film.properties["Film Genre"][0]) || this.searchTerm.includes(film.properties["Film Genre"][1]) || this.searchTerm.includes(film.properties["Film Genre"][2]);
 
 		},
+		insertHTMLfromLink(element) {
+			console.log(element)
+			var link = element.link;
+			var name = this.capitalize(element.name);
+			
+			var newLink = link.toLowerCase()
+
+			if (newLink.includes("youtube")) {					
+				return "<a target='_blank' href='" + newLink + "'><i aria-hidden='true' class='v-icon notranslate mdi mdi-youtube theme--light white--text'></i><span style='font-size:16px; margin-top:auto; marbin-bottom: 0' >" + name + "</span></a>"
+			} else if (newLink.includes("twitter")) {
+				return "<a target='_blank' href='" + link + "'><i aria-hidden='true' class='v-icon notranslate mdi mdi-twitter theme--light white--text'/><span style='font-size:16px; margin-top:auto; marbin-bottom: 0' >" + name + "</span></a>"
+			} else if (newLink.includes("bilibili")) {
+				return "<a target='_blank' href='" + link + "'><span aria-hidden='true' class='v-icon notranslate theme--light' style='fill: white'>" + this.biliSVG + "</span><span style='font-size:16px; margin-top:auto; marbin-bottom: 0' class='white--text' >" + name + "</span></a>"
+			}
+			return ""
+
+		},
+		capitalize(str) {
+			const arr = str.split(" ")
+			for (var i = 0; i < arr.length; i++) {
+				arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1)
+			}
+			const str2 = arr.join(" ")
+			return str2
+		}
 	},
 	computed: {
 		filteredFilms() {

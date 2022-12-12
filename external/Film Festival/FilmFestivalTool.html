@@ -97,18 +97,59 @@
 								console.log(jsonGenres)
 								propertyList[columnHeaders[contentIndex]] = jsonGenres
 							
-							} else if (columnHeaders[contentIndex] == "YouTube") {
+							} else if (columnHeaders[contentIndex] == "YouTube" && contentList[contentIndex] != "N/A") {
 								var ytLinks = contentList[contentIndex]
+								console.log(ytLinks)
 								var jsonLinks = ytLinks.split(/  /)
-								propertyList[columnHeaders[contentIndex]] = jsonLinks
+								var jsonObjects = {};
+								for (let linkIndex = 0; linkIndex < jsonLinks.length; jsonLinks++) {
+									var son = {}
+									var user = ""
+									var link = jsonLinks[linkIndex]
+									var endURL = link.toLowerCase().replaceAll("https://", "").replaceAll("http://", "").replaceAll("www.", "").replaceAll("youtube.com/", "").replaceAll("@", "").replaceAll("c/", "")
+									if (link.includes("youtube") && !link.includes("/channel/")){
+										user = endURL
+									} else {
+										user = window.prompt(`Enter username for ${link}`)
+									}
+
+									son = {
+										name: user,
+										link: link
+									}
+									console.log(son)
+									jsonObjects["_"+linkIndex] = son
+								}
+								propertyList[columnHeaders[contentIndex]] = jsonObjects
 							
-							} else if (columnHeaders[contentIndex] == "Twitter") {
+							} else if (columnHeaders[contentIndex] == "Twitter" && contentList[contentIndex] != "N/A") {
 								var tLinks = contentList[contentIndex]
+								console.log(tLinks)
 								var jsonLinks = tLinks.split(/ /)
-								propertyList[columnHeaders[contentIndex]] = jsonLinks
+								var jsonObjects = {};
+								for (let linkIndex = 0; linkIndex < jsonLinks.length; jsonLinks++) {
+									var son = {}
+									var user = ""
+									var link = jsonLinks[linkIndex]
+									var endURL = link.toLowerCase().replaceAll("https://", "").replaceAll("http://", "").replaceAll("www.", "").replaceAll("twitter.com/", "").replaceAll("@", "")
+									if (link.includes("twitter")){
+										user = endURL
+									} else {
+										user = window.prompt(`Enter username for ${link}`)
+									}
+
+									son = {
+										name: user,
+										link: link
+									}
+									console.log(son)
+									jsonObjects["_"+linkIndex] = son
+								}
+								propertyList[columnHeaders[contentIndex]] = jsonObjects
 							
-							} else if (contentList[contentIndex] != "" && columnHeaders[contentIndex] != "Thumbnail") 
+							} else if (contentList[contentIndex] != "" && columnHeaders[contentIndex] != "Thumbnail" && columnHeaders[contentIndex] != "YouTube" && columnHeaders[contentIndex] != "Twitter"){
 								propertyList[columnHeaders[contentIndex]] = contentList[contentIndex];
+							}
 							
 						}
 

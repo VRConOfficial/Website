@@ -7,10 +7,10 @@
 			<v-col cols="12" v-if="data.item.teamInfo" class="text-center py-8">
 				<v-row justify="center" align="center">
 					<v-col cols="auto" v-if="data.item.photo">
-						<v-img :src="getImage(data.item.photo, 'normal')" max-width="100px" max-height="100px" />
+						<v-img :src="getImage(data.item.photo, 'normal')" max-width="100px" max-height="100px" class="imgRnd"/>
 					</v-col>
 					<v-col cols="auto" v-else>
-						<v-img :src="require('@/assets/images/tiles/default-profile.webp')" max-width="100px" max-height="100px" />
+						<v-img :src="require('@/assets/images/tiles/default-profile.webp')" max-width="100px" max-height="100px" class="imgRnd"/>
 					</v-col>
 					<v-col cols="auto">
 						<h3 class="headline mb-0">{{ data.item.director }}</h3>
@@ -47,7 +47,7 @@
 				<v-window-item v-for="(team, index) in data.item.teamInfo" :key="index" class="px-8 px-sm-4 py-8 px-lg-8">
 					<v-row justify="center" align="center" class="pa-4" v-if="team.Leader.name">
 						<v-col cols="auto" v-if="team.Leader.photo">
-							<v-img :src="getImage(team.Leader.photo, 'normal')" max-width="100px" max-height="100px" />
+							<v-img :src="getImage(team.Leader.photo, 'normal')" max-width="100px" max-height="100px" class="imgRnd"/>
 						</v-col>
 						<v-col cols="auto">
 							<h3 class="headline mb-0">{{ team.Leader.name }}</h3>
@@ -60,7 +60,7 @@
 								<v-card color="transparent" class="darkened white--text">
 									<div style="display: flex; flex-direction: row">
 										<div style="display: flex; flex-direction: row">
-											<v-img :src="getImage(staff.photo, 'normal')" width="100px" height="100px" />
+											<v-img :src="getImage(staff.photo, 'normal')" width="100px" height="100px" class="imgRnd"/>
 											<v-card-text>
 												{{ staff.Name }}
 											</v-card-text>
@@ -83,6 +83,9 @@
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
+}
+.imgRnd {
+	border-radius: 50%;
 }
 </style>
 
@@ -121,17 +124,27 @@ export default {
 		// 	return array;
 		// },
 		getImage(image) {
+			if (image == "Karet.png") console.log("getting Image")
 			if (image) {
 				try {
+					if (image == "Karet.png") console.log("Trying Staff")
 					return require("@/assets/images/Staff/" + image);
 				} catch (e) {
 					try {
+						if (image == "Karet.png") console.log("Trying http")
 						let url = new URL(image);
 						if (url.protocol === "http:" || url.protocol === "https:") {
 							return image;
 						}
 					} catch (e2) {
-						return require("@/assets/images/Staff/" + image);
+						try {
+							if (image == "Karet.png") console.log("Trying tiles")
+							return require("@/assets/images/tiles/" + image)
+						} catch (e3) {
+							console.log(e3)
+							return require("@/assets/images/Staff/" + image);
+						}
+
 					}
 				}
 			}

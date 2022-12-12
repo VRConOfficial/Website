@@ -1,6 +1,7 @@
 
 import Vue from 'vue';
 import Vuetify from 'vuetify/lib';
+import BiliBili from '@/components/icons/BiliBili.vue'
 Vue.use(Vuetify);
 
 export default new Vuetify({
@@ -36,6 +37,13 @@ export default new Vuetify({
 				success: '#113C77',
 				anchor: '#fff',
 				main: '#AB47BC'
+			}
+		}
+	},
+	icons: {
+		values: {
+			bilibili: {
+				component: BiliBili
 			}
 		}
 	}

@@ -39,11 +39,14 @@
 										{{ dayjs(event.properties['End Time']).format("h:mm a") }}
 										({{ dayjs.tz.guess() }})
 									</div>
-									<div v-if="(event.properties['How to join?/Bot'] && (withinTime(event) || happeningSoon(event)))">
-										How to Join: <span v-html="grabJoinData(event)"></span>
-									</div>
 									<div v-if="event.properties['Type of Event']">
 										{{ event.properties['Type of Event'] }}
+									</div>
+									<div v-if="event.properties.Quest">
+										Quest Compatible?: <strong>{{ event.properties.Quest.toString() == "FALSE" ? "No" : "Yes" }}</strong>
+									</div>
+									<div v-if="(event.properties['How to join?/Bot'])">
+										How to Join: <span v-html="grabJoinData(event)"></span>
 									</div>
 								</v-col>
 							</v-row>
@@ -52,12 +55,12 @@
 									<ImageVue v-if="!withinTime(event)" :link="getImageLink(event.properties['Event Image Link'])"></ImageVue>
 									<twitch-stream v-if="(withinTime(event) && event.properties['Stream Link'])" :channel="getChannel(event)" height="240" width="400" theme="dark" />
 								</v-col>
-								<v-col cols="5" sm="5" md="5" lg="5" xl="5" class="ma-1" v-else>
-									<v-img v-if="!withinTime(event)" :src="require('@/assets/images/placeholder.webp')"></v-img>
+								<v-col cols="5" sm="5" md="5" lg="5" xl="5" class="ma-1" v-else-if="store.debugValue">
+									<v-img v-if="!withinTime(event) || store.debugValue" :src="require('@/assets/images/placeholder.webp')"></v-img>
 									<twitch-stream v-if="(withinTime(event) && event.properties['Stream Link'])" :channel="getChannel(event)" height="240" width="400" theme="dark" />
 								</v-col>
 								<v-col cols="11" sm="11" md="11" lg="6" xl="6" class="ma-5 text-h6 font-weight-light" v-if="event.properties['Marketing Description']">
-									<p>{{ event.properties['Marketing Description'] }}</p>
+									<p v-html="generateWhiteSpace(event.properties['Marketing Description'].toString())"></p>
 								</v-col>
 								<v-col cols="11" sm="11" md="11" lg="6" xl="6" class="ma-5 text-h6 font-weight-light" v-if="event.properties['How to join?/Bot']">
 
@@ -130,25 +133,40 @@ export default {
 			}
 		},
 
+		generateWhiteSpace(string) {
+			return string.replace(/\n/g, "<br />")
+
+		},
 
 		grabJoinData(event) {
-			var property = ""
+			var property = event.properties['How to join?/Bot']
 			var resp = ""
-			property = event.properties['How to join?/Bot']
+
 			if (property.toLowerCase().includes("vrcon bot")) {
-				var link = "";
-				if (property.includes('1')) {
-					link = 'https://vrchat.com/home/user/' + bots.VRCon1.UserID
+				var b = event.properties['How to join?/Bot'].toLowerCase().split('\n')
+				var links0 = [];
+				for (let i = 0; i < b.length; i++) {
+					var link;
+					if (property.includes('1')) {
+						link = 'https://vrchat.com/home/user/' + bots.VRCon1.UserID
+					}
+					if (property.includes('2')) {
+						link = 'https://vrchat.com/home/user/' + bots.VRCon2.UserID
+					}
+					if (property.includes('3')) {
+						link = 'https://vrchat.com/home/user/' + bots.VRCon3.UserID
+					}
+					links0.push(link)
 				}
-				if (property.includes('2')) {
-					link = 'https://vrchat.com/home/user/' + bots.VRCon2.UserID
+				resp = "Request Invite from "
+				for (let linkIndex = 0; linkIndex < links0.length; linkIndex++){
+					var or = links0.length > 0 && linkIndex + 1 < links0.length ? " or " : ""
+					resp += `<a href="` + link + `" target="_blank">` + b[linkIndex].toUpperCase() + `</a>` + or
 				}
-				if (property.includes('3')) {
-					link = 'https://vrchat.com/home/user/' + bots.VRCon3.UserID
-				}
-				resp = `Request Invite from <a href="` + link + `" target="_blank">` + property + `</a>`
-			} else {
-				resp = property
+			} else if (property.toLowerCase().includes("sign-up")) {
+				resp = "<a href='https://www.vrcon.online/ffsignup'> Sign-Up </a>"
+			} else if (property.toLowerCase().includes("group")) {
+				resp = "<a href='https://vrchat.com/home/group/grp_338caf29-7d15-4db0-bac7-f2016a17d4d6' target='_blank'>Join the VRCon Group on VRChat</a>"
 			}
 			return resp
 			// document.getElementById('HowToJoin').innerHTML = resp

@@ -61,23 +61,23 @@ const routes = [
 	{
 		path: '/staff',
 		name: 'staff',
-		component: store.debugValue === false ? StaffViewRedirect : StaffView,
+		component:  StaffView,
 		children: [
 			{
 				path: 'directors',
-				component: store.debugValue === false ? StaffViewRedirect : DirectorsStaffView,
+				component: DirectorsStaffView,
 			},
 			{
 				path: 'events-team',
-				component: store.debugValue === false ? StaffViewRedirect : EventsStaffView,
+				component: EventsStaffView,
 			},
 			{
 				path: 'production-team',
-				component: store.debugValue === false ? StaffViewRedirect : ProductionStaffView,
+				component: ProductionStaffView,
 			},
 			{
 				path: 'marketing-team',
-				component: store.debugValue === false ? StaffViewRedirect : MarketingStaffView,
+				component: MarketingStaffView,
 			},
 		],
 	},

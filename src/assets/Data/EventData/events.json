@@ -6,6 +6,7 @@
             "Event Name": "Opening Ceremony Pre Show",
             "End Time": 1671228000000,
             "Event Details": "30min Pre Recorded by Media Team",
+            "Marketing Description": "Are you ready for VRCon 2022? For 30 minutes prior to the start of VRCon, enjoy the special Pre Show made by our lovely staff of the VRCon Media Team",
             "How Long will the event run for?": "30min",
             "Previous Examples of work?": "VRCon.Live",
             "World they will be using?": "N/A",
@@ -14,7 +15,8 @@
             "Stream Link": "https://twitch.tv/vrconlive",
             "Stream Notes": "UUse Start.mp4",
             "VRCon Staff Member Overseeing this event": "Wolveeps",
-            "Number of Volunteers needed for the event": "0"
+            "Number of Volunteers needed for the event": "0",
+            "Event Image Link": "https://drive.google.com/file/d/1mpsDxLOEDo-ACwtSViPGKGUBgwJKj-vK/view?usp=sharing"
         }
     },
     {
@@ -22,10 +24,12 @@
         "properties": {
             "Event Name": "VRCon Opening Ceremony",
             "End Time": 1671231600000,
+            "Marketing Description": "Enjoy our our long tour of VRCon 2022 with the Directors and staff of VRCon",
             "Type of Event": "Opening Ceremony/Tour",
             "How Long will the event run for?": "1 Hour",
             "Stream Link": "https://twitch.tv/vrconlive",
-            "Stream Notes": "1 -2 Cameras"
+            "Stream Notes": "1 -2 Cameras",
+            "Event Image Link": "https://drive.google.com/file/d/1mpsDxLOEDo-ACwtSViPGKGUBgwJKj-vK/view?usp=sharing"
         }
     },
     {
@@ -33,8 +37,13 @@
         "properties": {
             "Event Name": "Artifex Live!",
             "End Time": 1671242400000,
+            "Marketing Description": "Join us in Welcoming Artifex as our welcoming Live Performance. With Artists , we have a special musical performance that will hype you up for the rest of the convension!",
             "Type of Event": "Theatre/Live Performance",
-            "Stream Link": "https://twitch.tv/vrconlive"
+            "Stream Link": "https://www.twitch.tv/officialartifex",
+            "Stream Notes": "1 cam - 4",
+            "How to join?/Bot": "VRCon Group",
+            "Event Image Link": "https://media.discordapp.net/attachments/1014658938609860638/1051690016868409385/artifex_trimmed_transparent.png",
+            "Quest": "TRUE"
         }
     },
     {
@@ -44,7 +53,10 @@
             "End Time": 1671253200000,
             "Event Details": "Vrcon 3-add for afterparty",
             "Type of Event": "After Party",
-            "Stream Notes": "Recominded Private VCDN stream do to copyright issues"
+            "Stream Link": "https://twitch.tv/vrconlive",
+            "Stream Notes": "Recominded Private VCDN stream do to copyright issues",
+            "How to join?/Bot": "VRCon Group",
+            "Quest": "TRUE"
         }
     },
     {
@@ -53,7 +65,7 @@
             "Event Name": "Avatar PVP Showcase",
             "End Time": 1671289200000,
             "Event Details": "This Event will be mainly about the sneak peak of the New avatar PVP which will give detail on some news things which include a Health bar system,Vehicles,Voice transfer(Walkie Talkies), Buffs/Debuffs, Jump Pads/Shields as well as the basic kill particles for ranged as well as melee. There is also a video that explains a lot more information which i'll link to whom is reading right now https://www.youtube.com/watch?v=NJozWzYOzsM&t=20s",
-            "Marketing Details": "I dont think I'll provide a short description for marketing but there is a YouTube Video that has news for the Warhammer 40k PvP I'll link it down as an example https://www.youtube.com/watch?v=KnUlBxkQhL4 Skip to 9:28 as it more Commercial themed. ",
+            "Marketing Description": "Join Us If you Wanna experience in the PvP Side of VRChat where we show the Basics of Avatar Kill Particles/Melee, Buffs/Debuffs, Heals Particles, PVP Models and so much more created by a VRC player name GoFluffYaself. Hosted by Citrus0range, and GoFluffYaself. Join as we go through the mechanics of the PvP System as well as some PVP Avatars and how they work to show what you need to know when partaking in Avatar PvP Worlds or Joining VRC PvP Groups so you have one extra reason why you may enjoy VRChat even more. (Caution Poor+ Avatars maybe used so strong Computer must be required to Avoid Computer Explosions/Crashes)",
             "Event Host Prefered Contact": "Citrus0range#9554",
             "Event Host VRChat UserName": "Citrus ",
             "Additional Hosts": "LebenderPanzer\nGoFluffYaself\nTheFlyingFlapjack\nBruva Det",
@@ -66,7 +78,11 @@
             "Are they ok with their event being streamed?": "TRUE",
             "Stream Link": "https://twitch.tv/VRConLive",
             "Stream Notes": "2 Cam, 1 show",
-            "Anything Else": "Nope nothing as off importance at the moment but if you need a chat DM me. I'm in the NZST Timezone so I Picked both Morning and Afternoon"
+            "Volunteers for this event": "Zero8473\nBlossomvr_\nRocky_Rocketeer",
+            "How to join?/Bot": "VRCon Group",
+            "Event Image Link": "https://media.discordapp.net/attachments/1046473356406431874/1051248513683558551/256.png",
+            "Anything Else": "Nope nothing as off importance at the moment but if you need a chat DM me. I'm in the NZST Timezone so I Picked both Morning and Afternoon",
+            "Quest": "FALSE"
         }
     },
     {
@@ -75,7 +91,7 @@
             "Event Name": "Introduction to VRChat Roleplay ",
             "End Time": 1671296400000,
             "Event Details": "I will mainly be moving the panel along and picking out audience members to question the four of us but what this is about on what is VRC Roleplay, what it has impacted these individual, how they get involved and how can anyone join.",
-            "Marketing Details": "What is VRChat Roleplay? Join us in our talk as we explain and go over on what it is and how to get involve as well as learn from our stories thay we will be bringing to you!",
+            "Marketing Description": "What is VRChat Roleplay? Join us in our talk as we explain and go over on what it is and how to get involve as well as learn from our stories thay we will be bringing to you!",
             "Event Host Prefered Contact": "Satchi#7124",
             "Event Host VRChat UserName": "Satchi ",
             "Additional Hosts": "*Yuna*, Artleck, Meathamski",
@@ -88,16 +104,19 @@
             "Are they ok with their event being streamed?": "TRUE",
             "Stream Link": "https://twitch.tv/satchivr",
             "Stream Notes": "NO Media, 2 - 4 cams",
-            "Anything Else": "I do want to run an actual event like we did previously. Where we hosted a lobby for people to see how the Social RP lobby goes but I do understand that you may have a full schedule but if you don't let me know. I would happily run it again."
+            "Volunteers for this event": "Blossomvr_\nIBETA7\nMageyboi",
+            "How to join?/Bot": "VRCon Group",
+            "Anything Else": "I do want to run an actual event like we did previously. Where we hosted a lobby for people to see how the Social RP lobby goes but I do understand that you may have a full schedule but if you don't let me know. I would happily run it again.",
+            "Quest": "FALSE"
         }
     },
     {
         "time": 1671300000000,
         "properties": {
-            "Event Name": "Mental Health & VRC",
+            "Event Name": "Mental Health in the Metaverse",
             "End Time": 1671303600000,
             "Event Details": "In this panel, I'll be discussing how VRC can impede or affect mental health-- including the appeal of the game to neurodivergent people. We'll also touch base on how VRC affects substance abuse. Why do second life games appeal to the escapist in all of us? What drives the mind to relish the versatility VRChat provides?",
-            "Marketing Details": "VRChat is a platform that appeals to many users-- but there are a significant number who are neruodivergent. Why do those with 'special needs' find this game so appealing? Join us for a deep dive into mental health and how it correlates to VRChat.",
+            "Marketing Description": "VRChat is a platform that appeals to many users-- but there are a significant number who are neruodivergent. Why do those with 'special needs' find this game so appealing? Join us for a deep dive into mental health and how it correlates to VRChat.",
             "Event Host Prefered Contact": "nerdynanny",
             "Event Host VRChat UserName": "nerdynanny",
             "Additional Hosts": "None",
@@ -110,28 +129,34 @@
             "Are they ok with their event being streamed?": "TRUE",
             "Stream Link": "https://www.twitch.tv/nerdynanny",
             "Stream Notes": "NO Media. 1-2 cams",
-            "Anything Else": "I can do the panel anywhere from 30 mins to an hour. It'll be relatively short."
+            "Volunteers for this event": "L Church L\nAce_Gmaer,MYHT1C",
+            "How to join?/Bot": "VRCon Group",
+            "Event Image Link": "https://media.discordapp.net/attachments/1004498269826723910/1051655180904583178/mental_health_panel.png?width=519&height=676",
+            "Anything Else": "I can do the panel anywhere from 30 mins to an hour. It'll be relatively short.",
+            "Quest": "TRUE"
         }
     },
     {
         "time": 1671307200000,
         "properties": {
-            "Event Name": "Skits'n'Bits Improv Show",
+            "Event Name": "Skits'n'Bits Improv Workshop\n",
             "End Time": 1671314400000,
-            "Event Details": "In the show preselected improvisers will do a series of improv games in front of an audience, audience will be involved for suggestions (locations, actions, etc) for the games",
-            "Marketing Details": "We're not really doing anything else. To focus on the improv, we cover a wide selection of topics and themes. We're also a hub to find other people to collaborate on skits, improv and projects.",
+            "Event Details": "In this event people can join along or watch how workshops go about in our group!\n",
+            "Marketing Description": "We’re a group of improv loving individuals with an enthusiasm for virtual theater! Join us for a special VRCon session of our weekly workshop and get a taste for the comedic artform. We'll be running through a slate of games and exercises designed to hone the fundamentals. It doesn't matter if you're a total newcomer or a seasoned pro, we'd love to have you there and show you what we're about!\n",
             "Event Host Prefered Contact": "SwitzerLad#007",
             "Event Host VRChat UserName": "SwitzerLad",
             "Additional Hosts": "ZircronSwift, WalGesicht",
-            "Type of Event": "Theatre/Live Performance",
-            "How Long will the event run for?": "1 1/2 Hours",
-            "Previous Examples of work?": "Yes",
+            "Type of Event": "Class/Workshop\n",
+            "How Long will the event run for?": "2 Hours",
+            "Previous Examples of work?": "Yes, we did one in HorrorConVR plus me and the others have hosted them by ourselves too\n",
             "World they will be using?": "Skits'n'Bits Improv Theatre",
             "What they will need from VRCon": "None",
-            "Are they ok with their event being streamed?": "TRUE",
-            "Stream Link": "https://twitch.tv/VRConLive",
-            "Stream Notes": "2 - 4 Cam. 1 show",
-            "Anything Else": "World is WIP but will get released before the event"
+            "Are they ok with their event being streamed?": "FALSE",
+            "Volunteers for this event": "Zero8473\nAriaTempest\nTBG",
+            "How to join?/Bot": "VRCon Group",
+            "Event Image Link": "https://media.discordapp.net/attachments/1017612717483380797/1051224473178755112/unknown.png",
+            "Anything Else": "World is WIP but will get released before the event",
+            "Quest": "TRUE"
         }
     },
     {
@@ -139,9 +164,23 @@
         "properties": {
             "Event Name": "VRCon Film Festival",
             "End Time": 1671325200000,
+            "Event Details": "VRCon Anual Film Festival Hosted by Metacosm",
+            "Marketing Description": "Join us in celebrating thirty VRChat movies, short films, music videos, and cinematic content made by filmmakers from across the world. Hosted by J. Constantine and Elim from Metacosm Studios.\n",
+            "Event Host Prefered Contact": "Michael Zhang",
+            "Event Host VRChat UserName": "Constantine",
+            "Additional Hosts": "Constantine and Elim",
+            "Type of Event": "Film Festival",
+            "How Long will the event run for?": "2 Hours",
+            "Previous Examples of work?": "VRCon 2021 Film Festival",
+            "World they will be using?": "VRCon Events World",
             "Are they ok with their event being streamed?": "TRUE",
             "Stream Link": "https://twitch.tv/vrconlive",
-            "Stream Notes": "1 stagecaster, 1 showrunner, 2 camera, wolveeps"
+            "Stream Notes": "1 stagecaster, 1 showrunner, 2 camera, wolveeps",
+            "Volunteers for this event": "Blossom,AriaTempest,Church,\nAce Gamer,MYHT1C,EtherTheDreamer\nMageyboi,bloodrifle,Gren",
+            "How to join?/Bot": "Sign-up",
+            "VIP List (Who the host wants in the instance)": "Covered by Metacosm",
+            "Event Image Link": "https://media.discordapp.net/attachments/1004497343971860561/1021446108230197248/VRCon_2022_Thumbnail.png?width=1618&height=910",
+            "Quest": "TRUE"
         }
     },
     {
@@ -151,7 +190,10 @@
             "End Time": 1671339600000,
             "Event Details": "Vrcon 3-add for afterparty",
             "Type of Event": "After Party",
-            "Stream Notes": "Recominded Private VCDN stream do to copyright issues"
+            "Stream Notes": "Recominded Private VCDN stream do to copyright issues",
+            "Volunteers for this event": "AriaTempest,Blossom,Ace Gamer\nChurch,Ether,StarNovaKitty",
+            "How to join?/Bot": "VRCon Group",
+            "Quest": "TRUE"
         }
     },
     {
@@ -173,7 +215,11 @@
             "Are they ok with their event being streamed?": "TRUE",
             "Stream Link": "https://www.twitch.tv/xcirrex",
             "Stream Notes": "NO Media",
-            "Anything Else": "We have had previous attempts of staying within our timeslot and useualy gone overtime (sorry). This time I will make sure the gametype and length is closer calculated with our experience in hosting!"
+            "Volunteers for this event": "Zero8473\nBlossom\n!!Vela Zhezzaia!!",
+            "How to join?/Bot": "VRCon Group",
+            "Event Image Link": "https://media.discordapp.net/attachments/787015447844749332/1051254532459470868/api.png",
+            "Anything Else": "We have had previous attempts of staying within our timeslot and useualy gone overtime (sorry). This time I will make sure the gametype and length is closer calculated with our experience in hosting!",
+            "Quest": "FALSE"
         }
     },
     {
@@ -189,10 +235,15 @@
             "How Long will the event run for?": "1 Hour",
             "Previous Examples of work?": "I have done very many presentations and panels IRL, a few in VR. Im comfy with it!",
             "Links": "N/A",
-            "World they will be using?": "VRCon",
+            "World they will be using?": "The Devlopment of Irrbloss",
             "What they will need from VRCon": "Instructions on what the provided presentation world can do!",
             "Are they ok with their event being streamed?": "TRUE",
-            "Stream Notes": "Possibly No Media. 2 cams"
+            "Stream Link": "https://twitch.tv/vrconlive",
+            "Stream Notes": "2 cams",
+            "Volunteers for this event": "Ether\nChurch\nGren",
+            "How to join?/Bot": "VRCon Group",
+            "Event Image Link": "https://media.discordapp.net/attachments/964573975915143219/1051225334000922644/Irrbloss_poster_copy.png?width=910&height=910",
+            "Quest": "TRUE"
         }
     },
     {
@@ -211,7 +262,12 @@
             "What they will need from VRCon": "Just the access to the platform and the audience would be amazing! Nothing needed!",
             "Are they ok with their event being streamed?": "TRUE",
             "Stream Link": "https://twitch.tv/vrconlive",
-            "Anything Else": "Thanks for considering our gym! I would love to showcase the awesome fitness facility we built in VRChat but I would also be down to do a panel / talk about VR fitness, and also as a content creator in general."
+            "Stream Notes": "2 cam",
+            "Volunteers for this event": "Zero8473\n!!Vela Zhezzaia!!\nEther",
+            "How to join?/Bot": "VRCon Group",
+            "Event Image Link": "https://drive.google.com/file/d/1h54t4jgHPBi9CDVmGMIDKbMLIKAl6Wqu/view?usp=sharing",
+            "Anything Else": "Thanks for considering our gym! I would love to showcase the awesome fitness facility we built in VRChat but I would also be down to do a panel / talk about VR fitness, and also as a content creator in general.",
+            "Quest": "FALSE"
         }
     },
     {
@@ -227,45 +283,38 @@
             "How Long will the event run for?": "2hrs",
             "Previous Examples of work?": "Yes",
             "Links": "https://discord.gg/wFmr4aVV6Z",
-            "World they will be using?": "VRCon Event World (Maybe)",
+            "World they will be using?": "Sentinels of Monstrum Home World",
             "What they will need from VRCon": "Performers/Actors",
             "Are they ok with their event being streamed?": "TRUE",
-            "Stream Link": "To Be Given",
+            "Stream Link": "https://www.twitch.tv/jackfrost654?sr=a",
             "Stream Notes": "No Media",
-            "Anything Else": "None"
+            "Volunteers for this event": "Ace Gamer,TBG,\nBlossom",
+            "How to join?/Bot": "VRCon Group",
+            "Event Image Link": "https://media.discordapp.net/attachments/1012867763976548392/1051223229974462594/oid-1.jpg",
+            "Anything Else": "None",
+            "Quest": "FALSE"
         }
     },
     {
-        "time": 1671462000000,
-        "properties": {
-            "Event Name": "Dance Class",
-            "End Time": 1671465600000,
-            "Event Details": "It is a 4min music video that tells a story with no talking. The only way to follow is with the motion of the characters along with the music in the background. Lastly if there is a fight scene the characters movements move along with the music as if they were dancing.",
-            "Marketing Description": "Join us for a ballroom dance lesson! Open to anyone! Come learn the basics of Latin and smooth ballroom dance all inside VR with VR Dance Academy!",
-            "Event Host Prefered Contact": "DustBunny#0091",
-            "Event Host VRChat UserName": "DustBunny",
-            "Additional Hosts": "N/A",
-            "Type of Event": "Class/Workshop",
-            "How Long will the event run for?": "1 Hour",
-            "Previous Examples of work?": "Yes! I've taught dance at 2 other vr cons",
-            "Links": "vrdance.org",
-            "World they will be using?": "8spark grand ballroom",
-            "What they will need from VRCon": "Just to share",
-            "Are they ok with their event being streamed?": "TRUE",
-            "Stream Link": "twitch.tv/dustydustbunny",
-            "Stream Notes": "NO Media"
-        }
-    },
-    {
-        "time": 1671476400000,
+        "time": 1671469200000,
         "properties": {
             "Event Name": "Pool Tournament",
             "End Time": 1671483600000,
             "Event Details": "VRCon Event",
+            "Marketing Description": "Come one! Come all! To the Doubles Pool Tournament. Here, you and your partner will be facing against other teams to take home the gold!",
             "Event Host Prefered Contact": "CelestialRose#0020",
             "Event Host VRChat UserName": "-CelestialRose-",
-            "How Long will the event run for?": "2 Hours",
-            "Stream Link": "https://twitch.tv/vrconlive"
+            "Additional Hosts": "Rubystorm",
+            "Type of Event": "Tournament",
+            "How Long will the event run for?": "4 Hours",
+            "World they will be using?": "\nPool Parlor v3｜8 Ball Pool",
+            "Stream Notes": "NO MEDIA. ",
+            "VRCon Staff Member Overseeing this event": "Spades\n",
+            "Number of Volunteers needed for the event": "4?",
+            "Volunteers for this event": "Ether\nBlossom\nbloodrifle\n!!Vela Zhezzaia!!\nthomatoes50",
+            "How to join?/Bot": "VRCon Group",
+            "Event Image LInk": "https://drive.google.com/file/d/1Jwxi8xRHtqyyiVUxHNxS4QQKGTk30Ahc/view?usp=sharing",
+            "Quest": "TRUE"
         }
     },
     {
@@ -283,13 +332,43 @@
             "World they will be using?": "Yes",
             "What they will need from VRCon": "None",
             "Are they ok with their event being streamed?": "TRUE",
-            "Stream Link": "https://twitch.tv/vrconlive"
+            "Stream Link": "https://twitch.tv/vrconlive",
+            "Stream Notes": "2-3 cams",
+            "Volunteers for this event": "IBETA7,Ace Gamer, AriaTempest",
+            "How to join?/Bot": "VRCon Group",
+            "Event Image LInk": "https://media.discordapp.net/attachments/1051557752457146408/1051578873583775775/STEMVRbigBanner2.png?width=1202&height=676",
+            "Quest": "TRUE"
+        }
+    },
+    {
+        "time": 1671498000000,
+        "properties": {
+            "Event Name": "Dance Class",
+            "End Time": 1671501600000,
+            "Event Details": "It is a 4min music video that tells a story with no talking. The only way to follow is with the motion of the characters along with the music in the background. Lastly if there is a fight scene the characters movements move along with the music as if they were dancing.",
+            "Marketing Description": "Join us for a beginner friendly partner ballroom dance lesson in VRChat with the VR Dance Academy. Come learn the basic steps for Waltz, Salsa and Swing Ballroom Dance in this one hour dance lesson with DustBunny. Anyone is welcome, including Quest and half body VR users.",
+            "Event Host Prefered Contact": "DustBunny#0091",
+            "Event Host VRChat UserName": "DustBunny",
+            "Additional Hosts": "N/A",
+            "Type of Event": "Class/Workshop",
+            "How Long will the event run for?": "1 Hour",
+            "Previous Examples of work?": "Yes! I've taught dance at 2 other vr cons",
+            "Links": "vrdance.org",
+            "World they will be using?": "8spark grand ballroom",
+            "What they will need from VRCon": "Just to share",
+            "Are they ok with their event being streamed?": "TRUE",
+            "Stream Link": "twitch.tv/dustydustbunny",
+            "Stream Notes": "NO Media",
+            "Volunteers for this event": "Ace Gamer,IBETA7,!!Vela Zhezzaia!!",
+            "How to join?/Bot": "VRCon Group",
+            "Event Image LInk": "https://media.discordapp.net/attachments/872888440419668038/1051612459389157396/VRDA_Logo_Circle_Words-1.png?width=676&height=676",
+            "Quest": "TRUE"
         }
     },
     {
         "time": 1671548400000,
         "properties": {
-            "Event Name": "Real Locomotion, Infinite Pedestrian",
+            "Event Name": "The Past and Future Of Walking In VR",
             "End Time": 1671552000000,
             "Event Details": "A talk about locomotion in games and in VR\n.History of video game locomotion/how VR \nlocomotion has been done",
             "Marketing Description": "Walking In Virtual Reality: A look at locomotion and whats missing to move in VR",
@@ -304,7 +383,21 @@
             "What they will need from VRCon": "Low Latency video player for slide show/to live play videos/ live pass through. Otherwise I can work with just a video player. ",
             "Are they ok with their event being streamed?": "TRUE",
             "Stream Link": "https://twitch.tv/vrconlive",
-            "Anything Else": "quest compatibility is not necessary, I would rather the low latency player if it means cutting quest. "
+            "Stream Notes": "1-2 cam",
+            "Volunteers for this event": "BloodRifle\nEther\nStarNovaKitty",
+            "How to join?/Bot": "VRCon Group",
+            "Event Image Link": "https://media.discordapp.net/attachments/1051209431507013772/1051209555188654151/Export3.png?width=651&height=910",
+            "Anything Else": "quest compatibility is not necessary, I would rather the low latency player if it means cutting quest. ",
+            "Quest": "TRUE"
+        }
+    },
+    {
+        "time": 1671555600000,
+        "properties": {
+            "Event Name": "VR Bowling",
+            "End Time": 1671559200000,
+            "Volunteers for this event": "RubyStorm\nCelestialRose,MYHT1C",
+            "How to join?/Bot": "VRCon Group"
         }
     },
     {
@@ -313,8 +406,11 @@
             "Event Name": "World Hop/Explore",
             "End Time": 1671577200000,
             "Event Details": "Vrcon Event",
+            "Marketing Description": "Enjoy a fun session of World Hopping with the VRCon Team",
             "How Long will the event run for?": "2 Hours ",
-            "Are they ok with their event being streamed?": "TRUE"
+            "Are they ok with their event being streamed?": "FALSE",
+            "Volunteers for this event": "Blossom,AceGamer,bloodrifle",
+            "How to join?/Bot": "VRCon Group"
         }
     },
     {
@@ -322,6 +418,7 @@
         "properties": {
             "Event Name": "\"We Met in Virtual Reality\"\nscreening",
             "End Time": 1671588000000,
+            "Marketing Description": "Filmed entirely inside the world of virtual reality (VR), this immersive and revealing documentary roots itself in several unique communities within VR Chat, a burgeoning virtual reality platform. Through observational scenes captured in real-time, in true documentary style, the film reveals the growing power and intimacy of several relationships formed in the virtual world, many of which began during the COVID-19 lockdown, while so many in the physical world were facing intense isolation.\n \nThe film follows Jenny, an American Sign Language (ASL) teacher, dedicated to building a welcoming community for deaf and hard of hearing VR Chat users, and two long distance couples growing their relationships in VR as they prepare to meet physically - DustBunny; a fitness dance instructor building a career in social VR dance classes and her partner, Toaster; and DragonHeart & IsYourBoi, a  couple who met through an exotic VR dance community where they are both performers. \n\nWe Met in Virtual Reality tenderly documents the stories of people experiencing love, loss and unexpected connection, expressing vulnerability around mental health struggles and questions about identity, offering a hyper real journey into the human experience of an online world that may soon shape the future.",
             "Event Host Prefered Contact": "Little Poe",
             "Event Host VRChat UserName": "Little Poe",
             "Additional Hosts": "Jenny0629, DustBunny, -Toaster-, IsYourBOI, DragonHeart.",
@@ -329,8 +426,11 @@
             "World they will be using?": "VRCon World ",
             "Are they ok with their event being streamed?": "TRUE",
             "Stream Link": "https://twitch.tv/vrconlive",
-            "Volunteers for this event": "3",
-            "How to join?/Bot": "VRCON BOT 2"
+            "Stream Notes": "2 cam,Ether",
+            "Volunteers for this event": "TBG-Screening,MYHT1C-Screening, Zero8473Screening",
+            "How to join?/Bot": "VRCon Group",
+            "Event Image Link": "https://media.discordapp.net/attachments/884550655975501904/1051254186764947456/WeMetinVR_VRCon.png",
+            "Quest": "FALSE"
         }
     },
     {
@@ -339,7 +439,7 @@
             "Event Name": "\"We Met in Virtual Reality\"\nQNA",
             "End Time": 1671595200000,
             "Event Details": "An informal conversation with Joe Hunting and the cast of 'We Met in Virtual Reality' discussing how the documentary was formed.",
-            "Marketing Description": "An informal conversation with Joe Hunting & the cast of We Met in Virtual Reality discussing how the documentary was formed.",
+            "Marketing Description": "The film follows Jenny, an American Sign Language (ASL) teacher, dedicated to building a welcoming community for deaf and hard of hearing VR Chat users, and two long distance couples growing their relationships in VR as they prepare to meet physically - DustBunny; a fitness dance instructor building a career in social VR dance classes and her partner, Toaster; and DragonHeart & IsYourBoi, a  couple who met through an exotic VR dance community where they are both performers.",
             "Event Host Prefered Contact": "Little Poe",
             "Event Host VRChat UserName": "Little Poe",
             "Additional Hosts": "Jenny0629, DustBunny, -Toaster-, IsYourBOI, DragonHeart.",
@@ -350,16 +450,20 @@
             "What they will need from VRCon": "Someone to moderate the conversation if interested, but if not, we are happy to host ourselves.",
             "Are they ok with their event being streamed?": "TRUE",
             "Stream Link": "https://twitch.tv/vrconlive",
-            "Volunteers for this event": "3",
-            "How to join?/Bot": "VRCON BOT 2"
+            "Stream Notes": "2 cam",
+            "Volunteers for this event": "Blossom-Q&A\nIBETA7-Q&A\nBloodRifle-Q&A",
+            "How to join?/Bot": "VRCon Group",
+            "Event Image Link": "https://media.discordapp.net/attachments/884550655975501904/1051254186764947456/WeMetinVR_VRCon.png",
+            "Quest": "FALSE"
         }
     },
     {
         "time": 1671724800000,
         "properties": {
-            "Event Name": "Vrcon Boxing",
+            "Event Name": "VRCon Fight Club",
             "End Time": 1671732000000,
             "Event Details": "VRCon Event ",
+            "Marketing Description": "Looking to get some energy out? Got a friend that you'd like to box with? Join the VRCon team while we release some energy, boxing with our friends",
             "Event Host Prefered Contact": "Rubystorm#9010",
             "Event Host VRChat UserName": "Rubystorm ",
             "Type of Event": "Vrcon",
@@ -367,7 +471,13 @@
             "World they will be using?": "Udon Boxing",
             "Are they ok with their event being streamed?": "TRUE",
             "Stream Link": "https://twitch.tv/vrconlive",
-            "How to join?/Bot": "VRCon Bot 1"
+            "Stream Notes": "2-4 cam",
+            "Number of Volunteers needed for the event": "3",
+            "Volunteers for this event": "!!Vela Zhezzaia!!,\nBloodrifle",
+            "How to join?/Bot": "VRCon Group",
+            "Event Image Link": "https://media.discordapp.net/attachments/1012867763976548392/1051225141377511504/boxing-shield-logo-graphic-design_24908-54893.jpg?width=1065&height=910",
+            "Anything Else": "Models affect if it works or not",
+            "Quest": "TRUE"
         }
     },
     {
@@ -387,7 +497,12 @@
             "What they will need from VRCon": "At least one Moderator, which was the case last year",
             "Are they ok with their event being streamed?": "TRUE",
             "Stream Link": "https://twitch.tv/vrconlive",
-            "Anything Else": "None"
+            "Stream Notes": "2 cam",
+            "Number of Volunteers needed for the event": "3",
+            "Volunteers for this event": "BloodRifle\nEther\nBlossom",
+            "How to join?/Bot": "VRCon Group",
+            "Anything Else": "None",
+            "Quest": "FALSE"
         }
     },
     {
@@ -400,12 +515,17 @@
             "Event Host Prefered Contact": "KaptainKira#9568",
             "Event Host VRChat UserName": "Kaptain Kira",
             "Type of Event": "Panel/Talk",
-            "How Long will the event run for?": "1 Hour",
+            "How Long will the event run for?": "30 Minutes",
             "Previous Examples of work?": "No, but I have experience streaming to an audience.",
             "Links": "https://www.twitch.tv/kaptain_kira",
             "World they will be using?": "VRCon World",
             "Are they ok with their event being streamed?": "TRUE",
-            "Anything Else": "I would like a VRCon logo to put on an avatar to wear for the event if possible."
+            "Stream Link": "https://www.twitch.tv/kaptain_kira",
+            "Number of Volunteers needed for the event": "3",
+            "Volunteers for this event": "Ace Gamer\n!!Vela Zhezzaia!!\nAriaTempest",
+            "How to join?/Bot": "VRCon Group",
+            "Anything Else": "I would like a VRCon logo to put on an avatar to wear for the event if possible.",
+            "Quest": "TRUE"
         }
     },
     {
@@ -414,13 +534,57 @@
             "Event Name": "Battle Discs Tournament",
             "End Time": 1671760800000,
             "Event Details": "VRCon Event",
+            "Marketing Description": "A VRCon official Event, watch as teams compete for the top in a game of Battle Discs",
             "Event Host Prefered Contact": "Rubystorm#9010",
             "Event Host VRChat UserName": "RubyStorm",
+            "Type of Event": "Tournament",
             "How Long will the event run for?": "2 Hours",
             "World they will be using?": "Battle Disc world",
             "Are they ok with their event being streamed?": "TRUE",
             "Stream Link": "https://twitch.tv/vrconlive",
-            "Anything Else": "Vrcon Event"
+            "Stream Notes": "4 cam +",
+            "Number of Volunteers needed for the event": "3",
+            "Volunteers for this event": "AriaTempest,\nBlossom\nBloodrifle",
+            "How to join?/Bot": "VRCon Group",
+            "Event Image Link": "https://drive.google.com/file/d/1E6BXT-GDOBAM2g3PoXz1Ptt7iqgeIm7n/view?usp=sharing",
+            "Anything Else": "Vrcon Event",
+            "Quest": "TRUE"
+        }
+    },
+    {
+        "time": 1671764400000,
+        "properties": {
+            "Event Name": "Ida Dance Cypher",
+            "End Time": 1671771600000,
+            "Marketing Description": "Come join us at the IDA cypher, Wear different dancers express themselves on the floor. See various styles from different dancers and feel free to jump in and have a good time.",
+            "Event Host Prefered Contact": "JJFX-MULTIMEDIA#6552",
+            "Event Host VRChat UserName": "JJFX-MULTIMEDIA",
+            "Type of Event": "Dance Cypher",
+            "World they will be using?": "Ida Wearhouse",
+            "Stream Link": "https://www.twitch.tv/jjfx_multimedia",
+            "Stream Notes": "Raid jjfx",
+            "VRCon Staff Member Overseeing this event": "Shadozw",
+            "Number of Volunteers needed for the event": "3",
+            "Volunteers for this event": "TBG,Blossom,Gren",
+            "How to join?/Bot": "VRCon Group",
+            "VIP List (Who the host wants in the instance)": "GGduh, JJFX-MultiMedia,B-Botics,Charma",
+            "Event Image Link": "https://drive.google.com/file/d/1uBUvXPXWu7N86lPUD0bA5lZIAn9EgdyR/view?usp=sharing"
+        }
+    },
+    {
+        "time": 1671807600000,
+        "properties": {
+            "Event Name": "World Exploration",
+            "End Time": 1671811200000,
+            "Event Details": "Visiting amazing and breath taking worlds\n(VRCon Event)",
+            "Type of Event": "Hangout",
+            "How Long will the event run for?": "1 Hour",
+            "Are they ok with their event being streamed?": "TRUE",
+            "VRCon Staff Member Overseeing this event": "Shadowz",
+            "Number of Volunteers needed for the event": "3",
+            "Volunteers for this event": "Blossom,BloodRifle,CelestialRose",
+            "How to join?/Bot": "VRCon Group",
+            "Quest": "TRUE"
         }
     },
     {
@@ -441,7 +605,12 @@
             "What they will need from VRCon": "Cookies. :3",
             "Are they ok with their event being streamed?": "TRUE",
             "Stream Link": "nerdynanny",
-            "Anything Else": "I'm not sure if I applied for this yet so if I have, ignore this one XD"
+            "Stream Notes": "no media",
+            "Volunteers for this event": "StarNovaKitty\nRocky_Rocketeer\nEther\nAceGamer",
+            "How to join?/Bot": "VRCon Group",
+            "Event Image Link": "https://media.discordapp.net/attachments/1004498269826723910/1051339375658672168/lgbt_panel.png?width=519&height=676",
+            "Anything Else": "I'm not sure if I applied for this yet so if I have, ignore this one XD",
+            "Quest": "TRUE"
         }
     },
     {
@@ -461,7 +630,12 @@
             "World they will be using?": "The event has its own stage. Its currently not a public world.",
             "What they will need from VRCon": "Nope!",
             "Are they ok with their event being streamed?": "TRUE",
-            "Stream Link": "https://twitch.tv/vrconlive"
+            "Stream Link": "https://twitch.tv/vrconlive",
+            "Stream Notes": "2-3 cam",
+            "Volunteers for this event": "Blossom\n!!Vela Zhezzaia!!\nGren",
+            "How to join?/Bot": "VRCon Group",
+            "Event Image Link": "https://media.discordapp.net/attachments/964573975915143219/1051226224376164422/xCirrex_Refulgent_Poster.png?width=920&height=910",
+            "Quest": "FALSE"
         }
     },
     {
@@ -482,27 +656,25 @@
             "What they will need from VRCon": "Nothing needed for hosting",
             "Are they ok with their event being streamed?": "TRUE",
             "Stream Link": "https://twitch.tv/vrconlive",
-            "Anything Else": "If media team would like to be present they can be. "
+            "Stream Notes": "4 cam +",
+            "Volunteers for this event": "Blossom\nBloodRifle\n!!Vela Zhezzaia!!",
+            "How to join?/Bot": "VRCon Group",
+            "Event Image Link": "https://media.discordapp.net/attachments/1051294557226143795/1051357470666272799/VRCON_Pic2.png?width=1200&height=676",
+            "Anything Else": "If media team would like to be present they can be. ",
+            "Quest": "FALSE"
         }
     },
     {
-        "time": 1671850800000,
+        "time": 1671847200000,
         "properties": {
             "Event Name": "VRCon After Party",
             "End Time": 1671858000000,
             "Event Details": "Vrcon 3-add for afterparty",
-            "Type of Event": "After Party"
-        }
-    },
-    {
-        "time": 1671890400000,
-        "properties": {
-            "Event Name": "Dance Battle-IDA",
-            "End Time": 1671901200000,
-            "Event Host Prefered Contact": "JJFX-MULTIMEDIA#6552",
-            "Event Host VRChat UserName": "JJFX-MULTIMEDIA",
-            "Number of Volunteers needed for the event": "3",
-            "How to join?/Bot": "Sign ups"
+            "Type of Event": "After Party",
+            "Stream Notes": "VRCDN. 1 showrunner",
+            "Volunteers for this event": "Ace Gamer,!!Vela Zhezzaia!!,Bloodrifle\nBlossom,AriaTempest,Zero8473",
+            "How to join?/Bot": "VRCon Group",
+            "Quest": "TRUE"
         }
     },
     {
@@ -511,7 +683,7 @@
             "Event Name": "Introducing the Wallig Group Television and Metalworks Factory VRChat Roleplay community",
             "End Time": 1671915600000,
             "Event Details": "In this event, i will introduce everyone to a new roleplay community i am building based on a now-defunct IRL metalworks company that fictionally never went defunct and got in the broadcasting business.  This will include information about the group itself and the RL history of the Wallig metalworks company.",
-            "Marketing Description": "This event will introduce the VRChat community, to two brand new roleplay experiences. Say hello to the new  Wallig Group Television and Metalworks Factory. An experience that will be out of this world. ",
+            "Marketing Description": "This event will introduce the VRChat community, to two brand new roleplay experiences. Say hello to the new Wallig Group Television Network and Metalworks Factory. An experience that will be out of this world.",
             "Event Host Prefered Contact": "Evelyn Colling Friedrich#5963",
             "Event Host VRChat UserName": "EvelynFrierich (Miku M․ Hatsune)",
             "Type of Event": "Community Spotlight",
@@ -521,7 +693,13 @@
             "World they will be using?": "Yes",
             "What they will need from VRCon": "I need an Archive copy of the stream as well as a PowerPoint presentation screen and a . ",
             "Are they ok with their event being streamed?": "TRUE",
-            "Stream Link": "https://twitch.tv/vrconlive"
+            "Stream Link": "https://twitch.tv/vrconlive",
+            "Stream Notes": "2-3",
+            "Number of Volunteers needed for the event": "3",
+            "Volunteers for this event": "Ether,\nBlossom,\nGren",
+            "How to join?/Bot": "VRCon Group",
+            "Event Image Link": "https://media.discordapp.net/attachments/1039354851580194887/1051247202518978581/Walligbnnr-VRCon.png?width=1082&height=676",
+            "Quest": "FALSE"
         }
     },
     {
@@ -541,16 +719,21 @@
             "What they will need from VRCon": "Possibly to see the selection of worlds. Otherwise can't think of anything at the moment.",
             "Are they ok with their event being streamed?": "TRUE",
             "Stream Link": "https://www.twitch.tv/tfmjonny",
-            "Anything Else": "The event could be considered a hybrid. The hybrid a mixture of Live Performance, Panel/Talk and Community Spotlight. "
+            "Stream Notes": "no media",
+            "Number of Volunteers needed for the event": "3",
+            "Volunteers for this event": "Ace Gamer\nBloodRifle\nBlossom",
+            "How to join?/Bot": "VRCon Group",
+            "Anything Else": "The event could be considered a hybrid. The hybrid a mixture of Live Performance, Panel/Talk and Community Spotlight. ",
+            "Quest": "TRUE"
         }
     },
     {
         "time": 1671926400000,
         "properties": {
-            "Event Name": "Piano in the Forest",
+            "Event Name": "IM_NAKU LIVE",
             "End Time": 1671930000000,
             "Event Details": "I will be doing a live acoustic performance, only piano and vocals, in a world I create",
-            "Marketing Description": "\"A live acoustic music performance done in Full Body Tracking taking place in a relaxing setting. Sit back and relax in the forest while you are calmed by a pianist's thoughts.\"",
+            "Marketing Description": "Live musical performance featuring virtual reality musician im_naku. The event includes live piano and vocals on top of a instrumental tracks.",
             "Event Host Prefered Contact": "Naku#1337",
             "Event Host VRChat UserName": "Naku",
             "Type of Event": "Theatre/Live Performance",
@@ -560,7 +743,13 @@
             "World they will be using?": "N/A",
             "Are they ok with their event being streamed?": "TRUE",
             "Stream Link": "https://www.twitch.tv/im_naku",
-            "Anything Else": "Prior experience performing at the last two VRCons as well as many other music venues within virtual reality."
+            "Stream Notes": "no media",
+            "Number of Volunteers needed for the event": "2",
+            "Volunteers for this event": "Gren\nMYHT1C\nTBG",
+            "How to join?/Bot": "VRCon Group",
+            "Event Image Link": "https://media.discordapp.net/attachments/780220765378838538/1051256151729246208/VRChat_2022-10-01_14-52-18.627_3840x2160.png?width=1618&height=910",
+            "Anything Else": "Prior experience performing at the last two VRCons as well as many other music venues within virtual reality.",
+            "Quest": "TRUE"
         }
     },
     {
@@ -570,7 +759,26 @@
             "End Time": 1671944400000,
             "Event Details": "Vrcon 3-add for afterparty",
             "Event Host VRChat UserName": "VRCon",
-            "Type of Event": "After Party"
+            "Type of Event": "After Party",
+            "Stream Notes": "VRCDN. 1 showrunner",
+            "Number of Volunteers needed for the event": "4/2 Fillers",
+            "Volunteers for this event": "!!Vela Zhezzaia!!,\nStarNovaKitty,\nIBETA7\nAce Gamer,\nEther,\nAriaTempest",
+            "How to join?/Bot": "VRCon Group",
+            "Quest": "TRUE"
+        }
+    },
+    {
+        "time": 1672077600000,
+        "properties": {
+            "Event Name": "Campfire Stories",
+            "End Time": 1672084800000,
+            "Event Details": "Campfire story telling where users tell there\nStorys to take us on an adventure",
+            "Marketing Description": "Come to the camp site to hear amazing tales and storys\nfrom people all around!",
+            "How Long will the event run for?": "2 Hours",
+            "Stream Notes": "no media",
+            "Number of Volunteers needed for the event": "3",
+            "Volunteers for this event": "Gren\nthomatoes50,\nIBETA7",
+            "How to join?/Bot": "VRCon Group"
         }
     },
     {
@@ -579,12 +787,30 @@
             "Event Name": "Mini Golf (Putt Putt)",
             "End Time": 1672095600000,
             "Event Details": "VRCon Event",
+            "Marketing Description": "Sit back and relax as we play a fun game of Mini Golf",
             "Event Host Prefered Contact": "Rubystorm#9010",
             "Event Host VRChat UserName": "RubyStorm",
+            "Type of Event": "Tournament",
             "How Long will the event run for?": "2 Hours",
             "World they will be using?": "Putt Putt Quest",
             "Are they ok with their event being streamed?": "TRUE",
-            "Stream Link": "https://twitch.tv/vrconlive"
+            "Stream Link": "https://twitch.tv/vrconlive",
+            "Volunteers for this event": "MYHT1C,\nIBETA7,\nBlossom",
+            "How to join?/Bot": "VRCon Group",
+            "Event Image Link": "https://drive.google.com/file/d/1gCkwhoxagdgjCkgkyhrRVqYaq1TM72yC/view?usp=sharing",
+            "Quest": "TRUE"
+        }
+    },
+    {
+        "time": 1672099200000,
+        "properties": {
+            "Event Name": "Game Night",
+            "End Time": 1672106400000,
+            "Event Details": "VRCon Event",
+            "Type of Event": "Hangout",
+            "How Long will the event run for?": "2 Hours",
+            "Volunteers for this event": "Tbg,\nBlood,\nChurch",
+            "How to join?/Bot": "VRCon Group"
         }
     },
     {
@@ -602,25 +828,63 @@
             "Links": "(optional) Wiki pages related to moves that will be covered, art, world data/files, music certificates (if applicable) ",
             "What they will need from VRCon": "A custom, quest-compatible, dedicated world to multiple stages with fitness poles",
             "Are they ok with their event being streamed?": "TRUE",
-            "Stream Link": "https://twitch.tv/vrconlive"
+            "Stream Link": "https://twitch.tv/vrconlive",
+            "Stream Notes": "3 cams",
+            "Number of Volunteers needed for the event": "3",
+            "Volunteers for this event": "Blossom,\n!!Vela Zhezzaia!!,\nZero8473",
+            "How to join?/Bot": "VRCon Group"
         }
     },
     {
         "time": 1672178400000,
         "properties": {
-            "Event Name": "Skits'n'Bits Improv Workshop",
+            "Event Name": "Skits'n'Bits Improv Show\n",
             "End Time": 1672185600000,
-            "Event Details": "In this event people can join along or watch how workshops go about in our group! ",
-            "Marketing Description": "We're not really doing anything else. To focus on the improv, we cover a wide selection of topics and themes. We're also a hub to find other people to collaborate on skits, improv and projects.",
+            "Event Details": "In the show preselected improvisers will do a series of improv games in front of an audience, audience will be involved for suggestions (locations, actions, etc) for the games\n",
+            "Marketing Description": "Were you hoping for an improv show this VRCon? We got you covered! Our team of experienced improvisers will take your suggestions and craft them into scenes of comedic chaos. Let us weave words and spin games worthy enough to entice a chuckle, or maybe even a guffaw? Be there for the inaugural laugh launch of the Skits'N'Bits Improv Show!",
             "Event Host Prefered Contact": "SwitzerLad#0007",
             "Event Host VRChat UserName": "SwitzerLad",
             "Additional Hosts": "ZircronSwift, WalGesicht",
-            "Type of Event": "Class/Workshop",
-            "How Long will the event run for?": "2 Hours",
-            "Previous Examples of work?": "Yes, we did one in HorrorConVR plus me and the others have hosted them by ourselves too",
+            "Type of Event": "Theatre/Live Performance\n",
+            "How Long will the event run for?": "2 Hours\n",
+            "Previous Examples of work?": "Yes",
             "World they will be using?": "Skits'n'Bits Improv Theatre ",
-            "Are they ok with their event being streamed?": "FALSE",
-            "Anything Else": "The world is still WIP but will be released before the event starts"
+            "What they will need from VRCon": "None",
+            "Are they ok with their event being streamed?": "TRUE",
+            "Stream Link": "https://twitch.tv/VRConLive",
+            "Stream Notes": "2 - 4 Cam. 1 show\n",
+            "Number of Volunteers needed for the event": "3",
+            "Volunteers for this event": "AriaTempest,\nIBETA7\n,AceGamer",
+            "How to join?/Bot": "VRCon Group",
+            "Event Image Link": "https://media.discordapp.net/attachments/1017612717483380797/1051224473178755112/unknown.png",
+            "Anything Else": "The world is still WIP but will be released before the event starts",
+            "Quest": "TRUE"
+        }
+    },
+    {
+        "time": 1672189200000,
+        "properties": {
+            "Event Name": "Virtual Painting",
+            "End Time": 1672192800000,
+            "Number of Volunteers needed for the event": "3",
+            "Volunteers for this event": "AceGamer\nEther,\nMageyboi,AriaTempest",
+            "How to join?/Bot": "VRCon Group",
+            "Quest": "TRUE"
+        }
+    },
+    {
+        "time": 1672261200000,
+        "properties": {
+            "Event Name": "Ghost-Police Station",
+            "End Time": 1672264800000,
+            "Event Details": "Find Clue to help you find the killer, Beware of your suroundings",
+            "Marketing Description": "Join as a group of people find who the killer is,look for clues to help your team out!",
+            "How Long will the event run for?": "1",
+            "World they will be using?": "Ghost Police  Station",
+            "Number of Volunteers needed for the event": "3",
+            "Volunteers for this event": "AriaTempest,AceGamer,IBETA7",
+            "How to join?/Bot": "VRCon Group",
+            "Quest": "TRUE"
         }
     },
     {
@@ -628,14 +892,19 @@
         "properties": {
             "Event Name": "Panel on VR Video Production",
             "End Time": 1672279200000,
-            "Event Host Prefered Contact": "Wolveeps"
+            "Event Host Prefered Contact": "Wolveeps",
+            "Stream Notes": "2 cam",
+            "Number of Volunteers needed for the event": "3",
+            "Volunteers for this event": "IBETA7,Gren,Mageyboi",
+            "How to join?/Bot": "VRCon Group",
+            "Quest": "TRUE"
         }
     },
     {
         "time": 1672282800000,
         "properties": {
             "Event Name": "NFFC (No friends friends Club)",
-            "End Time": 1672286400000,
+            "End Time": 1672288200000,
             "Event Details": "The No Friends Friends Club will be hosting a panel regarding information related to the No Friends Friends club, an anti-social social club with a focus on members of the VRChat community who suffer from social anxiety or have difficulty making friends. In this panel we will explain our mission, purpose and introduce some of our members of our club as guest speakers to share their experience being a part of the club. ",
             "Marketing Description": "The No Friends Friends Club is a VRChat community club focused on helping those with social anxiety or have difficulty making friends. We meet every Friday at 9:00pm EST. Through hangouts, seminars, exercises and meetups we give space for those who want to practice their social skills and make friends along the way. ",
             "Event Host Prefered Contact": "🤍Kuro🖤#3855",
@@ -649,21 +918,26 @@
             "What they will need from VRCon": "Video player to display a backdrop for the panel. There was one last year so I imagine there will be one again.",
             "Are they ok with their event being streamed?": "TRUE",
             "Stream Link": "twitch.tv/okaykuro",
-            "Event Image Link": "https://media.discordapp.net/attachments/973498360419995698/1043943287788158976/safsfasfa.png",
-            "Anything Else": "Time preference for the panel would be weekend night time"
+            "Stream Notes": "no media",
+            "Number of Volunteers needed for the event": "3",
+            "Volunteers for this event": "AceGamer\nBlossom\nBloodRifle",
+            "How to join?/Bot": "VRCon Group",
+            "Event Image Link": "https://media.discordapp.net/attachments/1004498269826723910/1051607712720486480/VRChat_2022-12-09_22-31-19.760_1920x1080.png?width=1202&height=676",
+            "Anything Else": "Time preference for the panel would be weekend night time",
+            "Quest": "TRUE"
         }
     },
     {
         "time": 1672344000000,
         "properties": {
-            "Event Name": "Autism and VRChat ",
+            "Event Name": "Neurological Disorders and Social VR",
             "End Time": 1672351200000,
             "Event Details": "This to talk and educate the awareness of autism and other mental disabilities that can effect how to become social in a online environment and educate proper social and life skills needed to properly deal and support friends with these kind of socially difficult disorders in a way that doesn't cause chaos to surrounding VRC communities. ",
-            "Marketing Description": "We are looking for autistic and disabled vtubers to help educate a panel on proper engagement with those with limited social skills and advocate for the d8sabled and autistic community ",
+            "Marketing Description": "In this panel, TinaJunVRC, talks about neurological disorders and how it affects many people of VRChat and goes over how you can properly engage with those who have limited social skills.",
             "Event Host Prefered Contact": "TinaJunVRC #1007",
             "Event Host VRChat UserName": "TinaJunVRC",
             "Additional Hosts": "None",
-            "Type of Event": "Class/Workshop",
+            "Type of Event": "Panel/Talk",
             "How Long will the event run for?": "1 Hour",
             "Previous Examples of work?": "I did a few VRC podcasts during Autism Awareness Month",
             "Links": "https://www.youtube.com/channel/UCvAtCelhtZYBvDfUTvmOXFw A link to my charity's YouTube channel which discusses disability advocacy and helping the autistic and disabled including a podcast that streamed in 2021 with frostyfrog and other vtubers \n\nhttps://thepcpitstop001.wixsite.com/cftaf (my charities website)",
@@ -671,7 +945,25 @@
             "What they will need from VRCon": "to have other users sith the same disabilities or disorders to share their experiences and help educate new users or those of same interest ",
             "Are they ok with their event being streamed?": "TRUE",
             "Stream Link": "twitch.tv/tinajunvrc",
-            "Anything Else": "I'm wanting to help those who cant speak or are 2 scared to engage online to better their chances in making friends and engage in becoming happy with some and be their true self again "
+            "Stream Notes": "no media",
+            "Number of Volunteers needed for the event": "3",
+            "Volunteers for this event": "!!Vela Zhezzaia!!,bloodrifle,Zero8473",
+            "How to join?/Bot": "VRCon Group",
+            "Anything Else": "I'm wanting to help those who cant speak or are 2 scared to engage online to better their chances in making friends and engage in becoming happy with some and be their true self again ",
+            "Quest": "TRUE"
+        }
+    },
+    {
+        "time": 1672354800000,
+        "properties": {
+            "Event Name": "Game Night",
+            "End Time": 1672362000000,
+            "Event Details": "VRCon Event",
+            "Type of Event": "Hangout",
+            "How Long will the event run for?": "2 Hours",
+            "Number of Volunteers needed for the event": "3",
+            "Volunteers for this event": "Blossom,AceGamer,MYHT1C",
+            "How to join?/Bot": "VRCon Group"
         }
     },
     {
@@ -692,21 +984,32 @@
             "What they will need from VRCon": "If possible we would like to start/visit another VRC world (\"40K Community Hub\") at some point of the event since this is our general rally world where all the groups of our Network meet and includes Links and advertisement for our various group Discords.\n\nNo, we likely don't require much more outside of having it made clear that people are happily invited to test out the system and our avatars and the things mentioned above if it is agreeable.",
             "Are they ok with their event being streamed?": "TRUE",
             "Stream Link": "https://twitch.tv/vrconlive",
-            "Event Image Link": "https://drive.google.com/file/d/1cwaPQbcask8nFkM4J8AoCVg0tAf1uQF9/view?usp=sharing"
+            "Number of Volunteers needed for the event": "3",
+            "Volunteers for this event": "Gren\nEther\nRubyStorm",
+            "How to join?/Bot": "vrcon bot 2",
+            "Event Image Link": "https://drive.google.com/file/d/1cwaPQbcask8nFkM4J8AoCVg0tAf1uQF9/view?usp=sharing",
+            "Quest": "FALSE"
         }
     },
     {
         "time": 1672430400000,
         "properties": {
-            "Event Name": "Into The Metaverse Panel",
+            "Event Name": "Metacosm Studios Panel",
             "End Time": 1672434000000,
+            "Marketing Description": "Meet the Metacosm Studios team and learn how we filmed “What if Mirrors Were ILLEGAL In VRChat?,” “Backrooms The Anime,” and our other VRChat films from this year. Metacosm Studios is an indie, virtual film studio that produces movies, short films, and episodic series shot entirely in VRChat.",
             "Event Host Prefered Contact": "Metacosm",
             "Event Host VRChat UserName": "Constatine",
             "Additional Hosts": "Peachbright, Skyking,  MichaelZ, Moon",
             "Type of Event": "Panel",
             "How Long will the event run for?": "1 Hour",
             "Stream Link": "https://twitch.tv/vrconlive",
-            "VRCon Staff Member Overseeing this event": "SenpaiVR / Shadozw"
+            "Stream Notes": "2-3 cam",
+            "VRCon Staff Member Overseeing this event": "SenpaiVR / Shadozw",
+            "Number of Volunteers needed for the event": "3",
+            "Volunteers for this event": "Ether\nMYHT1C\nChurch",
+            "How to join?/Bot": "VRCon Group",
+            "Event Image Link": "https://media.discordapp.net/attachments/1004497343971860561/1051567217923325973/Screenshot_667.png?width=1202&height=676",
+            "Quest": "TRUE"
         }
     },
     {
@@ -714,7 +1017,7 @@
         "properties": {
             "Event Name": "Muse Live!",
             "End Time": 1672448400000,
-            "Marketing Description": "A virtual Concert featuring some of VRChats  premeire talent! The event will showcase a variety of music styles and genres from heavy metal to pop to country.",
+            "Marketing Description": "A virtual Concert featuring some of VRChats  premiere talent! The event will showcase a variety of music styles and genres from heavy metal to pop to country.",
             "Event Host VRChat UserName": "MissMuse",
             "Additional Hosts": "AdzySlayer",
             "Type of Event": "Live Performance",
@@ -723,8 +1026,13 @@
             "What they will need from VRCon": "we will need you to place stream camera in designated area for best visuals. As well as any branding you wish to to be present on promotional materials.",
             "Are they ok with their event being streamed?": "TRUE",
             "Stream Link": "https://twitch.tv/vrconlive",
+            "Stream Notes": "2-3 cam",
+            "Number of Volunteers needed for the event": "6",
+            "Volunteers for this event": "Bloodrife,\nAceGamer,\n!!Vela Zhezzaia!\nZero8473,\nRubyStorm,\nCelestialRose",
+            "How to join?/Bot": "VRCon Group",
             "VIP List (Who the host wants in the instance)": "N/A (if changes VRcon staff will be notified promptly)",
-            "Event Image Link": "https://drive.google.com/file/d/1uopx-ZCyvgyJBKBfSprt6Yl-V28DuCU5/view"
+            "Event Image Link": "https://drive.google.com/file/d/1uopx-ZCyvgyJBKBfSprt6Yl-V28DuCU5/view",
+            "Quest": "FALSE"
         }
     },
     {
@@ -732,10 +1040,16 @@
         "properties": {
             "Event Name": "Talent Show",
             "End Time": 1672459200000,
+            "Marketing Description": "Sit back and enjoy as VRChat users show their talent and creations!",
             "Type of Event": "Live Performance",
             "How Long will the event run for?": "3 Hours",
             "Stream Link": "https://twitch.tv/vrconlive",
-            "VRCon Staff Member Overseeing this event": "Spades"
+            "Stream Notes": "3-4 cam",
+            "VRCon Staff Member Overseeing this event": "Spades",
+            "Number of Volunteers needed for the event": "3",
+            "Volunteers for this event": "Blossom\nAriaTempest\nChurch\nRuby",
+            "How to join?/Bot": "VRCon Group",
+            "Quest": "TRUE"
         }
     },
     {
@@ -743,8 +1057,12 @@
         "properties": {
             "Event Name": "Closing Ceremonies",
             "End Time": 1672462800000,
+            "Marketing Description": "VRCon Directors and Staff say their goodbyes after a fun and eventful convention",
             "Event Host VRChat UserName": "VRCon",
-            "Type of Event": "VRCon Event"
+            "Type of Event": "VRCon Event",
+            "Stream Link": "https://twitch.tv/vrconlive",
+            "Stream Notes": "Wolveeps, a cam, end.mp4",
+            "Event Image Link": "https://drive.google.com/file/d/1mpsDxLOEDo-ACwtSViPGKGUBgwJKj-vK/view?usp=sharing"
         }
     }
 ]

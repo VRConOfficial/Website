@@ -47,7 +47,7 @@ export default {
 					title: "Karet",
 					image: "Karet.png",
 					content:
-						"Karet, our production director, joined VRCon in 2021 to assist with the world team with the design and creation of the hub world. With his extencive knowledge in 3D Art and Programming knowledge, and his dedication to VRCon, he was invited to become our Director in 2022 to assist with this years creations.\n\nWhile you may recognize him from VRCon, you may also recognize him as the Chief of the LPD (Loli Police Department) along with some of his other creations over there.",
+						"Karet, our production director, joined VRCon in 2021 to assist with the world team with the design and creation of the hub world, as well as building the entire community festival world. With his extencive knowledge in 3D Art and Programming knowledge, and his dedication to VRCon, he was invited to become our Director in 2022 to assist with this years creations.\n\nWhile you may recognize him from VRCon, you may also recognize him as the Chief of the LPD (Loli Police Department) along with some of his other creations over there.",
 				},
 				title: "Karet",
 			},
@@ -57,7 +57,7 @@ export default {
 					title: "Shadozw",
 					image: "Shadozw.png",
 					content:
-						"Shadow is in charge of all Events related work. He organizes our schedules in order to create amazing experiences for our visitors",
+						"Hi I'm shadow!  Pleasure to meet you..  little background on me is I love to dance and coseplay!  But above all I love to meet new people and show them all around the social communities.  Let's make our community a family!",
 				},
 				title: "Shadozw",
 			},

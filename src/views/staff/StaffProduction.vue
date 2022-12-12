@@ -24,7 +24,7 @@ export default {
 			action: "mdi-account",
 			item: {
 				title: "Production",
-				image2: "placeholder.webp",
+				photo: "Karet.png",
 				content:
 					"The Production team handles the World and Avatar production for VRCon. They ensure that VRCon has a memerable world that immerses our visitors into the story we tell throughout the convension.",
 				director: "Karet",
