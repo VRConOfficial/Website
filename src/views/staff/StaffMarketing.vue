@@ -24,7 +24,7 @@ export default {
 			action: "mdi-account",
 			item: {
 				title: "Marketing",
-				image2: "placeholder.webp",
+				photo: "https://cdn.discordapp.com/avatars/771735983078637598/5cd6f5b84c1f655aef00b91dbf4a9610.png?size=1024",
 				content:
 					"After all is said and done, Marketing is responsible for getting the word out, and hyping up everyone for the fantastic experience VRCon has to offer. ",
 				director: "SenpaiVR",

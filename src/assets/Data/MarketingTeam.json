@@ -1,138 +1,163 @@
 [
-  {
-    "Photo": "placeholder.webp",
-    "Team": "Media",
-    "Leader": {
-      "name": "Wolveeps",
-      "photo": "https://cdn.discordapp.com/avatars/352206088399224834/bfe1ced1177c14fa3d4e3872b3db076f.png?size=1024"
-    },
-    "Staff": {
-      "": {
-        "Name": "ArcoseRazor",
-        "sub": "",
-        "photo": ""
-      },
-      "1": {
-        "Name": "Bloodrifle",
-        "sub": "",
-        "photo": ""
-      },
-      "2": {
-        "Name": "Carmo(SJF95Fighter)",
-        "sub": "",
-        "photo": ""
-      },
-      "3": {
-        "Name": "Chris_Conni",
-        "sub": "",
-        "photo": ""
-      },
-      "4": {
-        "Name": "drkim",
-        "sub": "",
-        "photo": ""
-      },
-      "5": {
-        "Name": "Eather the Dreamer",
-        "sub": "",
-        "photo": ""
-      },
-      "6": {
-        "Name": "Emma Torch",
-        "sub": "",
-        "photo": ""
-      },
-      "7": {
-        "Name": "FreakenPurple",
-        "sub": "",
-        "photo": ""
-      },
-      "8": {
-        "Name": "GerzyBow",
-        "photo": ""
-      },
-      "9": {
-        "Name": "KennyBeats!",
-        "photo": ""
-      },
-      "10": {
-        "Name": "Khangaluwu",
-        "photo": ""
-      },
-      "11": {
-        "Name": "Peko",
-        "photo": ""
-      },
-      "12": {
-        "Name": "Phill13938",
-        "photo": ""
-      },
-      "13": {
-        "Name": "Phill13938",
-        "photo": ""
-      },
-      "14": {
-        "Name": "Thomatoes50",
-        "photo": ""
-      },
-      "15": {
-        "Name": "WalGesicht",
-        "photo": ""
-      },
-      "16": {
-        "Name": "Wobblypixel",
-        "photo": ""
-      }
-    }
-  },
-  {
-    "Photo": "placeholder.webp",
-    "Team": "Graphics",
-    "Leader": {
-      "name": "Deathmap",
-      "photo": ""
-    },
-    "Staff": {
-      "": {
-        "Name": "Ashes of the Phoenix",
-        "sub": "",
-        "photo": ""
-      },
-      "__1": {
-        "Name": "Earth to Bound",
-        "sub": "",
-        "photo": ""
-      },
-      "__2": {
-        "Name": "Gamut",
-        "sub": "",
-        "photo": ""
-      },
-      "__3": {
-        "Name": "Incognootie",
-        "sub": "",
-        "photo": ""
-      },
-      "__4": {
-        "Name": "Tero",
-        "sub": "",
-        "photo": ""
-      }
-    }
-  },
-  {
-    "Photo": "placeholder.webp",
-    "Team": "Social Media",
-    "Leader": {
-      "name": "KisameReason",
-      "photo": ""
-    },
-    "Staff": {
-      "": {
-        "Name": "SladeDaCat",
-        "sub": "",
-        "photo": ""
-      }
-    }
-  }
+	{
+		"Photo": "placeholder.webp",
+		"Team": "Media",
+		"Leader": {
+			"name": "Wolveeps",
+			"photo": "https://cdn.discordapp.com/avatars/352206088399224834/bfe1ced1177c14fa3d4e3872b3db076f.png?size=1024"
+		},
+		"Staff": {
+			"0": {
+				"Name": "ArcoseRazor",
+				"sub": "",
+				"photo": ""
+			},
+			"1": {
+				"Name": "Bloodrifle",
+				"sub": "",
+				"photo": ""
+			},
+			"2": {
+				"Name": "Carmo(SJF95Fighter)",
+				"sub": "",
+				"photo": ""
+			},
+			"3": {
+				"Name": "Chris_Conni",
+				"sub": "",
+				"photo": ""
+			},
+			"4": {
+				"Name": "drkim",
+				"sub": "",
+				"photo": ""
+			},
+			"5": {
+				"Name": "Eather the Dreamer",
+				"sub": "",
+				"photo": ""
+			},
+			"6": {
+				"Name": "Emma Torch",
+				"sub": "",
+				"photo": ""
+			},
+			"7": {
+				"Name": "FreakenPurple",
+				"sub": "",
+				"photo": ""
+			},
+			"8": {
+				"Name": "GerzyBow",
+				"photo": ""
+			},
+			"9": {
+				"Name": "Josei Kage",
+				"photo": ""
+			},
+			"10": {
+				"Name": "Kanami",
+				"photo": ""
+			},
+			"11": {
+				"Name": "KennyBeats!",
+				"photo": ""
+			},
+			"12": {
+				"Name": "Khangaluwu",
+				"photo": ""
+			},
+			"13": {
+				"Name": "Peko",
+				"photo": ""
+			},
+			"14": {
+				"Name": "Phill13938",
+				"photo": ""
+			},
+			"15": {
+				"Name": "Phill13938",
+				"photo": ""
+			},
+			"16": {
+				"Name": "SladeDaCat",
+				"photo": ""
+			},
+			"17": {
+				"Name": "SonicWindDemon",
+				"photo": ""
+			},
+			"18": {
+				"Name": "Tagman39",
+				"photo": ""
+			},
+			"19": {
+				"Name": "Thomatoes50",
+				"photo": ""
+			},
+			"20": {
+				"Name": "WalGesicht",
+				"photo": ""
+			},
+			"21": {
+				"Name": "Wobblypixel",
+				"photo": ""
+			}
+		}
+	},
+	{
+		"Photo": "placeholder.webp",
+		"Team": "Graphics",
+		"Leader": {
+			"name": "Deathmap",
+			"photo": ""
+		},
+		"Staff": {
+			"0": {
+				"Name": "Ashes of the Phoenix",
+				"sub": "",
+				"photo": ""
+			},
+			"1": {
+				"Name": "Earth to Bound",
+				"sub": "",
+				"photo": ""
+			},
+			"__2": {
+				"Name": "Gamut",
+				"sub": "",
+				"photo": "G336.png"
+			},
+			"__3": {
+				"Name": "Incognootie",
+				"sub": "",
+				"photo": ""
+			},
+			"__4": {
+				"Name": "Tero",
+				"sub": "",
+				"photo": ""
+			}
+		}
+	},
+	{
+		"Photo": "placeholder.webp",
+		"Team": "Social Media",
+		"Leader": {
+			"name": "KisameReason",
+			"photo": ""
+		},
+		"Staff": {
+			"0": {
+				"Name": "SladeDaCat",
+				"sub": "",
+				"photo": ""
+			},
+			"1": {
+				"Name": "Gamut",
+				"sub": "",
+				"photo": "G336.png"
+			}
+		}
+	}
 ]

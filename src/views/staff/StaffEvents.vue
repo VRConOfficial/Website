@@ -24,9 +24,9 @@ export default {
 			action: "mdi-account",
 			item: {
 				title: "Events",
-				image2: "placeholder.webp",
+				photo: "Shadozw.png",
 				content:
-					"The Events team is in charge of creating memerable experiences, etc",
+					"The Events team is in charge of creating the memerable experiences you all enjoy!",
 				director: "Shadozw",
 				teamInfo: require("@/assets/Data/EventsTeam.json"),
 			},

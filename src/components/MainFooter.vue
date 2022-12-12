@@ -49,6 +49,7 @@
 						<br />
 						Website by
 						<a href="https://kylechaney.dev"><v-img class="three-thirty-six" max-height="0.8em" max-width="1.1em" contain src="@/assets/images/tiles/gradient336.png" />Gradient 336</a>
+						and <a href="https://senpaivr.com">SenpaiVR</a>
 					</v-col>
 				</v-row>
 			</div>
