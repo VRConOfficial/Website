@@ -30,7 +30,7 @@
 						<v-row no-gutters class="my-auto" style="max-width: 100%;">
 							<v-col class="ma-0">
 								<v-toolbar-title class="white--text" style="max-width:100%; overflow-wrap: break-word">
-									{{ film.name }}
+									{{ film.name }} {{ film.name }}
 								</v-toolbar-title>
 							</v-col>
 							<v-col class="ma-0">
@@ -157,10 +157,10 @@ export default {
 			console.log(element)
 			var link = element.link;
 			var name = this.capitalize(element.name);
-			
+
 			var newLink = link.toLowerCase()
 
-			if (newLink.includes("youtube")) {					
+			if (newLink.includes("youtube")) {
 				return "<a target='_blank' href='" + newLink + "'><i aria-hidden='true' class='v-icon notranslate mdi mdi-youtube theme--light white--text'></i><span style='font-size:16px; margin-top:auto; marbin-bottom: 0' >" + name + "</span></a>"
 			} else if (newLink.includes("twitter")) {
 				return "<a target='_blank' href='" + link + "'><i aria-hidden='true' class='v-icon notranslate mdi mdi-twitter theme--light white--text'/><span style='font-size:16px; margin-top:auto; marbin-bottom: 0' >" + name + "</span></a>"

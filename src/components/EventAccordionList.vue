@@ -1,9 +1,9 @@
 <template>
 	<v-card class="mx-auto darkened" color="transparent" dark>
 		<v-toolbar color="primary">
-			<v-toolbar-title>{{
-					dayjs(events[0].time).format("ddd - MMMM D YYYY")
-			}}</v-toolbar-title>
+			<v-toolbar-title>
+				{{ dayjs(events[0].time).format("ddd - MMMM D YYYY") }}
+			</v-toolbar-title>
 		</v-toolbar>
 		<v-list color="transparent">
 			<v-list-group v-for="(event, index) in events" :key="index" prepend-icon="mdi-calendar-check" no-action :class="datePassedStyle(event)">
@@ -61,14 +61,24 @@
 								</v-col>
 								<v-col cols="11" sm="11" md="11" lg="6" xl="6" class="ma-5 text-h6 font-weight-light" v-if="event.properties['Marketing Description']">
 									<p v-html="generateWhiteSpace(event.properties['Marketing Description'].toString())"></p>
+									<div class="ma-auto" style="width:fit-content">
+										<v-dialog v-model="trailer" width="auto" v-if="event.properties['Links'] && event.properties['Event Name'].toLowerCase().includes('screening')">
+											<template v-slot:activator="{ on, attrs }">
+												<v-btn color="primary" dark v-bind="attrs" v-on="on">
+													Watch the Trailer
+												</v-btn>
+											</template>
+											<div 
+											v-if="trailer"
+											style="width: 90vh; max-width: 90vw">
+												<LazyYoutube ref="lazyVideo" :src="event.properties.Links" max-width="80vw"/>
+											</div>
+										</v-dialog>
+									</div>
 								</v-col>
-								<v-col cols="11" sm="11" md="11" lg="6" xl="6" class="ma-5 text-h6 font-weight-light" v-if="event.properties['How to join?/Bot']">
-
-								</v-col>
-								<v-col cols="11" sm="11" md="11" lg="6" xl="6" class="ma-5 text-h6 font-weight-light" v-else></v-col>
 							</v-row>
 							<v-row justify="center" align="center">
-								<v-col cols="1" class="ma-1" v-if="event.properties['Event Image Link']"></v-col>
+								<v-col cols="1" style="margin: 0 auto" v-if="event.properties['Event Image Link']"></v-col>
 							</v-row>
 						</v-container>
 					</v-list-item-content>
@@ -82,6 +92,20 @@
 .date-passed {
 	filter: grayscale(100%);
 }
+
+.v-dialog_content {
+	justify-content: center;
+}
+
+.filmCardItem {
+	margin: auto 2em;
+}
+.showVideo { 
+	display: block
+}
+.hideVideo {
+	display: none;
+}
 </style>
 
 <script>
@@ -89,6 +113,7 @@ import { store } from "@/assets/Data/GlobalVars/store.js";
 import bots from "@/assets/Data/VRCon VRCUserIDS/VRConBots.json"
 import ImageVue from "./Image.vue";
 import 'twitch-stream-embed';
+import { LazyYoutube } from 'vue-lazytube'
 
 const dayjs = require("dayjs");
 const utc = require("dayjs/plugin/utc");
@@ -100,11 +125,14 @@ export default {
 	name: "AccordionListEvents",
 	components: {
 		ImageVue,
+		LazyYoutube
 	},
 	props: ["events"],
 	data: () => ({
 		store,
 		dayjs: dayjs,
+		trailer: false,
+		video: true,
 	}),
 	methods: {
 		getProperty(event, givenProperty) {
@@ -159,7 +187,7 @@ export default {
 					links0.push(link)
 				}
 				resp = "Request Invite from "
-				for (let linkIndex = 0; linkIndex < links0.length; linkIndex++){
+				for (let linkIndex = 0; linkIndex < links0.length; linkIndex++) {
 					var or = links0.length > 0 && linkIndex + 1 < links0.length ? " or " : ""
 					resp += `<a href="` + link + `" target="_blank">` + b[linkIndex].toUpperCase() + `</a>` + or
 				}
@@ -212,5 +240,6 @@ export default {
 		},
 
 	},
+	watch: {}
 };
 </script>

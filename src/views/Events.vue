@@ -11,6 +11,11 @@
 			<div class="white--text">
 				<div class="py-8">
 					<v-card flat tile color="transparent">
+						<v-row>
+							<v-col class="white--text">
+								<p width="100%" class="ma-0"><v-icon color="white">mdi-information-variant</v-icon> All events are shown in your local timezone (UTC{{new Date().getTimezoneOffset()/-60 > 0 ? "+" + new Date().getTimezoneOffset()/-60 : new Date().getTimezoneOffset()/-60}})</p>
+							</v-col>
+						</v-row>
 						<v-card-actions style="width: 100%" class="justify-space-around">
 							<div style="width: 100%;">
 								<v-row class="mb-1" no-gutters>
@@ -181,8 +186,8 @@ export default {
 			let events = Events;
 			let uniqueDays = [];
 			let uniqueTimestamps = [];
-			const monthNames = [ "January", "February", "March", "April", "May", "June",
-						"July", "August", "September", "October", "November","December",
+			const monthNames = ["January", "February", "March", "April", "May", "June",
+				"July", "August", "September", "October", "November", "December",
 			];
 			for (let i = 0; i < events.length; i++) {
 				let event = events[i];

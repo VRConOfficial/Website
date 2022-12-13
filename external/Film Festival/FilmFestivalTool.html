@@ -105,9 +105,9 @@
 								for (let linkIndex = 0; linkIndex < jsonLinks.length; jsonLinks++) {
 									var son = {}
 									var user = ""
-									var link = jsonLinks[linkIndex]
-									var endURL = link.toLowerCase().replaceAll("https://", "").replaceAll("http://", "").replaceAll("www.", "").replaceAll("youtube.com/", "").replaceAll("@", "").replaceAll("c/", "")
-									if (link.includes("youtube") && !link.includes("/channel/")){
+									var link = jsonLinks[linkIndex].includes("https://") || jsonLinks[linkIndex].includes("http://") ? jsonLinks[linkIndex] : "https://" + jsonLinks[linkIndex]
+									var endURL = link.toLowerCase().replaceAll("https://", "").replaceAll("http://", "").replaceAll("www.", "").replaceAll("youtube.com/", "").replaceAll("c/", "").replaceAll("user/", "")
+									if (link.includes("youtube") && !link.includes("/channel/") && !link.includes("@")){
 										user = endURL
 									} else {
 										user = window.prompt(`Enter username for ${link}`)
@@ -131,7 +131,7 @@
 									var son = {}
 									var user = ""
 									var link = jsonLinks[linkIndex]
-									var endURL = link.toLowerCase().replaceAll("https://", "").replaceAll("http://", "").replaceAll("www.", "").replaceAll("twitter.com/", "").replaceAll("@", "")
+									var endURL = link.toLowerCase().replaceAll("https://", "").replaceAll("http://", "").replaceAll("www.", "").replaceAll("twitter.com/", "").replaceAll("@", "").replaceAll("?lang=en", "")
 									if (link.includes("twitter")){
 										user = endURL
 									} else {
