@@ -48,6 +48,10 @@
 									<div v-if="(event.properties['How to join?/Bot'])">
 										How to Join: <span v-html="grabJoinData(event)"></span>
 									</div>
+									<br>
+									<div v-if="event.properties['Stream Link']">
+										Want to watch it live? Watch it <a :href="event.properties['Stream Link']">HERE</a>
+									</div>
 								</v-col>
 							</v-row>
 							<v-row justify="center" align="center">
@@ -195,6 +199,8 @@ export default {
 				resp = "<a href='https://www.vrcon.online/ffsignup'> Sign-Up </a>"
 			} else if (property.toLowerCase().includes("group")) {
 				resp = "<a href='https://vrchat.com/home/group/grp_338caf29-7d15-4db0-bac7-f2016a17d4d6' target='_blank'>Join the VRCon Group on VRChat</a>"
+			} else if (property.toLowerCase().includes("laserdome")) {
+				resp = "Join the <a href='https://discord.gg/Laserdome' target='_blank'>xCirrex Media Discord</a> and fill out the form in <a href='https://discord.com/channels/710976212570210327/718215364265246892/1051922487249731634' target='_blank'>#tournament-signup</a>"
 			}
 			return resp
 			// document.getElementById('HowToJoin').innerHTML = resp

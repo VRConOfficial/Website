@@ -30,7 +30,7 @@
 						<v-row no-gutters class="my-auto" style="max-width: 100%;">
 							<v-col class="ma-0">
 								<v-toolbar-title class="white--text" style="max-width:100%; overflow-wrap: break-word">
-									{{ film.name }} {{ film.name }}
+									{{ film.name }}
 								</v-toolbar-title>
 							</v-col>
 							<v-col class="ma-0">

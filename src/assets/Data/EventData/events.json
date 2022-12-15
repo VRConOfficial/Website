@@ -52,10 +52,12 @@
             "Event Name": "VRCon Opening Night Party",
             "End Time": 1671253200000,
             "Event Details": "Vrcon 3-add for afterparty",
+            "Marketing Description": "Enjoy our Opening night party with guest DJ's Wishy Washy, Fire Rose, and Doujin Ronin",
             "Type of Event": "After Party",
             "Stream Link": "https://twitch.tv/vrconlive",
             "Stream Notes": "Recominded Private VCDN stream do to copyright issues",
             "How to join?/Bot": "VRCon Group",
+            "Event Image Link": "https://drive.google.com/file/d/1VwtT45XMLHnPougM1hxLWhRvF6pelC68/view?usp=sharing",
             "Quest": "TRUE"
         }
     },
@@ -190,10 +192,12 @@
             "Event Name": "VRCon After Party",
             "End Time": 1671339600000,
             "Event Details": "Vrcon 3-add for afterparty",
+            "Marketing Description": "Enjoy a fun night of partying with our guest DJ's TOTC, Zoot, and NekoDork!",
             "Type of Event": "After Party",
             "Stream Notes": "Recominded Private VCDN stream do to copyright issues",
             "Volunteers for this event": "AriaTempest,Blossom,Ace Gamer\nChurch,Ether,StarNovaKitty",
             "How to join?/Bot": "VRCon Group",
+            "Event Image Link": "https://drive.google.com/file/d/1Duw-lKyCJPmAO5wljPFFQv17-gH4D1Xr/view?usp=sharing",
             "Quest": "TRUE"
         }
     },
@@ -217,7 +221,7 @@
             "Stream Link": "https://www.twitch.tv/xcirrex",
             "Stream Notes": "NO Media",
             "Volunteers for this event": "Zero8473\nBlossom\n!!Vela Zhezzaia!!",
-            "How to join?/Bot": "VRCon Group",
+            "How to join?/Bot": "Laserdome",
             "Event Image Link": "https://media.discordapp.net/attachments/787015447844749332/1051254532459470868/api.png",
             "Anything Else": "We have had previous attempts of staying within our timeslot and useualy gone overtime (sorry). This time I will make sure the gametype and length is closer calculated with our experience in hosting!",
             "Quest": "FALSE"
@@ -674,10 +678,12 @@
             "Event Name": "VRCon After Party",
             "End Time": 1671858000000,
             "Event Details": "Vrcon 3-add for afterparty",
+            "Marketing Description": "Enjoy a fun night of partying with our guest DJ's BLACKSTR, DJ CDELANSIG, and Chrysaora!",
             "Type of Event": "After Party",
             "Stream Notes": "VRCDN. 1 showrunner",
             "Volunteers for this event": "Ace Gamer,!!Vela Zhezzaia!!,Bloodrifle\nBlossom,AriaTempest,Zero8473",
             "How to join?/Bot": "VRCon Group",
+            "Event Image Link": "https://drive.google.com/file/d/1cl19QnDSvd2AU0rjYoWfKrYWGKXnebjS/view?usp=sharing",
             "Quest": "TRUE"
         }
     },
@@ -698,7 +704,7 @@
             "What they will need from VRCon": "I need an Archive copy of the stream as well as a PowerPoint presentation screen and a . ",
             "Are they ok with their event being streamed?": "TRUE",
             "Stream Link": "https://twitch.tv/vrconlive",
-            "Stream Notes": "2-3",
+            "Stream Notes": "2",
             "Number of Volunteers needed for the event": "3",
             "Volunteers for this event": "Ether,\nBlossom,\nGren",
             "How to join?/Bot": "VRCon Group",
@@ -762,12 +768,14 @@
             "Event Name": "VRCon After Party",
             "End Time": 1671944400000,
             "Event Details": "Vrcon 3-add for afterparty",
+            "Marketing Description": "Enjoy our final After Night Party, presented by the DJ's of RTTG, with Gyluss, Bobby J, and JNUE!",
             "Event Host VRChat UserName": "VRCon",
             "Type of Event": "After Party",
             "Stream Notes": "VRCDN. 1 showrunner",
             "Number of Volunteers needed for the event": "4/2 Fillers",
             "Volunteers for this event": "!!Vela Zhezzaia!!,\nStarNovaKitty,\nIBETA7\nAce Gamer,\nEther,\nAriaTempest",
             "How to join?/Bot": "VRCon Group",
+            "Event Image Link": "https://drive.google.com/file/d/1FJpYm9jxgU0yiNfcxXsEC7q3zb8BJkMx/view?usp=sharing",
             "Quest": "TRUE"
         }
     },
@@ -894,9 +902,19 @@
     {
         "time": 1672272000000,
         "properties": {
-            "Event Name": "Panel on VR Video Production",
+            "Event Name": "VRCons Media & Wolveeps Video Production",
             "End Time": 1672279200000,
+            "Event Details": "Wolveeps will be hosting a 2 hour pannel and live demos on Video production with VRCon Media Team in team collaborative efforts",
+            "Marketing Description": "Explore the inner workins of VRCon Media Department along side with Wolveeps on how VR Films are made in team collaboration efforts. Both in LIVE & record productions",
             "Event Host Prefered Contact": "Wolveeps",
+            "Event Host VRChat UserName": "Wolveeps",
+            "Additional Hosts": "Media Team and VRosity Staff",
+            "How Long will the event run for?": "2",
+            "Previous Examples of work?": "Wolveeps.com or VRCon Media",
+            "World they will be using?": "VRCon Stage world or VRCon Film World",
+            "What they will need from VRCon": "Every media team member and cookies",
+            "Are they ok with their event being streamed?": "yes",
+            "Stream Link": "vrcon & wolveeps",
             "Stream Notes": "2 cam",
             "Number of Volunteers needed for the event": "3",
             "Volunteers for this event": "IBETA7,Gren,Mageyboi",
