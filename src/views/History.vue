@@ -42,7 +42,7 @@
 				</v-dialog>
 				<v-timeline align-top :dense="$vuetify.breakpoint.smAndDown">
 					<v-timeline-item v-for="(item, i) in items.timelineItems" :key="i" fill-dot :icon="item.icon" :color="item.color">
-						<template v-slot:opposite v-if="item.dates != 'December 16, 2022 - December 30, 2022' || new Date().getTime() >= new Date(1671228000000)">
+						<template v-slot:opposite v-if="item.dates != 'December 16, 2022 - December 30, 2022' || new Date().getTime() >= new Date(1671229800000)">
 							<v-card style="width: 80; border-radius: 25px 0">
 								<v-img :src="item.image != '' ? isValidHttpUrl(item.image) ? item.image : require('@/assets/images/' + item.image.image) : require('@/assets/images/placeholder.webp')" dark max-height="14em" />
 								<v-card v-if="item.image.sub != '' && item.image != ''" height="2em" style=" display: flex; align-items: center; justify-content: center; ">
@@ -54,7 +54,7 @@
 								</v-card>
 							</v-card>
 						</template>
-						<v-card :color="item.color" dark v-if="item.dates != 'December 16, 2022 - December 30, 2022' || new Date().getTime() >= new Date(1671228000000)">
+						<v-card :color="item.color" dark v-if="item.dates != 'December 16, 2022 - December 30, 2022' || new Date().getTime() >= new Date(1671229800000)">
 							<v-card-title class="text-h6">
 								{{ item.dates }}
 							</v-card-title>
@@ -321,17 +321,17 @@ export default {
 							Day: {
 								name: "VRCon 2022 Dawn",
 								image: "VRCon_2022_B.png",
-								//link: "https://vrch.at/wrld_cdbeebf8-f854-471d-9f2c-b3d7a76095a6",
+								link: "https://vrchat.com/home/world/wrld_3f6b1425-e191-4d1e-902f-b38ebf68576c",
 							},
 							Dusk: {
 								name: "VRCon 2022 Dusk",
 								image: "VRCon_2022_C.png",
-								//link: "https://vrch.at/wrld_cdbeebf8-f854-471d-9f2c-b3d7a76095a6",
+								link: "https://vrchat.com/home/world/wrld_e66d3e56-bf8a-49fc-ae70-54759d58ec28",
 							},
 							Night: {
 								name: "VRCon 2022 Day",
 								image: "VRCon_2022_A.png",
-								//link: "https://vrch.at/wrld_cdbeebf8-f854-471d-9f2c-b3d7a76095a6",
+								link: "https://vrchat.com/home/world/wrld_1cef76fc-2f04-4e7d-89a8-a490c509dd0c",
 							},
 						},
 					},
