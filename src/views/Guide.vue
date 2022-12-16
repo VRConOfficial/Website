@@ -41,6 +41,96 @@
 					</p>
 				</div>
 			</div>
+
+		</ColumnLayout>
+
+		<ColumnLayout class="py-16">
+			<v-dialog v-model="trailer" width="auto">
+				<template v-slot:activator="{ on, attrs }"  v-if="new Date() >= new Date(1671210000000).getTime()">
+					<v-btn color="primary" dark v-bind="attrs" v-on="on">
+						Watch the Trailer
+					</v-btn>
+				</template>
+				<div v-if="trailer" style="width: 90vh; max-width: 90vw">
+					<LazyYoutube ref="lazyVideo" :src="'https://youtu.be/PXMInVzwR9Q'" max-width="80vw" />
+				</div>
+			</v-dialog>
+			<h1 class="white--text mx-auto mb-5" style="width:fit-content">How To Join With Groups</h1>
+			<v-stepper v-model="e1">
+				<v-stepper-header>
+					<v-stepper-step :complete="e1 > 1" step="1">
+						Click 'Groups' on Quick Menu
+					</v-stepper-step>
+					<v-divider></v-divider>
+					<v-stepper-step :complete="e1 > 2" step="2">
+						Join the VRCon Group
+					</v-stepper-step>
+					<v-divider />
+					<v-stepper-step :complete="e1 > 3" step="3">
+						Locate Active Instances
+					</v-stepper-step>
+					<v-divider />
+					<v-stepper-step :complete="e1 > 4" step="4">
+						Confirm your Instance Number
+					</v-stepper-step>
+				</v-stepper-header>
+				<v-stepper-items>
+					<v-stepper-content step="1">
+						<v-img :src="require('@/assets/images/GroupsGuide/1.png')" max-width="500px" :aspect-ratio="1" class="mx-auto mb-5" />
+						<v-card class="mb-12" color="accent">
+							<h4 class="pa-5 text-center">You can find 'Groups' by going into your Quick Menu and looking for the button labeled "Groups"</h4>
+						</v-card>
+
+						<v-btn color="primary" @click="e1 = 2">
+							Continue
+						</v-btn>
+					</v-stepper-content>
+
+					<v-stepper-content step="2">
+						<v-img :src="require('@/assets/images/GroupsGuide/2.png')" max-width="500px" :aspect-ratio="1" class="mx-auto mb-5" />
+						<v-card class="mb-12" color="accent">
+							<h4 class="pa-5 text-center">If you are not already in the VRCon group, search for 'VRCON.3783' and click 'Join Group'</h4>
+							<p class="mx-auto pb-5" style="width: fit-content">You can also search for it here: <a href="https://vrc.group/VRCON.3783" target="_blank">https://vrc.group/VRCON.3783</a></p>
+						</v-card>
+
+						<v-btn color="primary" @click="e1 = 3">
+							Continue
+						</v-btn>
+
+						<v-btn text @click="e1 = 1">
+							Back
+						</v-btn>
+					</v-stepper-content>
+					<v-stepper-content step="3">
+						<v-img :src="require('@/assets/images/GroupsGuide/3.png')" max-width="500px" :aspect-ratio="1.5" class="mx-auto mb-5" />
+						<v-card class="mb-12" color="accent">
+							<h4 class="pa-5 text-center">In the instances tab, find the instance you would like to join</h4>
+						</v-card>
+
+						<v-btn color="primary" @click="e1 = 4">
+							Continue
+						</v-btn>
+
+						<v-btn text @click="e1 = 2">
+							Back
+						</v-btn>
+					</v-stepper-content>
+					<v-stepper-content step="4">
+						<v-img :src="require('@/assets/images/GroupsGuide/4.png')" max-width="500px" :aspect-ratio="1" class="mx-auto mb-5" />
+						<v-card class="mb-12" color="accent">
+							<h4 class="pa-5 text-center">Confirm the instance number matches the event you are looking for (in this case, #87042)</h4>
+						</v-card>
+
+						<v-btn color="primary" @click="e1 = 1">
+							Return
+						</v-btn>
+
+						<v-btn text @click="e1 = 3">
+							Back
+						</v-btn>
+					</v-stepper-content>
+				</v-stepper-items>
+			</v-stepper>
 		</ColumnLayout>
 	</div>
 </template>
@@ -53,6 +143,7 @@
 import FullBack from "@/components/FullBack.vue";
 import ColumnLayout from "@/components/ColumnLayout.vue";
 import SectionBanner from "@/components/SectionBanner.vue";
+import { LazyYoutube } from 'vue-lazytube' 
 
 export default {
 	mounted() {
@@ -64,9 +155,13 @@ export default {
 		FullBack,
 		ColumnLayout,
 		SectionBanner,
+		LazyYoutube
 	},
 	props: [],
-	data: () => ({}),
+	data: () => ({
+		e1: 1,
+		trailer: false
+	}),
 	methods: {},
 };
 </script>

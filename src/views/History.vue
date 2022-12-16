@@ -42,7 +42,7 @@
 				</v-dialog>
 				<v-timeline align-top :dense="$vuetify.breakpoint.smAndDown">
 					<v-timeline-item v-for="(item, i) in items.timelineItems" :key="i" fill-dot :icon="item.icon" :color="item.color">
-						<template v-slot:opposite>
+						<template v-slot:opposite v-if="item.dates != 'December 16, 2022 - December 30, 2022' || new Date().getTime() >= new Date(1671228000000)">
 							<v-card style="width: 80; border-radius: 25px 0">
 								<v-img :src="item.image != '' ? isValidHttpUrl(item.image) ? item.image : require('@/assets/images/' + item.image.image) : require('@/assets/images/placeholder.webp')" dark max-height="14em" />
 								<v-card v-if="item.image.sub != '' && item.image != ''" height="2em" style=" display: flex; align-items: center; justify-content: center; ">
@@ -54,7 +54,7 @@
 								</v-card>
 							</v-card>
 						</template>
-						<v-card :color="item.color" dark>
+						<v-card :color="item.color" dark v-if="item.dates != 'December 16, 2022 - December 30, 2022' || new Date().getTime() >= new Date(1671228000000)">
 							<v-card-title class="text-h6">
 								{{ item.dates }}
 							</v-card-title>
@@ -223,7 +223,7 @@ export default {
 				},
 				//VRCon 2021
 				{
-					dates: "September 9, 2021 - September 12, 2022",
+					dates: "September 9, 2021 - September 12, 2021",
 					color: "primary",
 					icon: "mdi-party-popper",
 					image: {
@@ -295,53 +295,68 @@ export default {
 						"Our final Mini-Event for 2022 goes to our Billiards tournament where teams of two compete over 2 days for the championship.",
 				},
 				//VRCon 2022
-				// {
-				//   dates: "December 16, 2022 - December 30, 2022",
-				//   color: "primary",
-				//   icon: "mdi-party-popper",
-				//   image: "",
-				//   content:
-				//     "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti minus vero animi possimus, enim excepturi beatae? Voluptatum voluptates, eos quod placeat maiores, cum vel repellendus odit reiciendis dolor optio ut?",
-				//   worlds: {
-				//     groupName: "VRCon 2022",
-				//     worldNames: [
-				//       "VRCon Confrence Room",
-				//       "VRCon Billiards",
-				//       "VRCon 2020 Day",
-				//       "VRCon 2020 Night",
-				//       "VRCon 2020 Stage",
-				//     ],
-				//     worldImages: [""],
-				//     worldLinks: [
-				//       "https://vrch.at/wrld_da7b0546-0855-492f-a910-9562d255e019",
-				//       "https://vrch.at/wrld_ba4a03a2-26dd-4597-a5a5-924d795c4279",
-				//       "https://vrch.at/wrld_56b13c26-6eef-4bfa-8f56-bfbb0e44e76a",
-				//       "https://vrch.at/wrld_a182db1b-0b18-4be3-b40b-5d720c7c21b6",
-				//       "https://vrch.at/wrld_e32e0265-d3a4-4482-8685-a96a34e4dc06",
-				//     ],
-				//   },
-				// },
+				{
+					dates: "December 16, 2022 - December 30, 2022",
+					color: "primary",
+					icon: "mdi-party-popper",
+					image: {
+						image: "worlds/VRChat_2022-12-14_21-59-15.524_7680x4320.png",
+						sub: "Image Credit: SladeDaCat",
+					},
+					content:
+						"VRCon goes Medieval! This year, our team decided to move into a more themed route, giving VRCon a Medieval Makeover, while also giving visitors a full 2 weeks of events!",
+					worldsInfo: {
+						groupName: "VRCon 2022",
+						worlds: {
+							Hub: {
+								name: "VRCon 2022 Hub",
+								image: "VRCon_2022_Hub.png",
+								link: "https://vrchat.com/home/world/wrld_336b58c0-8105-4afb-ad10-80ed106a5341",
+							},
+							Stage: {
+								name: "VRCon 2022 Stage",
+								image: "VRCon_2022_Stage.png",
+								link: "https://vrchat.com/home/world/wrld_84f57687-5e08-4981-8253-fd12e1697596",
+							},
+							Day: {
+								name: "VRCon 2022 Dawn",
+								image: "VRCon_2022_B.png",
+								//link: "https://vrch.at/wrld_cdbeebf8-f854-471d-9f2c-b3d7a76095a6",
+							},
+							Dusk: {
+								name: "VRCon 2022 Dusk",
+								image: "VRCon_2022_C.png",
+								//link: "https://vrch.at/wrld_cdbeebf8-f854-471d-9f2c-b3d7a76095a6",
+							},
+							Night: {
+								name: "VRCon 2022 Day",
+								image: "VRCon_2022_A.png",
+								//link: "https://vrch.at/wrld_cdbeebf8-f854-471d-9f2c-b3d7a76095a6",
+							},
+						},
+					},
+				},
 			],
-		},
-		dialog: false,
-		worlds: null,
-		expand: false,
-		show: true,
-	}),
-	methods: {
-		isValidHttpUrl(string) {
-			let url;
-			try {
-				url = new URL(string);
-			} catch (_) {
-				return false;
-			}
-			return url.protocol === "http:" || url.protocol === "https:";
-		},
-		ShowWorlds(worlds) {
-			this.dialog = true;
-			setTimeout(() => (this.worlds = worlds), 1500);
-		},
 	},
+		dialog: false,
+	worlds: null,
+	expand: false,
+	show: true,
+}),
+methods: {
+	isValidHttpUrl(string) {
+		let url;
+		try {
+			url = new URL(string);
+		} catch (_) {
+			return false;
+		}
+		return url.protocol === "http:" || url.protocol === "https:";
+	},
+	ShowWorlds(worlds) {
+		this.dialog = true;
+		setTimeout(() => (this.worlds = worlds), 1500);
+	},
+},
 };
 </script>
