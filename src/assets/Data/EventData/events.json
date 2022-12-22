@@ -308,10 +308,10 @@
         }
     },
     {
-        "time": 1671469200000,
+        "time": 1671476400000,
         "properties": {
             "Event Name": "Pool Tournament",
-            "End Time": 1671483600000,
+            "End Time": 1671487200000,
             "Event Details": "VRCon Event",
             "Marketing Description": "Come one! Come all! To the Doubles Pool Tournament. Here, you and your partner will be facing against other teams to take home the gold!",
             "Event Host Prefered Contact": "CelestialRose#0020",
@@ -320,6 +320,8 @@
             "Type of Event": "Tournament",
             "How Long will the event run for?": "4 Hours",
             "World they will be using?": "\nPool Parlor v3｜8 Ball Pool",
+            "Are they ok with their event being streamed?": "TRUE",
+            "Stream Link": "https://twitch.tv/metaverse_tournaments",
             "Stream Notes": "NO MEDIA. ",
             "VRCon Staff Member Overseeing this event": "Spades\n",
             "Number of Volunteers needed for the event": "4?",
@@ -370,7 +372,7 @@
             "World they will be using?": "Grand Ballroom",
             "What they will need from VRCon": "Just to share",
             "Are they ok with their event being streamed?": "TRUE",
-            "Stream Link": "twitch.tv/dustydustbunny",
+            "Stream Link": "https://twitch.tv/dustydustbunny",
             "Stream Notes": "NO Media",
             "VRCon Staff Member Overseeing this event": "Shadozw",
             "Volunteers for this event": "Ace Gamer,IBETA7,!!Vela Zhezzaia!!",
@@ -439,7 +441,7 @@
             "Additional Hosts": "Jenny0629, DustBunny, -Toaster-, IsYourBOI, DragonHeart.",
             "How Long will the event run for?": "2 Hours",
             "Links": " https://youtu.be/UMBxESl38o0",
-            "World they will be using?": "VRCon 2022 Hub",
+            "World they will be using?": "Theatre",
             "Are they ok with their event being streamed?": "FALSE",
             "Stream Notes": "2 cam,Ether",
             "VRCon Staff Member Overseeing this event": "Rickity",
@@ -492,7 +494,7 @@
             "Number of Volunteers needed for the event": "3",
             "Volunteers for this event": "!!Vela Zhezzaia!!,\nBloodrifle",
             "How to join?/Bot": "VRCon Group",
-            "Event Image Link": "https://media.discordapp.net/attachments/1012867763976548392/1051225141377511504/boxing-shield-logo-graphic-design_24908-54893.jpg?width=1065&height=910",
+            "Event Image Link": "https://media.discordapp.net/attachments/1054965026710106112/1055330137446555678/boxingmatch.png?width=810&height=456",
             "Anything Else": "Models affect if it works or not",
             "Quest": "TRUE"
         }
@@ -567,7 +569,7 @@
             "Number of Volunteers needed for the event": "3",
             "Volunteers for this event": "AriaTempest,\nBlossom\nBloodrifle",
             "How to join?/Bot": "VRCon Group",
-            "Event Image Link": "https://drive.google.com/file/d/1E6BXT-GDOBAM2g3PoXz1Ptt7iqgeIm7n/view?usp=sharing",
+            "Event Image Link": "https://media.discordapp.net/attachments/807304419296673913/1055327915425943642/VRCon-Battle-Disc-Tournament-2022-poster.png?width=780&height=1229",
             "Anything Else": "Vrcon Event",
             "Quest": "TRUE"
         }
@@ -678,6 +680,7 @@
             "Are they ok with their event being streamed?": "TRUE",
             "Stream Link": "https://twitch.tv/vrconlive",
             "Stream Notes": "4 cam +",
+            "VRCon Staff Member Overseeing this event": "Spades",
             "Volunteers for this event": "Blossom\nBloodRifle\n!!Vela Zhezzaia!!",
             "How to join?/Bot": "VRCon Group",
             "Event Image Link": "https://media.discordapp.net/attachments/1051294557226143795/1051357470666272799/VRCON_Pic2.png?width=1200&height=676",
@@ -724,7 +727,7 @@
             "Number of Volunteers needed for the event": "3",
             "Volunteers for this event": "Ether,\nBlossom,\nGren",
             "How to join?/Bot": "VRCon Group",
-            "Event Image Link": "https://media.discordapp.net/attachments/1039354851580194887/1051247202518978581/Walligbnnr-VRCon.png?width=1082&height=676",
+            "Event Image Link": "https://media.discordapp.net/attachments/1039354851580194887/1055284070797557871/Walligbnnr-VRCon-updated.png?width=810&height=506",
             "Quest": "FALSE"
         }
     },

@@ -217,7 +217,7 @@ export default {
 
 		getChannel(event) {
 			var link = event.properties['Stream Link'];
-			var channel = event.properties['Stream Link'].replaceAll("www.", "").replaceAll("https://", "").replaceAll('twitch.tv/', '')
+			var channel = link.replaceAll("www.", "").replaceAll("https://", "").replaceAll('twitch.tv/', '')
 			return channel
 
 		},
