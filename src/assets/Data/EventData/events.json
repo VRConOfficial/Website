@@ -605,6 +605,7 @@
             "Type of Event": "Hangout",
             "How Long will the event run for?": "1 Hour",
             "Are they ok with their event being streamed?": "TRUE",
+            "VRCon Staff Member Overseeing this event": "Rickity & Barry",
             "Number of Volunteers needed for the event": "3",
             "Volunteers for this event": "Blossom,BloodRifle,CelestialRose",
             "How to join?/Bot": "VRCon Group",
@@ -791,7 +792,7 @@
             "Event Name": "VRCon After Party",
             "End Time": 1671944400000,
             "Event Details": "Vrcon 3-add for afterparty",
-            "Marketing Description": "Enjoy our final After Night Party, presented by the DJ's of RTTG, with Gyluss, Bobby J, and JNUE!",
+            "Marketing Description": "Enjoy our final After Night Party, presented by the DJ's of RTTG, with Gyluss, Greenelixr, and JNUE!",
             "Event Host VRChat UserName": "VRCon",
             "Type of Event": "After Party",
             "World they will be using?": "Vrcon 2022 Stage",
@@ -814,7 +815,6 @@
             "How Long will the event run for?": "2 Hours",
             "World they will be using?": "VRCon 2022 Hub",
             "Stream Notes": "no media",
-            "VRCon Staff Member Overseeing this event": "\nBarry",
             "Number of Volunteers needed for the event": "3",
             "Volunteers for this event": "Gren\nthomatoes50,\nIBETA7",
             "How to join?/Bot": "VRCon Group"
@@ -850,29 +850,6 @@
             "How Long will the event run for?": "2 Hours",
             "VRCon Staff Member Overseeing this event": "Shadozw",
             "Volunteers for this event": "Tbg,\nBlood,\nChurch",
-            "How to join?/Bot": "VRCon Group"
-        }
-    },
-    {
-        "time": 1672167600000,
-        "properties": {
-            "Event Name": "VR Pole Dancers",
-            "End Time": 1672174800000,
-            "Event Details": "The event will include a session of implementing various techniques and related strength boosters, where students will achieve various pole moves according to their own proficiency ",
-            "Marketing Description": "VRPD hosted workshop to cover and achieve new techniques on a fitness pole in virtual reality",
-            "Event Host Prefered Contact": "Archantos#8888",
-            "Event Host VRChat UserName": "Archantos ",
-            "Additional Hosts": "Hackebein, MissFridayNight, Raggz, S_Smurphen ",
-            "Type of Event": "Panel/Talk",
-            "How Long will the event run for?": "2 Hours",
-            "Links": "(optional) Wiki pages related to moves that will be covered, art, world data/files, music certificates (if applicable) ",
-            "What they will need from VRCon": "A custom, quest-compatible, dedicated world to multiple stages with fitness poles",
-            "Are they ok with their event being streamed?": "TRUE",
-            "Stream Link": "https://twitch.tv/vrconlive",
-            "Stream Notes": "3 cams",
-            "VRCon Staff Member Overseeing this event": "Barry",
-            "Number of Volunteers needed for the event": "3",
-            "Volunteers for this event": "Blossom,\n!!Vela Zhezzaia!!,\nZero8473",
             "How to join?/Bot": "VRCon Group"
         }
     },
@@ -925,7 +902,6 @@
             "Marketing Description": "Join as a group of people find who the killer is,look for clues to help your team out!",
             "How Long will the event run for?": "1",
             "World they will be using?": "Ghost - Police Office",
-            "VRCon Staff Member Overseeing this event": "Barry",
             "Number of Volunteers needed for the event": "3",
             "Volunteers for this event": "AriaTempest,AceGamer,IBETA7",
             "How to join?/Bot": "VRCon Group",

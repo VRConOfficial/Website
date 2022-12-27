@@ -80,21 +80,17 @@ export default {
 	data: () => ({
 		avatarPath: "@/assets/images/tiles/",
 		icons: {
-			facebook: {
-				icon: "mdi-facebook",
-				link: "",
+			Youtube: {
+				icon: "mdi-youtube",
+				link: "https://www.youtube.com/VRCon_Official",
+			},
+			twitch: {
+				icon: "mdi-twitch",
+				link: "https://www.twitch.tv/VRConLive"
 			},
 			twitter: {
 				icon: "mdi-twitter",
 				link: "https://twitter.com/VRCon_Official",
-			},
-			Instagram: {
-				icon: "mdi-instagram",
-				link: "",
-			},
-			Youtube: {
-				icon: "mdi-youtube",
-				link: "https://www.youtube.com/VRCon_Official",
 			},
 		},
 		items: [
