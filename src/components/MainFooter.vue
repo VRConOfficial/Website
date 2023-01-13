@@ -99,7 +99,6 @@ export default {
 				subItems: [
 					{ title: "Home", icon: "mdi-home", destination: "/home" },
 					{ title: "Guide", icon: "mdi-map", destination: "/guide" },
-					{ title: "Events", icon: "mdi-calendar-check", destination: "/events" },
 					{ title: "Film Festival", icon: "mdi-filmstrip", destination: "/FilmFestival2022" },
 					{ title: "FAQ", icon: "mdi-help-circle-outline", destination: "/questions" },
 					{ title: "History", icon: "mdi-timeline-clock-outline", destination: "/history" },
@@ -115,44 +114,11 @@ export default {
 						destination: "",
 					},
 					{
-						title: "Yaas",
-						subTitle: "yaas@vrcon.online",
-						avatar: "yaas-128.png",
-						destination: "",
-					},
-					{
-						title: "Karet",
-						subTitle: "karet@vrcon.online",
-						avatar: "Karet.png",
-						destination: "",
-					},
-					{
-						title: "Shadozw",
-						subTitle: "Shadozw@vrcon.online",
-						avatar: "Shadozw.png",
-						destination: "",
-					},
-					{
-						title: "SenpaiVR",
-						subTitle: "senpaivr@vrcon.online",
-						avatar: "SenpaiVR.png",
-						destination: "",
-					},
-					{
 						title: "Don Italiano",
 						subTitle: "don@vrcon.online",
 						avatar: "Don.png",
 						destination: "",
 					},
-				],
-			},
-			{
-				title: "Our Teams",
-				subItems: [
-					{ title: "Directors", icon: "mdi-account", destination: "/staff/directors" },
-					{ title: "Events", icon: "mdi-account", destination: "/staff/events-team" },
-					{ title: "Production", icon: "mdi-account", destination: "/staff/production-team" },
-					{ title: "Marketing", icon: "mdi-account", destination: "/staff/marketing-team" },
 				],
 			},
 		],

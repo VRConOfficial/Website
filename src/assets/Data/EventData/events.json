@@ -949,7 +949,7 @@
             "World they will be using?": "VRCon 2022 Stage -> No Friends Friends Club -> VRcon 2022  Booths",
             "What they will need from VRCon": "Video player to display a backdrop for the panel. There was one last year so I imagine there will be one again.",
             "Are they ok with their event being streamed?": "TRUE",
-            "Stream Link": "twitch.tv/okaykuro",
+            "Stream Link": "https://twitch.tv/okaykuro",
             "Stream Notes": "no media",
             "VRCon Staff Member Overseeing this event": "Spades",
             "Number of Volunteers needed for the event": "3",
@@ -987,13 +987,6 @@
             "Number of Volunteers needed for the event": "3",
             "Volunteers for this event": "Blossom,AceGamer,MYHT1C",
             "How to join?/Bot": "VRCon Group"
-        }
-    },
-    {
-        "time": 1672365600000,
-        "properties": {
-            "Event Name": "Drama Court RP",
-            "End Time": 1672369200000
         }
     },
     {
@@ -1068,22 +1061,20 @@
         }
     },
     {
-        "time": 1672448400000,
+        "time": 1672452000000,
         "properties": {
             "Event Name": "Talent Show",
-            "End Time": 1672459200000,
+            "End Time": 1672455600000,
             "Marketing Description": "Sit back and enjoy as VRChat users show their talent and creations!",
             "Event Host VRChat UserName": "Spades",
             "Type of Event": "Live Performance",
-            "How Long will the event run for?": "3 Hours",
+            "How Long will the event run for?": "1 Hour",
             "World they will be using?": "VRcon 2022 Hub",
-            "Stream Link": "https://twitch.tv/vrconlive",
             "Stream Notes": "NO STREAM",
             "VRCon Staff Member Overseeing this event": "Spades",
             "Number of Volunteers needed for the event": "3",
             "Volunteers for this event": "Blossom\nAriaTempest\nChurch\nRuby",
-            "How to join?/Bot": "VRCon Group",
-            "Quest": "TRUE"
+            "How to join?/Bot": "VRCon Group"
         }
     },
     {

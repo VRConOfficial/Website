@@ -38,11 +38,11 @@ const routes = [
 		name: 'guide',
 		component: GuideView
 	},
-	{
-		path: '/events',
-		name: 'events',
-		component: EventsView
-	},
+	// {
+	// 	path: '/events',
+	// 	name: 'events',
+	// 	component: EventsView
+	// },
 	{
 		path: '/questions',
 		name: 'questions',
@@ -58,29 +58,29 @@ const routes = [
 		name: 'FFSignup',
 		component: FilmFestivalSignup
 	},
-	{
-		path: '/staff',
-		name: 'staff',
-		component:  StaffView,
-		children: [
-			{
-				path: 'directors',
-				component: DirectorsStaffView,
-			},
-			{
-				path: 'events-team',
-				component: EventsStaffView,
-			},
-			{
-				path: 'production-team',
-				component: ProductionStaffView,
-			},
-			{
-				path: 'marketing-team',
-				component: MarketingStaffView,
-			},
-		],
-	},
+	// {
+	// 	path: '/staff',
+	// 	name: 'staff',
+	// 	component:  StaffView,
+	// 	children: [
+	// 		{
+	// 			path: 'directors',
+	// 			component: DirectorsStaffView,
+	// 		},
+	// 		{
+	// 			path: 'events-team',
+	// 			component: EventsStaffView,
+	// 		},
+	// 		{
+	// 			path: 'production-team',
+	// 			component: ProductionStaffView,
+	// 		},
+	// 		{
+	// 			path: 'marketing-team',
+	// 			component: MarketingStaffView,
+	// 		},
+	// 	],
+	// },
 ]
 
 const router = new VueRouter({
