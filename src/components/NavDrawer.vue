@@ -42,9 +42,7 @@ export default {
 		items: [
 			{ title: "Home", icon: "mdi-home", destination: "/home" },
 			{ title: "Guide", icon: "mdi-map", destination: "/guide" },
-			{ title: "Film Festival", icon: "mdi-filmstrip", destination: "/FilmFestival2022"},
 			{ title: "FAQ", icon: "mdi-help-circle-outline", destination: "questions" },
-			{ title: "History", icon: "mdi-timeline-clock-outline", destination: "/history" },
 		],
 	}),
 	methods: {

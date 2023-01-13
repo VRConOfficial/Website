@@ -9,20 +9,6 @@
 		<ColumnLayout>
 			<div>
 				<v-container class="px-0 white--text my-2">
-					<v-row class="px-0 d-flex align-center justify-center text-center text-sm-left">
-						<v-col cols="11" sm="8" md="5" lg="4" xl="4" class="pa--4">
-							<v-img src="@/assets/images/leathered.webp" class="my-2"></v-img>
-						</v-col>
-						<v-col cols="12" sm="auto" class="px-0">
-							<div class="medieval my-6 white--text text-h2 text-sm-h2 text-center text-sm-left">
-								Hear'ye Hear'ye
-							</div>
-							<div class="ma-6 text-h4">
-								VRCon 2022 <br />
-								December 16th - 30th
-							</div>
-						</v-col>
-					</v-row>
 					<v-row v-for="(link, index) in linkList" :key="index" class="align-center justify-center text-h5 text-sm-h4">
 						<v-col cols="10" class="my-sm-4">
 							<v-btn class="pa-8 primary rounded" :to="link.destination" block>
@@ -33,15 +19,6 @@
 				</v-container>
 				<div class="rounded">
 					<AlternatingTiles :content="landingInfo" class="my-4 px-0 rounded" />
-					<v-container>
-						<v-row v-for="(link, index) in linkList2" :key="index" class="align-center justify-center text-h5 text-sm-h4">
-							<v-col cols="10" class="my-sm-4">
-								<v-btn class="pa-8 primary" :to="link.destination" block>
-									{{ link.text }}
-								</v-btn>
-							</v-col>
-						</v-row>
-					</v-container>
 				</div>
 			</div>
 		</ColumnLayout>
@@ -89,16 +66,6 @@ export default {
 			{
 				text: "Guide",
 				destination: "guide",
-			},
-			{
-				text: "Events",
-				destination: "events",
-			},
-		],
-		linkList2: [
-			{
-				text: "Our History",
-				destination: "history",
 			},
 		],
 	}),
